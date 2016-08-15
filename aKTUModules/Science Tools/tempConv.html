@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature</title>
+  <link rel='stylesheet' href='tempConv.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Converting Temperature</h1>
+		<h2 style="text-align: center;"><br><br><br>Convert the temperatures from one temperature scale to the other.</h2>
+		
+		<div id="instFah">
+			<p><b>Fahrenheit to Celsius</b>:</p>
+			<ol>
+				<li>Subtract 32&deg from the Fahrenheit temperature</li>
+				<li>Then multiply the result from <em>Step 1</em> by 5</li>
+				<li>Then divide the result from <em>Step 2</em> by 9</li>
+			</ol>
+			<p>(<b><span class="keyWord">&degF </span></b> - 32) &times 5 &divide 9</p>
+			<p>Ex: (<b><span class="keyWord">68 &degF </span></b> - 32) &times 5 &divide 9 = 20 &degC </p>
+		</div>
+		
+		<div id="instCel">
+			<p><b>Celsius to Fahrenheit</b>:</p>
+			<ol>
+				<li>Multiply Celsius temperature by 9</li>
+				<li>Then divide the result from <em>Step 1</em> by 5</li>
+				<li>Then add 32&deg to the result from <em>Step 2</em></li>
+			</ol>
+			<p><b><span class="keyWord">&degC </span></b> &times 9 &divide 5 + 32&deg </p>
+			<p>Ex:  <b><span class="keyWord">20 &degC </span></b> &times 9 &divide 5 + 32&deg = 68 &degF </p>
+		</div>
+		
+		
+	<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	
+		<div id="q1Div" class="qDiv">
+			<form id="q1Form" onsubmit="return false" method="post" class="qForm">50 &degF = 
+				<input class="input" id="q1ans" type="text" placeholder="Celsius" maxlength="3"/> &degC <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ1();" align="center"/>
+			</form>
+			<p id="incorrPar1a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar1b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next1Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next1();" class="next"></a>
+			</div>
+		
+		</div>
+	
+	<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	
+		<div id="q2Div" class="qDiv" style="display: none;">
+			<form id="q2Form" onsubmit="return false" method="post" class="qForm">30 &degC = 
+				<input class="input" id="q2ans" type="text" placeholder="Fahrenheit" maxlength="3"/> &degF <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ2();" align="center"/>
+			</form>
+			<p id="incorrPar2a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar2b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next2Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next2();" class="next"></a>
+			</div>
+		
+		</div>
+	
+	<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	
+		<div id="q3Div" class="qDiv" style="display: none;">
+			<form id="q3Form" onsubmit="return false" method="post" class="qForm">0 &degC = 
+				<input class="input" id="q3ans" type="text" placeholder="Fahrenheit" maxlength="3"/> &degF <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ3();" align="center"/>
+			</form>
+			<p id="incorrPar3a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar3b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next3Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next3();" class="next"></a>
+			</div>
+		
+		</div>	
+	
+	<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	
+		<div id="q4Div" class="qDiv" style="display: none;">
+			<form id="q4Form" onsubmit="return false" method="post" class="qForm">140 &degF = 
+				<input class="input" id="q4ans" type="text" placeholder="Celsius" maxlength="3"/> &degC <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ4();" align="center"/>
+			</form>
+			<p id="incorrPar4a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar4b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next4Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next4();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q5Div" class="qDiv" style="display: none;">
+			<form id="q5Form" onsubmit="return false" method="post" class="qForm">68 &degF = 
+				<input class="input" id="q5ans" type="text" placeholder="Celsius" maxlength="3"/> &degC <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ5();" align="center"/>
+			</form>
+			<p id="incorrPar5a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar5b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next5Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next5();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q6Div" class="qDiv" style="display: none;">
+			<form id="q5Form" onsubmit="return false" method="post" class="qForm">-15 &degC = 
+				<input class="input" id="q6ans" type="text" placeholder="Fahrenheit" maxlength="3"/> &degF <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ6();" align="center"/>
+			</form>
+			<p id="incorrPar6a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar6b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next6Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next6();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q7Div" class="qDiv" style="display: none;">
+			<form id="q7Form" onsubmit="return false" method="post" class="qForm">5 &degC = 
+				<input class="input" id="q7ans" type="text" placeholder="Fahrenheit" maxlength="3"/> &degF <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ7();" align="center"/>
+			</form>
+			<p id="incorrPar7a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar7b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next7Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next7();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q8Div" class="qDiv" style="display: none;">
+			<form id="q8Form" onsubmit="return false" method="post" class="qForm">212 &degF = 
+				<input class="input" id="q8ans" type="text" placeholder="Celsius" maxlength="3"/> &degC <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ8();" align="center"/>
+			</form>
+			<p id="incorrPar8a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar8b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next8Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next8();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q9Div" class="qDiv" style="display: none;">
+			<form id="q9Form" onsubmit="return false" method="post" class="qForm">32 &degF = 
+				<input class="input" id="q9ans" type="text" placeholder="Celsius" maxlength="3"/> &degC <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ9();" align="center"/>
+			</form>
+			<p id="incorrPar9a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar9b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next9Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next9();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q10Div" class="qDiv" style="display: none;">
+			<form id="q10Form" onsubmit="return false" method="post" class="qForm">-5 &degC = 
+				<input class="input" id="q10ans" type="text" placeholder="Fahrenheit" maxlength="3"/> &degF <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ10();" align="center"/>
+			</form>
+			<p id="incorrPar10a" class="incorrPar"><b>Use the conversion on the left.</b></p>
+			<p id="incorrPar10b" class="incorrPar"><b>Use the conversion on the right.</b></p>
+						
+			<div id="next10Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next10();" class="next"></a>
+			</div>
+		
+		</div>
+		
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<div id="fin">
+			<h2 id="divHead">You have completed practicing temperature conversion between Celsius and Fahrenheit.</h2>
+			<a href="../mainPage.html" id="finButton">Finished!</a>
+		</div>
+		
+		
+	</div>
+
+	<script type="text/javascript">		
+		function checkQ1(){
+			var temp = Number(document.getElementById('q1ans').value);			
+			
+			if(temp == 10){
+				document.getElementById('next1Div').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";	
+				document.getElementById('incorrPar1b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next1Div').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "block";
+			}
+						
+		}
+		
+		function next1(){
+			document.getElementById('q1Div').style.display = "none";
+			document.getElementById('q2Div').style.display = "block";
+		}
+		
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ2(){
+			var temp = Number(document.getElementById('q2ans').value);			
+			
+			if(temp == 86){
+				document.getElementById('next2Div').style.display = "block";
+				document.getElementById('incorrPar2a').style.display = "none";	
+				document.getElementById('incorrPar2b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next2Div').style.display = "none";
+				document.getElementById('incorrPar2b').style.display = "block";
+			}
+						
+		}
+		
+		function next2(){
+			document.getElementById('q2Div').style.display = "none";
+			document.getElementById('q3Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ3(){
+			var temp = Number(document.getElementById('q3ans').value);			
+			
+			if(temp == 32){
+				document.getElementById('next3Div').style.display = "block";
+				document.getElementById('incorrPar3a').style.display = "none";	
+				document.getElementById('incorrPar3b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next3Div').style.display = "none";
+				document.getElementById('incorrPar3b').style.display = "block";
+			}
+						
+		}
+		
+		function next3(){
+			document.getElementById('q3Div').style.display = "none";
+			document.getElementById('q4Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ4(){
+			var temp = Number(document.getElementById('q4ans').value);			
+			
+			if(temp == 60){
+				document.getElementById('next4Div').style.display = "block";
+				document.getElementById('incorrPar4a').style.display = "none";	
+				document.getElementById('incorrPar4b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next4Div').style.display = "none";
+				document.getElementById('incorrPar4a').style.display = "block";
+			}
+						
+		}
+		
+		function next4(){
+			document.getElementById('q4Div').style.display = "none";
+			document.getElementById('q5Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ5(){
+			var temp = Number(document.getElementById('q5ans').value);			
+			
+			if(temp == 20){
+				document.getElementById('next5Div').style.display = "block";
+				document.getElementById('incorrPar5a').style.display = "none";	
+				document.getElementById('incorrPar5b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next5Div').style.display = "none";
+				document.getElementById('incorrPar5a').style.display = "block";
+			}
+						
+		}
+		
+		function next5(){
+			document.getElementById('q5Div').style.display = "none";
+			document.getElementById('q6Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ6(){
+			var temp = Number(document.getElementById('q6ans').value);			
+			
+			if(temp == 5){
+				document.getElementById('next6Div').style.display = "block";
+				document.getElementById('incorrPar6a').style.display = "none";	
+				document.getElementById('incorrPar6b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next6Div').style.display = "none";
+				document.getElementById('incorrPar6b').style.display = "block";
+			}
+						
+		}
+		
+		function next6(){
+			document.getElementById('q6Div').style.display = "none";
+			document.getElementById('q7Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ7(){
+			var temp = Number(document.getElementById('q7ans').value);			
+			
+			if(temp == 41){
+				document.getElementById('next7Div').style.display = "block";
+				document.getElementById('incorrPar7a').style.display = "none";	
+				document.getElementById('incorrPar7b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next7Div').style.display = "none";
+				document.getElementById('incorrPar7b').style.display = "block";
+			}
+						
+		}
+		
+		function next7(){
+			document.getElementById('q7Div').style.display = "none";
+			document.getElementById('q8Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ8(){
+			var temp = Number(document.getElementById('q8ans').value);			
+			
+			if(temp == 100){
+				document.getElementById('next8Div').style.display = "block";
+				document.getElementById('incorrPar8a').style.display = "none";	
+				document.getElementById('incorrPar8b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next8Div').style.display = "none";
+				document.getElementById('incorrPar8a').style.display = "block";
+			}
+						
+		}
+		
+		function next8(){
+			document.getElementById('q8Div').style.display = "none";
+			document.getElementById('q9Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ9(){
+			var temp = Number(document.getElementById('q9ans').value);			
+			
+			if(temp == 0){
+				document.getElementById('next9Div').style.display = "block";
+				document.getElementById('incorrPar9a').style.display = "none";	
+				document.getElementById('incorrPar9b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next9Div').style.display = "none";
+				document.getElementById('incorrPar9a').style.display = "block";
+			}
+						
+		}
+		
+		function next9(){
+			document.getElementById('q9Div').style.display = "none";
+			document.getElementById('q10Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ10(){
+			var temp = Number(document.getElementById('q10ans').value);			
+			
+			if(temp == 23){
+				document.getElementById('next10Div').style.display = "block";
+				document.getElementById('incorrPar10a').style.display = "none";	
+				document.getElementById('incorrPar10b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('next10Div').style.display = "none";
+				document.getElementById('incorrPar10b').style.display = "block";
+			}
+						
+		}
+		
+		function next10(){
+			document.getElementById('q10Div').style.display = "none";
+			document.getElementById('fin').style.display = "block";
+		}
+		
+	</script>
+	
+	
+	
+	<nav>
+		<a href="temp2.html"           title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+  
+</body>
+</html>

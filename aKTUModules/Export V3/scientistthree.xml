@@ -1,0 +1,6 @@
+<?xml version ='1.0' ?>
+	<chapter1>
+		<hint id = 'intro1'>You are doing exceptional work junior scientist!!</hint>
+		<hint id = 'intro2'> You have done such a great job that the mRNA molecules are ready!</hint>
+		<hint id = 'intro3'> Let's see how long it takes for the ribosomes to make amino acids.</hint>
+	</chapter1>

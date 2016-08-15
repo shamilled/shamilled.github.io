@@ -1,0 +1,207 @@
+body{
+  width: 100%;
+  max-width: 785px;
+  height: 600px;
+  background-image: url('PICS/ktuBackGround.png');
+  color: black;
+    margin: auto;
+}
+
+#mainHeadline{
+  font-size: 35px;
+  padding: 15px;
+  border-radius: 20px 0px 20px 0px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #BCE2A3), color-stop(1, #93E65B));
+  background: -moz-linear-gradient(left bottom, #BCE2A3, #93E65B);
+  background-image: -ms-linear-gradient(bottom left, #BCE2A3 0%, #93E65B 100%);
+  border: 2px;
+  width: 350px;
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  color: #F7F5FF;
+  }
+  
+#divHead{
+  font-size: 20px;
+  font-family: cursive,sans-serif;
+  color: black;
+  /*width: 400px; */
+  text-align: center;
+  margin-bottom: 30px;
+  }
+  
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  color: #4B2181;
+  background-image: url('PICS/Background 2.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: center;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  }
+  
+#squares div{
+  display: inline-block;
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #BCE2A3), color-stop(1, #93E65B));
+  background: -moz-linear-gradient(left bottom, #BCE2A3, #93E65B);
+  background-image: -ms-linear-gradient(bottom left, #BCE2A3 0%, #93E65B 100%);
+  margin-left: 25px;
+  position: relative;
+  top: -8px;
+  }
+  
+.box{
+  height: 350px;
+  width: 370px;
+  /* border: 2px dotted grey; */
+  position: absolute;
+  margin: 5px;
+  display: inline-block;
+  text-align: left;
+  }
+  
+#textBox{
+  top: 100px;
+  left: 30px;
+  height: 300px;
+  }
+  
+#textBoxBlood{
+  top: 100px;
+  left: 30px;
+  height: 300px;
+  width: 430px;
+  }
+  
+#textBoxBone{
+  top: 110px;
+  left: 30px;
+  height: 300px;
+  width: 410px;
+  }
+  
+#textBoxMic{
+  top: 90px;
+  left: 15px;
+  height: 300px;
+  width: 410px;
+  }
+
+  
+#imgBox{
+  width: 230px;
+  position: absolute;
+  top: 90px;
+  left: 450px;
+  }
+  
+#micsImg{
+  height: 100%;
+  position: absolute;
+  left: 40px;
+  }
+  
+#imgBoxBone{
+  width: 210px;
+  position: absolute;
+  top: -25px;
+  left: 440px;
+  }
+  
+#adTiss{
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  }
+  
+#bloodTiss{
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  }
+  
+#bones{
+  width: 100%;
+  }
+  
+  
+#nerveBox{
+  width: 650px;
+  height: 200px;
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  }  
+  
+#nerveImg{
+  width: 100%;
+  }
+
+#nerveText{
+  position: absolute;
+  top: 280px;
+  left: 20px;
+  width: 670px;
+  height: 180px;
+  text-align: left;
+  }
+  
+
+  
+#keyWord{
+  color: #0ECB00;
+  }
+  
+.vocWord{
+  color: #3FCE35
+  }
+  
+#previous{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 15px;
+  }
+  
+#glossary{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(155,255,230);
+  border: 15px;
+  padding: 10px;
+  margin-left: 4px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 492px;
+  }
+  
+#sources{
+  color: white;
+  position: absolute;
+  left: 700px;
+  top: 500px;
+  }

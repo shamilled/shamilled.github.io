@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applying the Scientific Method</title>
+  <link rel='stylesheet' href='que11.css'>
+  <meta charset=utf-8 />
+  <script type="text/javascript">
+	function checkForGuess(){
+			var guessCheck = sessionStorage.getItem("guess");
+			
+			if(guessCheck != null){
+				document.getElementById('next').style.display = "block";
+				document.getElementById('makeGuess').style.display = "none";
+				document.getElementById('ansForm').innerHTML = "You guessed " + sessionStorage.getItem('guess') + " cashiers.";
+			}
+		}
+		
+  </script>
+</head>
+<body onload="checkForGuess()">
+  
+	<div id="mainFrame">
+	
+		<h1>Experiment</h1>
+		
+		<p style="width: 880px;"><b>We are going to perform another experiment, this time trying different numbers of cashiers and observing which is most 
+		profitable. At the end of the experiment, we will know the best number of cashiers to have working.</b></p>
+		
+		<p>In order to better compare the different trials, we are going to collect <b>quantitative data</b> this time. We are going to look at how much money 
+		we make at the end of the day.</p>
+		<br>
+		<p>If three cashiers was not enough, how many cashiers do you think will be the best number for the store?</p>
+		<form id="ansForm" onsubmit="return false" method="post" style="position: relative; top: 110px; left: 15px; font-size: 25px; color: green;">
+				<input class="input" id="guessNum" type="text" placeholder="Guessed Number of Cashiers" style="width: 170px;"/>
+				<input id="button" type="submit" value="Submit" onclick="takeAns();" align="center"/>
+		</form></b>
+		
+		<div>
+			<p id="resp" style="display: none;"><b>Let's Find Out!</b></p>
+			<p id="makeGuess" style="display: none; position: relative; top: 100px; left: 0px;"><b>Make a guess before you continue. Anything will work!</b></p>
+		</div>
+	</div>
+
+	<script type="text/javascript">	
+		function takeAns(){
+			var guess = document.getElementById('guessNum').value;
+			sessionStorage.setItem("guess", guess);
+			
+			if(guess == ''){
+				document.getElementById('makeGuess').style.display = "block";
+			}
+			else{
+				document.getElementById('resp').style.display = "block";
+				document.getElementById('next').style.display = "block";
+				document.getElementById('makeGuess').style.display = "none";
+			}
+		}
+	</script>
+	
+	<nav>
+		<a href="que10.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="que12.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+	
+	
+  
+</body>
+</html>

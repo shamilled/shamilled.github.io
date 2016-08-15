@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tools of Science</title>
+  <link rel='stylesheet' href='tools1.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Volume</h1>
+		
+		
+		<div id="parDiv">
+			<ul>
+				<p><b><span class="keyWord">Volume</span> is the amount of three-dimensional space that something takes up.</b></p>
+				<br>
+				<li><u>The Base Unit for Volume</u> using the Metric System (SI) is the <b><em>Liter</em></b>.</li>
+				<br>
+				<li>Solids, liquids, and gases all have volume.</li>
+				<br>
+				<li>Volume is measured differently for solids, liquids, and gases.</li>
+				<br><br>
+				&nbsp&nbsp&nbsp&nbsp&nbsp <!--Used these to move buttons over instead of putting it on style sheet -->
+				<a href="volSolids.html" class="myButton">Solids</a>
+				<a href="volLiquids.html" class="myButton">Liquids</a>
+				<a href="volGases.html" class="myButton">Gases</a>
+
+			</ul>
+			
+
+		</div>
+		
+		<div id="metDiv">
+			<h2>Metric System (SI) Units for Volume:</h2>
+				
+			<p><b>1 Liter (L) = 1000 <em>Milli</em>liters (mL)
+			<br>
+			1 <em>Milli</em>liter (mL) = 1 Cubic <em>Centi</em>meter (cm<sup>3</sup>)</b></p>
+			
+		</div>
+		
+		<div id="usUnitsDiv">
+			<h2>Convert U.S. Customary Units to Metric System Units:</h2>
+				
+			<p>1 Gallon (G) = 3.78541 Liters (L)
+			<br>
+			1 Tablespoon (tbsp.) = 14.7868 Milliliters (mL)</p>
+		</div>
+		
+		<img id="gradCyl" src="images/graduatedCylinder.png">
+	
+	
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+			<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.lineWidth = 3;
+				/*Dashed Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 0);
+				ctx.lineTo(450, 500);		
+				ctx.stroke();
+				
+				/*Top Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 125);
+				ctx.lineTo(901, 125);		
+				ctx.stroke();
+				
+				/*Second Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 250);
+				ctx.lineTo(901, 250);		
+				ctx.stroke();
+						
+				
+			</script>
+	</div>
+
+	
+	
+	
+	<nav>
+		<a href="#"           title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="tools2.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

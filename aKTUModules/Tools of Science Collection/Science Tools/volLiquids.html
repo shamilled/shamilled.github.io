@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Measuring Volume: Liquids</title>
+  <link rel='stylesheet' href='volLiquids.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Measuring Volume: Liquids</h1>		
+		<div id="tutorial">
+			<img id="volTut" src="images/volLiquidTutorial.png"/>
+			<input id="begin" type="submit" value="Begin" onclick="begin();" align="center"/>
+		</div>
+		
+			<!--Was going to update score in here, but would prefer students to keep trying until each is correct before moving on.-->
+		<div id="scoreBox">
+			<!-- <b><span id="score">0/0</span></b> -->
+			<p id="corrPar">Correct!</p>
+			<p id="incorrPar">Remember to look at the <u>bottom</u> of the meniscus.</p>
+		</div>
+		
+		
+	<!-- Begin Answer Forms Here -->	
+		<div id="q1" class="qDiv" style="display: none;">
+			<form id="q1Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q1ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ1();" align="center"/>
+			</form>
+			<img id="img1" class="qImg" src="images/volLiquids1.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q2" class="qDiv" style="display: none;">
+			<form id="q2Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q2ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ2();" align="center"/>
+			</form>
+			<img id="img2" class="qImg" src="images/volLiquids2.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q3" class="qDiv" style="display: none;">
+			<form id="q3Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q3ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ3();" align="center"/>
+			</form>
+			<img id="img3" class="qImg" src="images/volLiquids3.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q4" class="qDiv" style="display: none;">
+			<form id="q4Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q4ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ4();" align="center"/>
+			</form>
+			<img id="img4" class="qImg" src="images/volLiquids4.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q5" class="qDiv" style="display: none;">
+			<form id="q5Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q5ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ5();" align="center"/>
+			</form>
+			<img id="img5" class="qImg" src="images/volLiquids5.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q6" class="qDiv" style="display: none;">
+			<form id="q6Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q6ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ6();" align="center"/>
+			</form>
+			<img id="img6" class="qImg" src="images/volLiquids6.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q7" class="qDiv" style="display: none;">
+			<form id="q7Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q7ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ7();" align="center"/>
+			</form>
+			<img id="img7" class="qImg" src="images/volLiquids7.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q8" class="qDiv" style="display: none;">
+			<form id="q8Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q8ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ8();" align="center"/>
+			</form>
+			<img id="img8" class="qImg" src="images/volLiquids8.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q9" class="qDiv" style="display: none;">
+			<form id="q9Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q9ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ9();" align="center"/>
+			</form>
+			<img id="img9" class="qImg" src="images/volLiquids9.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q10" class="qDiv" style="display: none;">
+			<form id="q10Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q10ans" type="text" placeholder="Volume in mL" maxlength="5"/> milliliters <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ10();" align="center"/>
+			</form>
+			<img id="img10" class="qImg" src="images/volLiquids10.png">
+		</div>
+		
+	<!-------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------->
+	
+		<div id="fin">
+			<h2 id="divHead">You have completed practicing measuring volume with a graduated cylinder.</h2>
+			<a href="../mainToolsPage.html" id="finButton">Finished!</a>
+		</div>
+		
+		
+		
+		
+		
+	<!--------------------------------------------------------------------------------------->	
+
+	</div>
+	
+	<script type="text/javascript">		
+		function begin(){
+			document.getElementById('q1').style.display = "block";
+			document.getElementById('tutorial').style.display = "none";
+		}
+		
+		function checkQ1(){
+			var vol = Number(document.getElementById('q1ans').value);			
+			
+			if(vol == 225){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q1').style.display = "none";
+				document.getElementById('q2').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ2(){
+			var vol = Number(document.getElementById('q2ans').value);			
+			
+			if(vol == 150){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q2').style.display = "none";
+				document.getElementById('q3').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ3(){
+			var vol = Number(document.getElementById('q3ans').value);			
+			
+			if(vol == 185){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q3').style.display = "none";
+				document.getElementById('q4').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ4(){
+			var vol = Number(document.getElementById('q4ans').value);			
+			
+			if(vol == 80){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q4').style.display = "none";
+				document.getElementById('q5').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ5(){
+			var vol = Number(document.getElementById('q5ans').value);			
+			
+			if(vol == 50){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q5').style.display = "none";
+				document.getElementById('q6').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ6(){
+			var vol = Number(document.getElementById('q6ans').value);			
+			
+			if(vol == 125){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q6').style.display = "none";
+				document.getElementById('q7').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ7(){
+			var vol = Number(document.getElementById('q7ans').value);			
+			
+			if(vol == 235){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q7').style.display = "none";
+				document.getElementById('q8').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ8(){
+			var vol = Number(document.getElementById('q8ans').value);			
+			
+			if(vol == 195){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q8').style.display = "none";
+				document.getElementById('q9').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ9(){
+			var vol = Number(document.getElementById('q9ans').value);			
+			
+			if(vol == 100){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q9').style.display = "none";
+				document.getElementById('q10').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ10(){
+			var vol = Number(document.getElementById('q10ans').value);			
+			
+			if(vol == 155){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar').style.display = "none";	
+				document.getElementById('q10').style.display = "none";
+				document.getElementById('fin').style.display = "block";
+			}
+			
+			else{
+				document.getElementById('corrPar').style.display= "none";
+				document.getElementById('incorrPar').style.display = "block";
+			}
+						
+		}
+		
+	</script>
+
+	
+	
+	<nav>
+		<a href="vol1.html"    title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+  
+</body>
+</html>

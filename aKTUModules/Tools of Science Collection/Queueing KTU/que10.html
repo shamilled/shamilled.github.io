@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applying the Scientific Method</title>
+  <link rel='stylesheet' href='que10.css'>
+  <meta charset=utf-8 />
+  <script type="text/javascript">
+	function checkStorage(){
+		document.getElementById('name').innerHTML = sessionStorage.getItem('name').toUpperCase();
+		document.getElementById('storeName').innerHTML = sessionStorage.getItem('store').toUpperCase();
+		document.getElementById('storeName2').innerHTML = sessionStorage.getItem('store').toUpperCase();
+	}
+  </script>
+</head>
+<body onload="checkStorage();">
+  
+	<div id="mainFrame">
+	
+		<h1>Conclusion</h1>
+		
+		<p style="width: 800px;"><b>We are going to need more cashiers if we want to avoid line build ups.</b></p>
+
+		<p>We saw that 3 cashiers just wasn't enough during rush times. So how many cashiers should we hire? </p>
+
+		<p>It is difficult to predict how customers will arrive. Sometimes they arrive all at once, which creates random delays at the counters.</p>
+		
+		<p>Let's try hiring different numbers of cashiers to see which amount works best.</p>
+		
+		<div id="signDiv">
+			<img id="sign" src="images/hiringSign2.png">
+			<div id="nameDiv">
+				<p id="namePar">CONTACT <span id="name"></span></p>
+			</div>
+			
+			<div id="storeNameDiv">
+				<p id="storeNamePar"><b><span id="storeName">Store Name</span></b></p>
+			</div>
+		<div>
+		
+		
+	</div>
+
+	<nav>
+		<a href="que9.html"  title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="que11.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

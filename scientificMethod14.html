@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth14.css'>
+  <script type="text/javascript">
+	function checkStorage(){
+		if(sessionStorage.getItem('tableComplete') == "yes"){
+			document.getElementById('next').style.display = "block";
+			
+			document.getElementById('d2').innerHTML = 2;
+			document.getElementById('d3').innerHTML = 3;
+			document.getElementById('d4').innerHTML = 4;
+			
+			document.getElementById('fA2').innerHTML = 7.5 + ' cm';
+			document.getElementById('fA3').innerHTML = 13 + ' cm';
+			document.getElementById('fA4').innerHTML = 15 + ' cm';
+			
+			document.getElementById('fB2').innerHTML = 10 + ' cm';
+			document.getElementById('fB3').innerHTML = 17 + ' cm';
+			document.getElementById('fB4').innerHTML = 25 + ' cm';
+		}
+	}
+  </script>
+</head>
+<body onload="checkStorage();">
+  
+	<div id="mainFrame">
+		<h1>Record the Data</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li>You continue to make measurements of the plants for each day and record the following values:
+					<ul>
+						<li>Day 2: Plant A was 7.5 cm tall and Plant B was 10 cm tall</li>
+						<li>Day 3: Plant A was 13 cm tall and Plant B was 17 cm tall</li>
+						<li>Day 4: Plant A was 15 cm tall and Plant B was 25 cm tall</li>
+					</ul>
+				</li>
+				<p>Record the data in the table below and submit to see if you did it correctly.</p>
+			</ul>
+			<table id="table">
+				<tr id="row1"><b>
+					<td>Day</td>
+					<td>Plant A (Fertilizer 1)</td>
+					<td>Plant B (Fertilizer 2)</td>
+				</b></tr>
+				<tr id="row2"><b>
+					<td>1</td>
+					<td>2 cm</td>
+					<td>2.5 cm</td>
+				</b></tr>
+				<tr id="row3">
+					<td><form id="d2"  class="vals" onsubmit="return false" method="post">
+							<input class="input" id="day2" type="text"/>
+					</form></td>
+					<td><form id="fA2" class="vals" onsubmit="return false" method="post">
+							<input class="input" id="A2" type="text"/> cm
+					</form></td>
+					<td><form id="fB2" class="vals" onsubmit="return false" method="post">
+							<input class="input" id="B2" type="text"/> cm
+					</form></td>
+				</tr>
+				<tr id="row4">
+					<td><form id="d3"  class="vals" onsubmit="return false" method="post">
+							<input class="input" id="day3" type="text"/>
+					</form></td>
+					<td><form id="fA3" class="vals" onsubmit="return false" method="post">
+							<input class="input" id="A3" type="text"/> cm
+					</form></td>
+					<td><form id="fB3" class="vals" onsubmit="return false" method="post">
+							<input class="input" id="B3" type="text"/> cm
+					</form></td>
+				</tr>
+				<tr id="row5">
+					<td><form id="d4"  class="vals" onsubmit="return false" method="post">
+							<input class="input" id="day4" type="text"/>
+					</form></td>
+					<td><form id="fA4" class="vals" onsubmit="return false" method="post">
+							<input class="input" id="A4" type="text"/> cm
+					</form></td>
+					<td><form id="fB4" class="vals" onsubmit="return false" method="post">
+							<input class="input" id="B4" type="text"/> cm
+					</form></td>
+				</tr>
+			</table>
+			
+			<input id="button" type="submit" value="Submit" onclick="checkData();" align="center"/>
+			
+			<div id="checkDay" class="check">
+				<p>Check Day Column</p>
+				<img class="down" src="PICS/downArrow.png">
+			</div>
+			<div id="correctDay" class="check">
+				<p><b>Correct</b></p>
+				<img class="down" src="PICS/downArrow.png">
+			</div>
+			
+			<div id="checkA" class="check">
+				<p>Check Plant A Column</p>
+				<img class="down" src="PICS/downArrow.png">
+			</div>
+			<div id="correctA" class="check">
+				<p><b>Correct</b></p>
+				<img class="down" src="PICS/downArrow.png">
+			</div>
+			
+			<div id="checkB" class="check">
+				<p>Check Plant B Column</p>
+				<img class="down" src="PICS/downArrow.png">
+			</div>
+			<div id="correctB" class="check">
+				<p><b>Correct</b></p>
+				<img class="down" src="PICS/downArrow.png">
+			</div>
+		</div>
+		
+		<img id="clipBoard" src="PICS/clipBoard.png">
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+		/*For Validating Data Input*/
+		function checkData(){
+			var day2 = Number(document.getElementById('day2').value);
+			var day3 = Number(document.getElementById('day3').value);
+			var day4 = Number(document.getElementById('day4').value);
+			
+			var a2 = Number(document.getElementById('A2').value);
+			var a3 = Number(document.getElementById('A3').value);
+			var a4 = Number(document.getElementById('A4').value);
+			
+			var b2 = Number(document.getElementById('B2').value);
+			var b3 = Number(document.getElementById('B3').value);
+			var b4 = Number(document.getElementById('B4').value);
+			
+			if ((day2 != 2) || (day3 != 3) || (day4 != 4)){
+				document.getElementById("checkDay").style.display="block";
+				document.getElementById("correctDay").style.display="none";
+				}
+			if ((day2 == 2) && (day3 == 3) && (day4 == 4)){
+				document.getElementById("checkDay").style.display="none";
+				document.getElementById("correctDay").style.display="block";
+				}
+			
+			
+			if ((a2 != 7.5) || (a3 != 13) || (a4 != 15)){
+				document.getElementById("checkA").style.display="block";
+				document.getElementById("correctA").style.display="none";
+				}
+			if ((a2 == 7.5) && (a3 == 13) && (a4 == 15)){
+				document.getElementById("checkA").style.display="none";
+				document.getElementById("correctA").style.display="block";
+				}
+			
+			
+			if ((b2 != 10) || (b3 != 17) || (b4 != 25)){
+				document.getElementById("checkB").style.display="block";
+				document.getElementById("correctB").style.display="none";
+				}
+			if ((b2 == 10) && (b3 == 17) && (b4 == 25)){
+				document.getElementById("checkB").style.display="none";
+				document.getElementById("correctB").style.display="block";
+				}
+			
+			/*Hide Next Button Until All Are Correct */
+			if ((day2 == 2) && (day3 == 3) && (day4 == 4) && (a2 == 7.5) && (a3 == 13) && (a4 == 15) && (b2 == 10) && (b3 == 17) && (b4 == 25)){
+				document.getElementById('next').style.display="block";
+				sessionStorage.setItem('tableComplete' , "yes")
+				}
+				
+			}
+			
+		/*For Drawing the Lines*/
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,    65);
+			ctx.lineTo(870,  65);
+			ctx.lineTo(870,  280);
+			ctx.lineTo(901,  280);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(155,  65);
+			ctx.lineTo(141,  58);
+			ctx.lineTo(141,  72);
+			ctx.lineTo(155,  65);						
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901,  280);
+			ctx.lineTo(887,  273);
+			ctx.lineTo(887,  287);
+			ctx.lineTo(901,  280);
+			ctx.fill();
+			ctx.stroke();
+					
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod13.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href=scientificMethod15.html title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weight vs. Mass</title>
+  <link rel='stylesheet' href='weight2.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Weight <b><em><span style="color: red; text-shadow: 1px 1px 1px black;">vs.</span></em></b> Mass</h1>
+
+		<div id="massDiv">
+			<h3><span class="keyWord">Mass</span> is the quantity of matter in an object.</h3>
+			
+			<p>All you need is matter to have <b>mass</b>.</p>
+			<p>Your mass is the same here on earth as it is on the moon or anywhere else in space.</p>
+		</div>
+		
+		<div id="weightDiv">
+			<h3><span class="keyWord">Weight</span> is a combination of mass and gravity working together.</h3>
+				
+			<p><b>Weight</b> is the downward force of an object due to gravity.</p>
+			<p>You weigh more on earth than you would on the moon because the moon has less gravity.</p>
+			<p>Free falling objects are <b>weightless</b> but still have the same <b>mass</b>.</p>
+		</div>
+		
+		<div id="parDiv">
+			<ul>
+				<p><b>Have you ever heard of astronauts experiencing <span class="keyWord">Weightlessness</span> when they are in space?</b></p>
+				<li>Astronauts don't feel weight in space because they don't feel gravity while they are in space.</li>
+				<br>
+				<li><b><em>HOWEVER</em></b>, they still have the same <span class="keyWord">Mass</span> in space as they do on earth. Astronauts are not <em>massless</em> in space.</li>
+
+
+
+			</ul>
+			
+
+		</div>
+		
+		<div id="funFact">
+			<p id="fact"><b>Fun Fact</b>: Did you know that when the satellites and space stations are orbiting earth they are actually in
+			<b>free fall</b> around the earth! This is why they are weightless.</p>
+		</div>
+		
+		<img id="orbit" src="PICS/orbit.png">
+	
+	
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+			<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.lineWidth = 3;
+				/*Dashed Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 0);
+				ctx.lineTo(450, 500);		
+				ctx.stroke();
+								
+			</script>
+	</div>
+
+	
+	
+	
+	<nav>
+		<a href="weight1.html"           title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+  
+</body>
+</html>

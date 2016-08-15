@@ -1,0 +1,186 @@
+body{
+  width: 100%;
+  max-width: 785px;
+  height: 600px;
+  background-image: url('images/ktuBackGround.png');
+  color: black;
+}
+
+#mainHeadline{
+  font-size: 35px;
+  padding: 15px;
+  border-radius: 20px 0px 20px 0px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #BCE2A3), color-stop(1, #93E65B));
+  background: -moz-linear-gradient(left bottom, #BCE2A3, #93E65B);
+  background-image: -ms-linear-gradient(bottom left, #BCE2A3 0%, #93E65B 100%);
+  border: 2px;
+  width: 350px;
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  color: #F7F5FF;
+  }
+  
+  
+#mainHeadlinesmer{
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 20px 0px 20px 0px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #BCE2A3), color-stop(1, #93E65B));
+  background: -moz-linear-gradient(left bottom, #BCE2A3, #93E65B);
+  background-image: -ms-linear-gradient(bottom left, #BCE2A3 0%, #93E65B 100%);
+  border: 2px;
+  width: 45%;
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  color: #F7F5FF;
+  }
+  
+#divHead{
+  font-size: 20px;
+  font-family: cursive,sans-serif;
+  color: black;
+  /*width: 400px; */
+  text-align: center;
+  margin-bottom: 30px;
+  }
+  
+
+  
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  color: #4B2181;
+  background-image: url('images/Background 2.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: center;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  }
+  
+#squares div{
+  display: inline-block;
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #BCE2A3), color-stop(1, #93E65B));
+  background: -moz-linear-gradient(left bottom, #BCE2A3, #93E65B);
+  background-image: -ms-linear-gradient(bottom left, #BCE2A3 0%, #93E65B 100%);
+  margin-left: 25px;
+  position: relative;
+  top: -8px;
+  }
+  
+.box{
+  height: 350px;
+  width: 370px;
+  /* border: 2px dotted grey; */
+  position: absolute;
+  margin: 5px;
+  display: inline-block;
+  text-align: left;
+  }
+  
+.orgImg{
+  height: 350px;
+  width: 220px;
+  }
+  
+#textBox{
+  top: 100px;
+  left: 30px;
+  height: 300px;
+  }
+  
+#textBoxsmER{
+  top: 140px;
+  left: 30px;
+  height: 300px;
+  text-align: left;
+  }
+  
+#textBoxmit{
+  top: 120px;
+  left: 30px;
+  }
+  
+#textBoxLys{
+  top: 120px;
+  left: 30px;
+  }
+  
+#imgBox{
+  width: 230px;
+  top: 90px;
+  left: 450px;
+  }
+  
+#keyWord{
+  color: #0ECB00;
+  }
+  
+#chromLink{
+  text-decoration: none;
+  color: #FF832F;
+  }
+  
+#chromLink:hover{
+  font-size: 105%;
+  color: green;
+  }
+  
+#dnaLink{
+  text-decoration: none;
+  color: #FF832F;
+  }
+  
+#dnaLink:hover{
+  font-size: 105%;
+  color: green;
+  }
+  
+#previous{
+  text-decoration: none;
+  color: green;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 15px;
+  }
+
+#glossary{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(155,255,230);
+  border: 15px;
+  padding: 10px;
+  margin-left: 4px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 492px;
+  }
+  
+#sources{
+  color: white;
+  position: absolute;
+  left: 700px;
+  top: 500px;
+  }

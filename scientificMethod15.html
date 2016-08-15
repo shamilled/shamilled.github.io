@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth15.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Analyze the Data</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li>When you analyze your data, you are trying to make sense of it and learn from it. You should put your 
+				data into charts and graphs to help you view your data better.</li>
+				<br>
+				<li>Charts and graphs help make the data from your table more visual. This will help you spot trends and reach conclusions.</li>
+				<br>
+				<li>One great way to visualize data that you want to compare, like heights or amounts, is with <em>Bar Graphs</em>.</li>
+			</ul>
+		</div>
+		
+		
+		<img id="clip" src="PICS/clipBoardinMag.png">
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,    280);
+			ctx.lineTo(90,   280);
+			ctx.lineTo(90,   440);
+			ctx.lineTo(880,  440);
+			ctx.lineTo(880,  50);
+			ctx.lineTo(901,  50);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(255,  440);
+			ctx.lineTo(241,  433);
+			ctx.lineTo(241,  447);
+			ctx.lineTo(255,  440);						
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901,  50);
+			ctx.lineTo(887,  43);
+			ctx.lineTo(887,  57);
+			ctx.lineTo(901,  50);
+			ctx.fill();
+			ctx.stroke();
+					
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod14.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod16.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

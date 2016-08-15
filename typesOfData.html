@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applying the Scientific Method</title>
+  <link rel='stylesheet' href='typesOfData.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+	<h1>Qualitative vs.Quantitative Measurements</h1>
+		
+		<div id="q1" class="quesDiv">
+			<h2 style="text-align: center;">This glass feels warmer than the other glass.</h2>
+			<form>
+				<input class="a"    id="q1a"  type="button"  value="Quantitative"  onclick="checkq1a()">
+				<br>
+				<input class="b"    id="q1b"  type="button"  value="Qualitative"   onclick="checkq1b()">
+				<br>
+				<input class="next" id="n1"   type="button"  value="Next"          onclick="next1()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr1"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr1" style="color: #2F00CB;   display: none;"><b>This is <u>qualitative</u> because we are not measuring the temperatures.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q2" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">That rock was 4 pounds heavier than the first.</h2>
+			<form>
+				<input class="a"    id="q2a"  type="button"  value="Quantitative"  onclick="checkq2a()">
+				<br>
+				<input class="b"    id="q2b"  type="button"  value="Qualitative"   onclick="checkq2b()">
+				<br>
+				<input class="next" id="n2"   type="button"  value="Next"          onclick="next2()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr2"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr2" style="color: #2F00CB;   display: none;"><b>Pounds are a <u>quantity</u> of weight.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->	
+		<div id="q3" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">It is 76 degrees Fahrenheit in here.</h2>
+			<form>
+				<input class="a"    id="q3a"  type="button"  value="Quantitative"  onclick="checkq3a()">
+				<br>
+				<input class="b"    id="q3b"  type="button"  value="Qualitative"   onclick="checkq3b()">
+				<br>
+				<input class="next" id="n3"   type="button"  value="Next"          onclick="next3()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr3"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr3" style="color: #2F00CB;   display: none;"><b>Degrees Fahrenheit are a <u>quantity</u> of temperature.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q4" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">That concert took a long time.</h2>
+			<form>
+				<input class="a"    id="q4a"  type="button"  value="Quantitative"  onclick="checkq4a()">
+				<br>
+				<input class="b"    id="q4b"  type="button"  value="Qualitative"   onclick="checkq4b()">
+				<br>
+				<input class="next" id="n4"   type="button"  value="Next"          onclick="next4()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr4"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr4" style="color: #2F00CB;   display: none;"><b>We did not say <em>how long</em> it took so we did not quantify it. So this is <u>qualitative</u>.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q5" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">This fertilizer made the plants grow taller.</h2>
+			<form>
+				<input class="a"    id="q5a"  type="button"  value="Quantitative"  onclick="checkq5a()">
+				<br>
+				<input class="b"    id="q5b"  type="button"  value="Qualitative"   onclick="checkq5b()">
+				<br>
+				<input class="next" id="n5"   type="button"  value="Next"          onclick="next5()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr5"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr5" style="color: #2F00CB;   display: none;"><b>We did not measure how much taller. This is a <u>qualitative</u> observation.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q6" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">This fertilizer made the plants grow an average of 6 inches taller.</h2>
+			<form>
+				<input class="a"    id="q6a"  type="button"  value="Quantitative"  onclick="checkq6a()">
+				<br>
+				<input class="b"    id="q6b"  type="button"  value="Qualitative"   onclick="checkq6b()">
+				<br>
+				<input class="next" id="n6"   type="button"  value="Next"          onclick="next6()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr6"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr6" style="color: #2F00CB;   display: none;"><b>Inches is a <u>quantity</u> of length. We measured the difference in heights and <em>quantified</em> it with inches.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q7" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">His car was moving faster than the bus.</h2>
+			<form>
+				<input class="a"    id="q7a"  type="button"  value="Quantitative"  onclick="checkq7a()">
+				<br>
+				<input class="b"    id="q7b"  type="button"  value="Qualitative"   onclick="checkq7b()">
+				<br>
+				<input class="next" id="n7"   type="button"  value="Next"          onclick="next7()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr7"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr7" style="color: #2F00CB;   display: none;"><b>We did not measure the speed, so this is a <u>qualitative</u> observation.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q8" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">The baseball was moving 95 miles per hour.</h2>
+			<form>
+				<input class="a"    id="q8a"  type="button"  value="Quantitative"  onclick="checkq8a()">
+				<br>
+				<input class="b"    id="q8b"  type="button"  value="Qualitative"   onclick="checkq8b()">
+				<br>
+				<input class="next" id="n8"   type="button"  value="Next"          onclick="next8()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr8"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr8" style="color: #2F00CB;   display: none;"><b>Miles per Hour is a <u>quantitiy</u> of speed. We measured the speed of the baseball.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q9" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">There are 12.6 liters of water in that bucket.</h2>
+			<form>
+				<input class="a"    id="q9a"  type="button"  value="Quantitative"  onclick="checkq9a()">
+				<br>
+				<input class="b"    id="q9b"  type="button"  value="Qualitative"   onclick="checkq9b()">
+				<br>
+				<input class="next" id="n9"   type="button"  value="Next"          onclick="next9()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr9"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr9" style="color: #2F00CB;   display: none;"><b>Liters are a <u>quantity</u> of volume. Qualities deal with properties and features.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q10" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">The car ride took 4 hours and 20 minutes.</h2>
+			<form>
+				<input class="a"    id="q10a"  type="button"  value="Quantitative"  onclick="checkq10a()">
+				<br>
+				<input class="b"    id="q10b"  type="button"  value="Qualitative"   onclick="checkq10b()">
+				<br>
+				<input class="next" id="n10"   type="button"  value="Next"          onclick="next10()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr10"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr10" style="color: #2F00CB;   display: none;"><b>Hours and minutes are <u>quantities</u> of time. Qualities deal with properties and features.</b></p>
+			</div>
+		</div>
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q11" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">This gum smells like oranges.</h2>
+			<form>
+				<input class="a"    id="q11a"  type="button"  value="Quantitative"  onclick="checkq11a()">
+				<br>
+				<input class="b"    id="q11b"  type="button"  value="Qualitative"   onclick="checkq11b()">
+				<br>
+				<input class="next" id="n11"   type="button"  value="Next"          onclick="next11()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr11"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr11" style="color: #2F00CB;   display: none;"><b>Smells are qualities.</b></p>
+			</div>
+		</div>	
+	<!-- ------------------------------------------------------------------------------- -->
+		<div id="q11" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">This gum smells like oranges.</h2>
+			<form>
+				<input class="a"    id="q11a"  type="button"  value="Quantitative"  onclick="checkq11a()">
+				<br>
+				<input class="b"    id="q11b"  type="button"  value="Qualitative"   onclick="checkq11b()">
+				<br>
+				<input class="next" id="n11"   type="button"  value="Next"          onclick="next11()"   >
+			</form>
+			
+			<div   class="response">
+				<p id="corr11"   style="color: green; display: none;"><b>Correct!</b></p>
+				<p id="incorr11" style="color: #2F00CB;   display: none;"><b>Smells are qualities.</b></p>
+			</div>
+		</div>	
+		
+	<!-- Finished Division -->
+		<div id="fin" class="quesDiv" style="display: none;">
+			<h2 style="text-align: center;">Finished!</h2>
+			<p>You answered <span id="result"></span> out of 11 correctly.</p>
+			<p>You can try again or you can continue with the rest of the lesson.</p>
+			<form>
+				<a id="tryAgain" href="typesOfData.html">Try Again</a>
+				<br>
+				<a id="goOn"     href="que9.html">Continue</a>
+			</form>
+		</div>
+		
+
+	
+		
+	</div>
+	
+	<script>
+	var n = 0;
+	var compQQact;
+	
+	/*These functions come in chunks of 3 for each question*/
+		function checkq1a(){
+			document.getElementById('incorr1').style.display="block"; /*Quantitative*/
+			document.getElementById('q1a').style.display="none";
+			document.getElementById('q1b').style.display="none";
+			document.getElementById('n1').style.display="block";
+		}
+		function checkq1b(){
+			document.getElementById('corr1').style.display="block"; /*Qualitative*/
+			document.getElementById('q1a').style.display="none";
+			document.getElementById('q1b').style.display="none";
+			document.getElementById('n1').style.display="block";
+			n = n + 1;
+		}
+		
+		function next1(){
+			document.getElementById('q1').style.display="none";
+			document.getElementById('q2').style.display="block";
+		}
+		
+	/*-------------------------------------------------------------------------*/
+		function checkq2a(){
+			document.getElementById('corr2').style.display="block"; /*Quantitative*/
+			document.getElementById('q2a').style.display="none";
+			document.getElementById('q2b').style.display="none";
+			document.getElementById('n2').style.display="block";
+			n = n + 1;
+		}
+		function checkq2b(){
+			document.getElementById('incorr2').style.display="block"; /*Qualitative*/
+			document.getElementById('q2a').style.display="none";
+			document.getElementById('q2b').style.display="none";
+			document.getElementById('n2').style.display="block";
+		}
+		function next2(){
+			document.getElementById('q2').style.display="none";
+			document.getElementById('q3').style.display="block";
+		}
+	
+	/*-------------------------------------------------------------------------*/
+		function checkq3a(){
+			document.getElementById('corr3').style.display="block"; /*Quantitative*/
+			document.getElementById('q3a').style.display="none";
+			document.getElementById('q3b').style.display="none";
+			document.getElementById('n3').style.display="block";
+			n = n + 1;
+		}
+		function checkq3b(){
+			document.getElementById('incorr3').style.display="block"; /*Qualitative*/
+			document.getElementById('q3a').style.display="none";
+			document.getElementById('q3b').style.display="none";
+			document.getElementById('n3').style.display="block";
+		}
+		function next3(){
+			document.getElementById('q3').style.display="none";
+			document.getElementById('q4').style.display="block";
+		}
+		
+	/*-------------------------------------------------------------------------*/
+		function checkq4a(){
+			document.getElementById('incorr4').style.display="block"; /*Quantitative*/
+			document.getElementById('q4a').style.display="none";
+			document.getElementById('q4b').style.display="none";
+			document.getElementById('n4').style.display="block";
+		}
+		function checkq4b(){
+			document.getElementById('corr4').style.display="block"; /*Qualitative*/
+			document.getElementById('q4a').style.display="none";
+			document.getElementById('q4b').style.display="none";
+			document.getElementById('n4').style.display="block";
+			n = n + 1;
+		}
+		function next4(){
+			document.getElementById('q4').style.display="none";
+			document.getElementById('q5').style.display="block";
+		}
+	
+	/*-------------------------------------------------------------------------*/
+		function checkq5a(){
+			document.getElementById('incorr5').style.display="block"; /*Quantitative*/
+			document.getElementById('q5a').style.display="none";
+			document.getElementById('q5b').style.display="none";
+			document.getElementById('n5').style.display="block";
+		}
+		function checkq5b(){
+			document.getElementById('corr5').style.display="block"; /*Qualitative*/
+			document.getElementById('q5a').style.display="none";
+			document.getElementById('q5b').style.display="none";
+			document.getElementById('n5').style.display="block";
+			n = n + 1;
+		}
+		function next5(){
+			document.getElementById('q5').style.display="none";
+			document.getElementById('q6').style.display="block";
+		}
+	/*-------------------------------------------------------------------------*/
+		function checkq6a(){
+			document.getElementById('corr6').style.display="block"; /*Quantitative*/
+			document.getElementById('q6a').style.display="none";
+			document.getElementById('q6b').style.display="none";
+			document.getElementById('n6').style.display="block";
+			n = n + 1;
+		}
+		function checkq6b(){
+			document.getElementById('incorr6').style.display="block"; /*Qualitative*/
+			document.getElementById('q6a').style.display="none";
+			document.getElementById('q6b').style.display="none";
+			document.getElementById('n6').style.display="block";
+		}
+		function next6(){
+			document.getElementById('q6').style.display="none";
+			document.getElementById('q7').style.display="block";
+		}	
+	/*-------------------------------------------------------------------------*/
+		function checkq7a(){
+			document.getElementById('incorr7').style.display="block"; /*Quantitative*/
+			document.getElementById('q7a').style.display="none";
+			document.getElementById('q7b').style.display="none";
+			document.getElementById('n7').style.display="block";
+		}
+		function checkq7b(){
+			document.getElementById('corr7').style.display="block"; /*Qualitative*/
+			document.getElementById('q7a').style.display="none";
+			document.getElementById('q7b').style.display="none";
+			document.getElementById('n7').style.display="block";
+			n = n + 1;
+		}
+		function next7(){
+			document.getElementById('q7').style.display="none";
+			document.getElementById('q8').style.display="block";
+		}	
+	/*-------------------------------------------------------------------------*/
+		function checkq8a(){
+			document.getElementById('corr8').style.display="block"; /*Quantitative*/
+			document.getElementById('q8a').style.display="none";
+			document.getElementById('q8b').style.display="none";
+			document.getElementById('n8').style.display="block";
+			n = n + 1;
+		}
+		function checkq8b(){
+			document.getElementById('incorr8').style.display="block"; /*Qualitative*/
+			document.getElementById('q8a').style.display="none";
+			document.getElementById('q8b').style.display="none";
+			document.getElementById('n8').style.display="block";
+		}
+		function next8(){
+			document.getElementById('q8').style.display="none";
+			document.getElementById('q9').style.display="block";
+		}
+	/*-------------------------------------------------------------------------*/
+		function checkq9a(){
+			document.getElementById('corr9').style.display="block"; /*Quantitative*/
+			document.getElementById('q9a').style.display="none";
+			document.getElementById('q9b').style.display="none";
+			document.getElementById('n9').style.display="block";
+			n = n + 1;
+		}
+		function checkq9b(){
+			document.getElementById('incorr9').style.display="block"; /*Qualitative*/
+			document.getElementById('q9a').style.display="none";
+			document.getElementById('q9b').style.display="none";
+			document.getElementById('n9').style.display="block";
+		}
+		function next9(){
+			document.getElementById('q9').style.display="none";
+			document.getElementById('q10').style.display="block";
+		}
+	/*-------------------------------------------------------------------------*/
+		function checkq10a(){
+			document.getElementById('corr10').style.display="block"; /*Quantitative*/
+			document.getElementById('q10a').style.display="none";
+			document.getElementById('q10b').style.display="none";
+			document.getElementById('n10').style.display="block";
+			n = n + 1;
+		}
+		function checkq10b(){
+			document.getElementById('incorr10').style.display="block"; /*Qualitative*/
+			document.getElementById('q10a').style.display="none";
+			document.getElementById('q10b').style.display="none";
+			document.getElementById('n10').style.display="block";
+		}
+		function next10(){
+			document.getElementById('q10').style.display="none";
+			document.getElementById('q11').style.display="block";
+		}
+	/*-------------------------------------------------------------------------*/
+		function checkq11a(){
+			document.getElementById('incorr11').style.display="block"; /*Quantitative*/
+			document.getElementById('q11a').style.display="none";
+			document.getElementById('q11b').style.display="none";
+			document.getElementById('n11').style.display="block";
+		}
+		function checkq11b(){
+			document.getElementById('corr11').style.display="block"; /*Qualitative*/
+			document.getElementById('q11a').style.display="none";
+			document.getElementById('q11b').style.display="none";
+			document.getElementById('n11').style.display="block";
+			n = n + 1;
+		}
+		function next11(){
+			document.getElementById('q11').style.display="none";
+			document.getElementById('fin').style.display="block";
+			document.getElementById('result').innerHTML = n;
+			compQQact = 31;
+			sessionStorage.setItem('compQQ', compQQact);
+		}
+		
+	</script>
+	
+
+	<nav>
+		<a href="que9.html"  title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+  
+</body>
+</html>

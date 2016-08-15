@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth16.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Bar Graphs</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li><b><span class="keyWord">Bar Graphs</span> are used to show the <u>total change</u> in something.</b></li>
+				<br>
+				<li>The <span style="color: #EE7F00;"><u>independent variable</u></span> (the type of fertilizer used) goes on the <span style="color: #EE7F00;">X Axis</span>
+				and the <span style="color: #8600AF;"><u>dependent variable</u></span> (the height of the plants) goes on the <span style="color: #8600AF;"><u>y axis</u></span>.</li>
+				<br>
+				<p>By displaying our data with a <span class="keyWord">Bar Graph</span>, we can easily compare the height of Plant
+				A to Plant B and see that Plant B grew taller.</p>
+			</ul>
+		</div>
+		
+		<img id="graph" src="images/barGraph.png">
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,    50);
+			ctx.lineTo(901,  50);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(35,  50);
+			ctx.lineTo(21,  43);
+			ctx.lineTo(21,  57);
+			ctx.lineTo(35,  50);						
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901,  50);
+			ctx.lineTo(887,  43);
+			ctx.lineTo(887,  57);
+			ctx.lineTo(901,  50);
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Dashed Line*/
+			ctx.beginPath();
+			ctx.setLineDash([5,3]);
+			ctx.moveTo(450, 0);
+			ctx.lineTo(450, 500);			
+			ctx.stroke();
+					
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod15.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod17.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

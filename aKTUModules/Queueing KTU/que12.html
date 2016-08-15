@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applying the Scientific Method</title>
+  <link rel='stylesheet' href='que12.css'>
+  <meta charset=utf-8 />
+</head>
+<body onload="loadVariables();">
+  
+	<div id="mainFrame">
+	
+		<h1>Perform the Experiment</h1>
+		
+		<p id="firstPar" style="width: 900px;"><b>Click 'Run Experiment' to collect all the results from having different numbers of cashiers. 
+		<br>
+		How many cashiers was most profitable? 
+			<form id="ansForm" onsubmit="return false" method="post" style="color: green; font-size: 25px;">
+				<input class="input" id="cashNum" type="text" placeholder="Best Number of Cashiers"/>
+				<input id="button" type="submit" value="Submit" onclick="checkAns();" align="center"/>
+			</form></b>
+		</p>
+		
+		<div id="chart_div" style="width: 450px; height: 250px;">
+		</div>
+		
+		<div id="respDiv">
+			<p id="corrPar"   style="color: green; position: absolute; top: -10px; left: 50px; font-size: 30px; display: none;"><b>Correct!</b></p>
+			<p id="incorrPar" style="color: red; position: absolute; top: 0px; display: none;"><b>Use the Bar Graph and table to see the best number of cashiers to have.</b></p>
+		</div>
+
+		
+		
+		<table id="table"><b>
+			  <tr>
+				<td><span style="color: #EE7F00;"><b>Cashiers</b></span></td>
+				<td><span style="color: #8600AF;"><b>Profit</b></span></td>
+				<td><b>Customers Leaving</b></td>
+			  </tr>
+			  <!--<tr>
+			    <td style="color: #EE7F00;"><b>1</b></td>
+				<td style="color: #8600AF;" id="1Val" class="vals"></td>
+				<td id="L1"></td>
+			  </tr>
+			  <tr>
+			    <td style="color: #EE7F00;"><b>2</b></td>
+				<td style="color: #8600AF;" id="2Val" class="vals"></td>
+				<td id="L2"></td>
+			  </tr>      -->
+			  <tr>
+				<td style="color: #EE7F00;"><b>3</b></td>
+				<td style="color: #8600AF;" id="3Val" class="vals"></td>
+				<td id="L3"></td>
+			  </tr>
+			  <tr>
+				<td style="color: #EE7F00;"><b>4</b></td>
+				<td style="color: #8600AF;" id="4Val" class="vals"></td>
+				<td id="L4"></td>
+			  </tr>
+			  <tr>
+				<td style="color: #EE7F00;"><b>5</b></td>
+				<td style="color: #8600AF;" id="5Val" class="vals"></td>
+				<td id="L5"></td>
+			  </tr>
+			  <tr>
+				<td style="color: #EE7F00;"><b>6</b></td>
+				<td style="color: #8600AF;" id="6Val" class="vals"></td>
+				<td id="L6"></td>
+			  </tr>
+			  <tr>
+				<td style="color: #EE7F00;"><b>7</b></td>
+				<td style="color: #8600AF;" id="7Val" class="vals"></td>
+				<td id="L7"></td>
+			  </tr>
+			  <tr>
+				<td style="color: #EE7F00;"><b>8</b></td>
+				<td style="color: #8600AF;" id="8Val" class="vals" onsubmit="return false" method="post"></td>
+				<td id="L8"></td>
+			  </tr>
+			  <tr>
+				<td style="color: #EE7F00;"><b>9</b></td>
+				<td style="color: #8600AF;" id="9Val" class="vals"></td>
+				<td id="L9"></td>
+			  </tr>
+		</b>
+		</table>
+			  
+			<form id="expRunButton" onsubmit="return false" method="submit" style="height: 26px;">
+				<input type="submit" value="Run Experiment" onclick="doMath(), drawScatterChart(), findMax();" align="center"/>
+			</form>
+	</div>
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script>
+		var t1 = 0;
+		var t2 = 0;
+		var t3 = 0;
+		var t4 = 0;
+		var t5 = 0;
+		var t6 = 0;
+		var t7 = 0;
+		var t8 = 0;
+		var t9 = 0;
+
+		var tlea1 = 0;
+		var tlea2 = 0;
+		var tlea3 = 0;
+		var tlea4 = 0;
+		var tlea5 = 0;
+		var tlea6 = 0;
+		var tlea7 = 0;
+		var tlea8 = 0;
+		var tlea9 = 0;
+		
+		function doMath(){
+		
+		var tout = new Array(10);
+		var tleaout = new Array(10);
+		
+		var time = 0;
+		var x = 0; /*Number of Customers Initially*/
+		var lea = 0; /*Number of Customers that leave early*/
+		var n = 0.0; /*Money being made or lost*/
+		var t = 0.0;/*Total money to be divided for an average of 100 runs (Make one for each number of cashier)*/
+		var tlea = 0;
+			
+		/*----------------------------------------*/
+		
+		var dt = 0.1;		// time step
+		var timeMax = 24.0;	// total simulation time
+		
+		var lambda = 3.0;
+		var mu = 1.0;
+		var g = 1000;
+		
+		var r0 = 0.0;
+		var r1 = 0.0;
+		var r2 = 0.0;
+		
+		for (j=0;j<9;j++) {
+			time = 0;
+			x = 0; /*Number of Customers Initially*/
+			lea = 0; /*Number of Customers that leave early*/
+			n = 0; /*Money being made or lost*/
+			t = 0;/*Total money to be divided for an average of 100 runs (Make one for each number of cashier)*/
+			tlea = 0;
+
+			var c = j+1;		// number of servers
+
+			for (i = 0; i < 100; i++) {
+				time = 0;
+				x = 0;
+				n = 0;
+				lea = 0;
+				
+				while(time < timeMax) {
+				
+					r0 = Math.random();
+					r1 = Math.random();
+					r2 = Math.random();
+					
+					if(r0 < lambda*dt){
+						x = x + 1;		// one customer arrives
+					}
+					if(r1 < mu*Math.min(c,x)*dt){		// rate of service
+						x = x - 1;		// one customer leaves
+						n = n + 20.0;	// profit!
+					}
+					if(r2 < g*Math.max(x-c,0)*dt){		// customer only leaves if not being served
+						x = x - 1;		// one customer leaves
+						lea = lea + 1;	// ... and the customer is unhappy
+						//n = n-50.0;		// bad business!
+					}
+					
+					time = time+dt;
+				}
+				//lea = lea+x
+				n = n - 100.0*c;
+				t = t + n;
+				tlea = tlea + lea;
+			}
+			tout[j] = Math.floor(t/100);
+			tleaout[j] = Math.floor(tlea/100);
+			//tleaout[j] = x;
+			//tout[j] = (t/100.0);
+			//tleaout[j] = (tlea/100.0);
+			
+			//alert(x)
+
+		}
+
+		
+		t1 = tout[1-1];
+		t2 = tout[2-1];
+		t3 = tout[3-1];
+		t4 = tout[4-1];
+		t5 = tout[5-1];
+		t6 = tout[6-1];
+		t7 = tout[7-1];
+		t8 = tout[8-1];
+		t9 = tout[9-1];
+		
+		tlea1 = tleaout[1-1];
+		tlea2 = tleaout[2-1];
+		tlea3 = tleaout[3-1];
+		tlea4 = tleaout[4-1];
+		tlea5 = tleaout[5-1];
+		tlea6 = tleaout[6-1];
+		tlea7 = tleaout[7-1];
+		tlea8 = tleaout[8-1];
+		tlea9 = tleaout[9-1];
+
+
+		
+			/*Break Ties with Number of Customers Leaving*/
+			if(t4 == t5){
+				t4 = t4 - tlea4;
+				t5 = t5 - tlea5;
+			}
+			if(t4 == t6){
+				t4 = t4 - tlea4;
+				t6 = t6 - tlea6;
+			}
+			if(t6 == t5){
+				t6 = t6 - tlea6;
+				t5 = t5 - tlea5;
+			}
+			/*Break secondary ties with number of Cashiers. Just in case number of leaving customers happens to be the same.*/
+			if(t4 == t5){
+				t4 = t4 + 2;
+				t5 = t5 + 1;
+			}
+			if(t4 == t6){
+				t4 = t4 + 2;
+				t6 = t6 + 1;
+			}
+			if(t5 == t6){
+				t5 = t5 + 2;
+				t6 = t6 + 1;
+			}
+			
+			/*Put all the variables into the table. This has to be done after the tie breaker statements.*/
+			
+			/*document.getElementById('1Val').innerHTML = "$" + " " + t1;
+			document.getElementById('L1').innerHTML = tlea1;
+			document.getElementById('2Val').innerHTML = "$" + " " + t2;
+			document.getElementById('L2').innerHTML = tlea2;*/
+			document.getElementById('3Val').innerHTML = "$" + " " + t3;
+			document.getElementById('L3').innerHTML = tlea3;
+			document.getElementById('4Val').innerHTML = "$" + " " + t4;
+			document.getElementById('L4').innerHTML = tlea4;
+			document.getElementById('5Val').innerHTML = "$" + " " + t5;
+			document.getElementById('L5').innerHTML = tlea5;
+			document.getElementById('6Val').innerHTML = "$" + " " + t6;
+			document.getElementById('L6').innerHTML = tlea6;
+			document.getElementById('7Val').innerHTML = "$" + " " + t7;
+			document.getElementById('L7').innerHTML = tlea7;
+			document.getElementById('8Val').innerHTML = "$" + " " + t8;
+			document.getElementById('L8').innerHTML = tlea8;
+			document.getElementById('9Val').innerHTML = "$" + " " + t9;
+			document.getElementById('L9').innerHTML = tlea9;
+			
+			/*Store variables for the session so that we can return*/
+			/*sessionStorage.setItem('profit2', t2);*/
+			sessionStorage.setItem('profit3', t3);
+			sessionStorage.setItem('profit4', t4);
+			sessionStorage.setItem('profit5', t5);
+			sessionStorage.setItem('profit6', t6);
+			sessionStorage.setItem('profit7', t7);
+			sessionStorage.setItem('profit8', t8);
+			sessionStorage.setItem('profit9', t9);
+			
+			sessionStorage.setItem('left3', tlea3);
+			sessionStorage.setItem('left4', tlea4);
+			sessionStorage.setItem('left5', tlea5);
+			sessionStorage.setItem('left6', tlea6);
+			sessionStorage.setItem('left7', tlea7);
+			sessionStorage.setItem('left8', tlea8);
+			sessionStorage.setItem('left9', tlea9);
+			
+			/*Hide the next button in case they re-run the experiment. I have the storage of the correct number of cashiers linked to them submitting
+			the number of cashiers.*/
+			document.getElementById('next').style.display = "none";			document.getElementById('expRunButton').style.display= "none";			document.getElementById('corrPar').style.display = "none";			document.getElementById('incorrPar').style.display = "none";
+	}
+	
+
+
+	
+	/*--------------------------------------------------------*/
+	/*Find Max Variable*/
+	/*This finds the name of the variable associated with the correct max profit*/
+	/*Need to use the variable name of the highest profit to relate it to the correct number of cashiers*/
+	function findMax(){
+	
+	var list = [t1, t2, t3, t4, t5, t6, t7, t8, t9];
+		maxT = Math.max.apply(Math.max, list);
+		listNames = ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8", "t9"];
+		maxListName = listNames[list.indexOf(maxT)];
+		
+	}
+	/*This checks the answer from the headline question, number of cashiers.*/	
+	function checkAns() {
+		/*alert(maxListName);*/
+		var ans = document.getElementById("cashNum").value;
+		var corrAns = 0;
+		
+		if(maxListName == 't3'){
+			<!-- alert("it was t3"); -->
+			corrAns = 3; /*Assign correct number of cashiers to the corrAns variable*/
+		}
+		if(maxListName == 't4'){
+			<!-- alert("it was t4"); -->
+			corrAns = 4;
+		}
+		if(maxListName == 't5'){
+			<!-- alert("it was t5"); -->
+			corrAns = 5;
+		}
+		if(maxListName == 't6'){
+			<!-- alert("it was t6"); -->
+			corrAns = 6;
+		}
+		if(maxListName == 't7'){
+			<!-- alert("it was t7"); -->
+			corrAns = 7;
+		}
+		
+		if(ans == corrAns){
+			document.getElementById('corrPar').style.display="block";
+			document.getElementById('incorrPar').style.display="none";
+			document.getElementById('next').style.display = 'block';			document.getElementById('previous').style.display = "block";
+		}
+		
+		if(ans != corrAns){
+			document.getElementById('incorrPar').style.display="block";
+			document.getElementById('corrPar').style.display="none";
+		}
+		
+		sessionStorage.setItem('cashNumResult', corrAns);
+	
+	
+	}
+	
+	
+	
+	
+	/*--------------------------------------------------------*/
+ 
+    google.load("visualization", "1", {packages:["corechart"]});
+
+
+	function drawScatterChart() {	
+		
+        var data = google.visualization.arrayToDataTable([
+          ['Sales', 'Expenses'],
+		  /*[ 1,         t1],*/
+          /*[ 2,         t2],*/
+          [ 3,         t3],
+          [ 4,         t4],
+		  [ 5,         t5],
+		  [ 6,         t6],
+		  [ 7,         t7],
+		  [ 8,         t8],
+		  [ 9,         t9]		  
+        ]);
+        var options = {
+          title: 'Profit vs. Number of Cashiers',
+          hAxis: {ticks: [3,4,5,6,7,8,9], title: 'Cashiers', baselineColor: '#8600AF', titleTextStyle: {color: "#EE7F00", bold: true}, textStyle: {color: "#EE7F00", bold: true}},
+		  vAxis: {title: 'Profit', minValue: 0, baselineColor: '#EE7F00', titleTextStyle: {color: "#8600AF", bold: true}, textStyle: {color: "#8600AF", bold: true}},
+          legend: 'none'
+        };
+        
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+	  
+	  
+	/*Do this on load to check and see if this was already finished.*/  
+	/*If it is, fill out the table, graph, and form with the data*/
+	function loadVariables(){
+		var ansCheck = sessionStorage.getItem('cashNumResult');
+		
+		if(ansCheck != null){
+			/*Fill out the table from session storage*/
+			document.getElementById('3Val').innerHTML = "$" + " " + sessionStorage.getItem('profit3');
+			document.getElementById('L3').innerHTML = sessionStorage.getItem('left3');
+			document.getElementById('4Val').innerHTML = "$" + " " + sessionStorage.getItem('profit4');
+			document.getElementById('L4').innerHTML = sessionStorage.getItem('left4');
+			document.getElementById('5Val').innerHTML = "$" + " " + sessionStorage.getItem('profit5');
+			document.getElementById('L5').innerHTML = sessionStorage.getItem('left5');
+			document.getElementById('6Val').innerHTML = "$" + " " + sessionStorage.getItem('profit6');
+			document.getElementById('L6').innerHTML = sessionStorage.getItem('left6');
+			document.getElementById('7Val').innerHTML = "$" + " " + sessionStorage.getItem('profit7');
+			document.getElementById('L7').innerHTML = sessionStorage.getItem('left7');
+			document.getElementById('8Val').innerHTML = "$" + " " + sessionStorage.getItem('profit8');
+			document.getElementById('L8').innerHTML = sessionStorage.getItem('left8');
+			document.getElementById('9Val').innerHTML = "$" + " " + sessionStorage.getItem('profit9');
+			document.getElementById('L9').innerHTML = sessionStorage.getItem('left9');
+			
+			/*Fill out the graph from session storage*/
+			google.load("visualization", "1", {packages:["corechart"]});
+			
+			var res3 = Number(sessionStorage.getItem('profit3')); var res4 = Number(sessionStorage.getItem('profit4')); var res5 = Number(sessionStorage.getItem('profit5')); var res6 = Number(sessionStorage.getItem('profit6')); var res7 = Number(sessionStorage.getItem('profit7')); var res8 = Number(sessionStorage.getItem('profit8')); var res9 = Number(sessionStorage.getItem('profit9'));                   
+			
+			var data = google.visualization.arrayToDataTable([
+			  ['Sales', 'Expenses'],
+			  /*[ 1,         t1],*/
+			  /*[ 2,         t2],*/
+			  [ 3,         res3],
+			  [ 4,         res4],
+			  [ 5,         res5],
+			  [ 6,         res6],
+			  [ 7,         res7],
+			  [ 8,         res8],
+			  [ 9,         res9]		  
+			]);
+			var options = {
+			  title: 'Profit vs. Number of Cashiers',
+			  hAxis: {ticks: [3,4,5,6,7,8,9], title: 'Cashiers', baselineColor: '#8600AF', titleTextStyle: {color: "#EE7F00", bold: true}, textStyle: {color: "#EE7F00", bold: true}},
+			  vAxis: {title: 'Profit', minValue: 0, baselineColor: '#EE7F00', titleTextStyle: {color: "#8600AF", bold: true}, textStyle: {color: "#8600AF", bold: true}},
+			  legend: 'none'
+			};
+        
+
+			var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+			chart.draw(data, options);
+		/*---------------------------------------------------------*/
+
+		/*Fill out form*/
+		/*I am commenting this out for now, because I want them to be able to rerun the experiment as much as they like if they go back to it.*/
+		/*document.getElementById('ansForm').innerHTML = sessionStorage.getItem('cashNumResult') + " " + "cashiers";*/
+		
+		/*Make Continue Learning Button Visible*/
+		document.getElementById('next').style.display = "block";		document.getElementById('expRunButton').style.display = "none";		document.getElementById('ansForm').innerHTML = sessionStorage.getItem('cashNumResult') + " Cashiers";
+			
+			
+		}
+	
+	}
+	</script>
+
+	<nav>
+		<a href="que11.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="que13.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

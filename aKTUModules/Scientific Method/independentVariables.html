@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='independentVariables.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Independent Variables</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li><b><u>Fertilizer</u></b>: The type of fertilizer that you use is <i>your choice</i>. It <b><u>does not depend</u></b> on the 
+				height of the plants or on the day, so it is an <i>Independent Variable</i>.</li>
+				<br>
+				<li><b><u>Day</u></b>: You will make measurements on <i>different</i> days, but the days <b><u>do not depend</u></b> on the fertilizer 
+				or on the height of the plants. Therefore the day is an <i>Independent Variable</i>.
+			</ul>
+		</div>
+		
+		<img id="guy" src="images/indVarGuy.png">
+		
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0, 55);
+			ctx.lineTo(860, 55);
+			ctx.lineTo(860, 460);
+			ctx.lineTo(901, 460);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(65, 55);
+			ctx.lineTo(51, 48);
+			ctx.lineTo(51, 62);
+			ctx.lineTo(65, 55);
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901, 460);
+			ctx.lineTo(887, 453);
+			ctx.lineTo(887, 467);
+			ctx.lineTo(901, 460);
+			ctx.fill();
+			ctx.stroke();		
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod7.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod9.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

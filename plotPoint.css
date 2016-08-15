@@ -1,0 +1,83 @@
+body{
+	background-image: url('PICS/ktuBackGround.png');
+	}
+
+#mainFrame{
+	width: 901px;
+	height: 500px;
+	border: 5px solid #008A2E;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(218,241,201,0.83) 3%, rgba(218,241,201,1) 78%, rgba(218,241,201,1) 81%, rgba(174,239,127,1) 95%, rgba(218,241,201,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(3%,rgba(218,241,201,0.83)), color-stop(78%,rgba(218,241,201,1)), color-stop(81%,rgba(218,241,201,1)), color-stop(95%,rgba(174,239,127,1)), color-stop(100%,rgba(218,241,201,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(218,241,201,0.83) 3%,rgba(218,241,201,1) 78%,rgba(218,241,201,1) 81%,rgba(174,239,127,1) 95%,rgba(218,241,201,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(218,241,201,0.83) 3%,rgba(218,241,201,1) 78%,rgba(218,241,201,1) 81%,rgba(174,239,127,1) 95%,rgba(218,241,201,1) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(218,241,201,0.83) 3%,rgba(218,241,201,1) 78%,rgba(218,241,201,1) 81%,rgba(174,239,127,1) 95%,rgba(218,241,201,1) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(218,241,201,0.83) 3%,rgba(218,241,201,1) 78%,rgba(218,241,201,1) 81%,rgba(174,239,127,1) 95%,rgba(218,241,201,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4daf1c9', endColorstr='#daf1c9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	font-family: sans-serif;
+	}
+		
+#textDiv{
+	width: 350px;
+	position: absolute;
+	top: 60px;
+	left: 25px;
+	}
+
+h3{
+	position: absolute;
+	top: 270px;
+	left: 550px;
+	width: 350px;
+	text-align: justify;
+	}
+	
+#graph{
+	background-color: #E6E6E6;
+	border: 2px solid black;
+	border-radius: 10px;
+	position: absolute;
+	top: 55px;
+	left: 370px;
+	width: 490px;
+	}
+	
+#graph:hover{
+	border: 3px solid black;
+	}
+	
+.vals{
+	margin: 0px;
+	width: 20px;
+	}
+	
+.input{
+	width: 100px;
+	margin: auto;
+	}
+	
+.pagechange{
+	position: absolute;
+	top: 530px;
+	text-decoration: none;
+	color: #000F10;
+	font-family: sans-serif;
+	}
+	
+#previous{
+	left: 10px;
+	background-color: #008A2E;
+	padding: 10px;
+	border-radius: 10px;
+	border: 2px solid #D7D7D7;
+	color: #EEEEEE;
+	}
+
+	
+#next{
+	left: 110px;
+	background-color: #008A2E;
+	padding: 10px;
+	border-radius: 10px;
+	border: 2px solid #D7D7D7;
+	color: #EEEEEE;
+	}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth19.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Scatter Plots</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li><b><span class="keyWord"><b>Scatter Plots</b></span> are multiple data points plotted on one graph. They can help us
+				see patterns and trends in the data.</b></li>
+				<br>
+				<li>For our example, we took all of the height measurements for Plants A and B from our chart and
+				plotted them on this graph.</li>
+				<br>
+				<li>The <span style="color: #EE7F00;">Independent Variable (time)</span> is plotted on the <span style="color: #EE7F00;">X Axis</span>.</li>
+				<br>
+				<li>The <span style="color: #8600AF">Dependent Variable (the height of the plant)</span> goes on the <span style="color: #8600AF">Y axis</span>.</li>
+				<p>What patterns do you see for Plant A (the blue dots) and Plant B (the red dots)?</p>
+			</ul>
+		</div>
+		
+		<img id="graph" src="images/scatterPlot.png">
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,   50);
+			ctx.lineTo(901, 50);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(110,  50);
+			ctx.lineTo(96,  43);
+			ctx.lineTo(96,  57);
+			ctx.lineTo(110,  50);						
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901,  50);
+			ctx.lineTo(887,  43);
+			ctx.lineTo(887,  57);
+			ctx.lineTo(901,  50);
+			ctx.fill();
+			ctx.stroke();
+			
+			
+			
+			/*Dashed Line*/
+			ctx.beginPath();
+			ctx.setLineDash([5,3]);
+			ctx.moveTo(450, 0);
+			ctx.lineTo(450, 500);		
+			ctx.stroke();
+					
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod18.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod20.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

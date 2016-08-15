@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='controls.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Controls</h1>
+		
+		<div id="textDiv">
+			
+			<p><b><span class="keyWord">Controls</span> are the part of the experiment that you want to keep the same no matter what.</b></p>
+			<p>The controls for this experiment are variables that we want to keep the same for Plant A and Plant B.</p>
+			<p style="text-align: center; font-size: 18px; background-color: #A896C0; border-radius: 10px;"><b>Controls:</b></p>
+			<ul style="background-color: #E6E6E6; width: 686px; border-radius: 20px; border: 2px solid #818181;">
+				<li><b>Type of Seeds</b>: We want Plant A and Plant B to be the same type of plant.</li><br>
+				<li><b>Amount of Sunlight</b>: We want both plants to get the same amount of sun.</li><br>
+				<li><b>Amount of Water</b>: We want both plants to get the same amount of water.</li><br>
+				<li><b>Soil</b>: We want both plants to grow in the same type of soil.</li><br>
+				<li><b>Amount of Fertilizer</b>: We want to use the same amount of fertilizer on the plants, but different types.<br> Only the type of fertilizer 
+				should affect our experiment.</li><br>
+				<li><b>Ruler</b>: We want to use the same ruler on each plant to make sure we measure fairly.</li><br>
+				<li><b>Planting Pot</b>: Grow both plants in the same size and type of planting pot.</li>
+			</ul>
+		</div>
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(125, 0);
+			ctx.lineTo(125, 55);
+			ctx.lineTo(205, 55);
+			ctx.stroke();
+			
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(205, 55);
+			ctx.lineTo(191, 48);
+			ctx.lineTo(191, 62);
+			ctx.lineTo(205, 55);
+			ctx.fill();
+			ctx.stroke();		
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod7.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+  
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cell Dynamics</title>
+  <link rel='stylesheet' href='cellstyle.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+  <figure id="mainFrame">
+    
+	<div class="box" id="cellImage">
+    <h1>The Cell</h1>
+    <img src='Cell Image, Gatan Inc.jpg' alt='SEM Cell' />
+	<figcaption>This picture of a cell is taken by an electron microscope. 
+	Cells are too tiny for us to see without the help of microscopes.</figcaption>
+    </div>
+	
+	<div class="box" id="information">
+	  <p>Lots of information about cells and other things that 
+	  kids at this age will understand. Even more information.
+	  The kids now know all about cells. <b>The End</b></p>
+	</div>
+  </figure>
+
+  
+</body>
+</html>

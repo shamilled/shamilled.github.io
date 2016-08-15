@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth20.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Line Graphs</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li><b><span class="keyWord">Line Graphs</span> are used to see patterns that happen over time.</b></li>
+				<br>
+				<li>In our example, we are connecting the dots from the scatter chart with lines to help us see the growth patterns better.</li>
+				<br>
+				<li>Now we can easily visualize how the plants grew. Plant A started to slow down afer day 3, but Plant B kept growing at the same pace.</li>
+				<br>
+				<p>Why do you think Plant A slowed down?</p>
+			</ul>
+		</div>
+		
+		<img id="graph" src="images/lineGraph.png">
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,  50);
+			ctx.lineTo(901, 50);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(110,  50);
+			ctx.lineTo(96,  43);
+			ctx.lineTo(96,  57);
+			ctx.lineTo(110,  50);						
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901,  50);
+			ctx.lineTo(887,  43);
+			ctx.lineTo(887,  57);
+			ctx.lineTo(901,  50);
+			ctx.fill();
+			ctx.stroke();
+			
+			
+			
+			/*Dashed Line*/
+			ctx.beginPath();
+			ctx.setLineDash([5,3]);
+			ctx.moveTo(450, 0);
+			ctx.lineTo(450, 500);		
+			ctx.stroke();
+					
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod19.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod21.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

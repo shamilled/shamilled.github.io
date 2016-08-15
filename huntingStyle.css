@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #0b7293;
+}
+
+#activity {
+    margin-left: 20%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+h2 {
+    color: whitesmoke;
+    font-family:  "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    margin-right: 23.1%;
+    text-align: center;
+}

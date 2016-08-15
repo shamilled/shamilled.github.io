@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applying the Scientific Method</title>
+  <link rel='stylesheet' href='que3.css'>
+  <meta charset=utf-8 />
+  <script type="text/javascript">
+	function checkStorage(){
+		var checkAve = sessionStorage.getItem('avePeop');
+		var checkAveH = sessionStorage.getItem('peopPerHour');
+		
+		if(checkAve == 120 && checkAveH == 15){
+			document.getElementById('next').style.display = "block";
+			document.getElementById('aveForm').innerHTML = "120 people";
+			document.getElementById('aveHourForm').innerHTML = "15 people";
+		}
+		
+		document.getElementById('name').innerHTML = sessionStorage.getItem('name');
+	}
+  </script>
+</head>
+<body onload="checkStorage();">
+  
+	<div id="mainFrame">
+		
+		<img id="clipBoard" src="PICS/dataclipboard.png"/>
+		<div id="nameDiv">
+			<span id="name">Name</span>
+		</div>
+	
+		<h1>Background Research</h1>
+		<div id="textDiv">
+		
+			<p style="width: 480px;"><b>You count the number of people that come in the store every day and record the 
+			data in a table on your clipboard to the right. &nbsp &rarr; </b></p><br><br>
+
+			<!-- <p><b>You did this for a whole week and got the following seven numbers:</b></p>
+			<ul>
+				<li>102</li>
+				<li>93</li>
+				<li>130</li>
+				<li>125</li>
+				<li>120</li>
+				<li>140</li>
+				<li>130</li>
+			</ul> -->
+			
+			<br>
+			<p><b>What is the average number of people per day?
+					<form id="aveForm" onsubmit="return false" method="post" style="color: green; font-size: 25px;">
+						<input class="input" id="ave" type="text" placeholder="Average People Per Day"/>
+						<input id="button" type="submit" value="Submit" onclick="checkAve(), checkBoth();" align="center"/>
+					</form>
+			</b></p>
+			
+			<!--Response Divisions--------------->
+			<div id="correct">
+				<p style="color: green;">Correct!</p>
+			</div>
+			<div id="incorr">
+				<p style="color: red;">Try Again</p>
+			</div>
+				
+			<div id="work">
+				<form onsubmit="return false" method="post">Click 'solve' to work through step by step:
+					<input id="button" type="submit" value="Solve" onclick="giveHint();" align="center"/>
+				</form>
+			</div>
+			<!----------------------------------->
+			
+			
+			
+			<p><b>If your store is open for 8 hours a day, how many people come in per 
+			hour on average?</b>
+			<br>
+			(To do this, take the average number of people per day that you found above and divide it by 8.)</p>
+			
+			<form id="aveHourForm" onsubmit="return false" method="post" style="color: green; font-size: 25px;">
+				<input class="input" id="aveHour" type="text"placeholder="Average People Per Hour"/>
+				<input id="button" type="submit" value="Submit" onclick="checkAveHour(), checkBoth();" align="center"/>
+			</form>
+			
+			<div id="corrAveHour">
+				<p style="color: green;">Correct!</p>
+			</div>
+			<div id="incorrAveHour">
+				<p style="color: red;">Try Again</p>
+			</div>
+		</div>
+		
+		<!----------------Hint--------------->
+			<div id="hint">
+				<h2 style="text-align: center;">Solve Step By Step</h2>
+				<h4 style="text-align: center;">102 &nbsp&nbsp&nbsp&nbsp 93 &nbsp&nbsp&nbsp&nbsp 130 &nbsp&nbsp&nbsp&nbsp 125 &nbsp&nbsp&nbsp&nbsp 120 &nbsp&nbsp&nbsp&nbsp 140 &nbsp&nbsp&nbsp&nbsp 130</h4>
+				<form id="h1" class="hintForm" onsubmit="return false" method="post" style="height: 26px;">&nbsp&nbsp 102 + 93 &nbsp&nbsp=
+					<input class="input" id="hIn1" type="text"/>
+					<input type="submit" value="Check" onclick="showh2();" align="center"/>
+					<p id="correctH1" style="color: green; width: 60px; position: relative; top: -40px; left: 340px; display: none;">Correct!</p>
+					<p id="incorrectH1" style="color: red; width: 100px; position: relative; top: -40px; left: 340px; display: none">Try Again</p>
+				</form>
+				<form id="h2" class="hintForm" onsubmit="return false" method="post" style="height: 26px; display: none;">&nbsp&nbsp <b>195</b> + 130 =
+					<input class="input" id="hIn2" type="text"/>
+					<input type="submit" value="Check" onclick="showh3();" align="center"/>
+					<p id="correctH2" style="color: green; width: 60px; position: relative; top: -40px; left: 340px; display: none;">Correct!</p>
+					<p id="incorrectH2" style="color: red; width: 100px; position: relative; top: -40px; left: 340px; display: none">Try Again</p>
+				</form>
+				<form id="h3" class="hintForm" onsubmit="return false" method="post" style="height: 26px; display: none;">&nbsp&nbsp <b>325</b> + 125 =
+					<input class="input" id="hIn3" type="text"/>
+					<input type="submit" value="Check" onclick="showh4();" align="center"/>
+					<p id="correctH3" style="color: green; width: 60px; position: relative; top: -40px; left: 340px; display: none;">Correct!</p>
+					<p id="incorrectH3" style="color: red; width: 100px; position: relative; top: -40px; left: 340px; display: none">Try Again</p>
+				</form>
+				<form id="h4" class="hintForm" onsubmit="return false" method="post" style="height: 26px; display: none;">&nbsp&nbsp <b>450</b> + 120 =
+					<input class="input" id="hIn4" type="text"/>
+					<input type="submit" value="Check" onclick="showh5();" align="center"/>
+					<p id="correctH4" style="color: green; width: 60px; position: relative; top: -40px; left: 340px; display: none;">Correct!</p>
+					<p id="incorrectH4" style="color: red; width: 100px; position: relative; top: -40px; left: 340px; display: none">Try Again</p>
+				</form>
+				<form id="h5" class="hintForm" onsubmit="return false" method="post" style="height: 26px; display: none;">&nbsp&nbsp <b>570</b> + 140 =
+					<input class="input" id="hIn5" type="text"/>
+					<input type="submit" value="Check" onclick="showh6();" align="center"/>
+					<p id="correctH5" style="color: green; width: 60px; position: relative; top: -40px; left: 340px; display: none;">Correct!</p>
+					<p id="incorrectH5" style="color: red; width: 100px; position: relative; top: -40px; left: 340px; display: none">Try Again</p>
+				</form>
+				<form id="h6" class="hintForm" onsubmit="return false" method="post" style="height: 26px; display: none;">&nbsp&nbsp <b>710</b> + 130 =
+					<input class="input" id="hIn6" type="text"/>
+					<input type="submit" value="Check" onclick="showh7();" align="center"/>
+					<p id="correctH6" style="color: green; width: 60px; position: relative; top: -40px; left: 340px; display: none;">Correct!</p>
+					<p id="incorrectH6" style="color: red; width: 100px; position: relative; top: -40px; left: 340px; display: none">Try Again</p>
+				</form>
+				<br>
+				<form id="h7" class="hintForm" onsubmit="return false" method="post" style="height: 26px; display: none;">&nbsp&nbsp <b>840</b> &divide 7 &nbsp = &nbsp&nbsp
+					<input class="input" id="hIn7" type="text"/>
+					<input type="submit" value="Check" onclick="checkh7();" align="center"/>
+					<p id="correctH7" style="color: green; width: 60px; position: relative; top: -40px; left: 340px; display: none;">Correct!</p>
+					<p id="incorrectH7" style="color: red; width: 100px; position: relative; top: -40px; left: 340px; display: none">Try Again</p>
+				</form>
+				<h3 id="finAns" style="text-align: center; display: none;">Correct! The Average is <b>120</b>.</h3>
+				<input type="submit" value="Close" onclick="closeHint();" style="position: relative; left: 150px; font-size: 20px; padding: 10px; border-radius: 10px;">
+			</div>
+		<!----------------------------------->
+	</div>
+	
+	<script>
+		var ave;
+		var aveH;
+		
+		function checkAve(){
+			ave = Number(document.getElementById("ave").value);
+			
+			if(ave == 120){
+				document.getElementById('correct').style.display="block";
+				document.getElementById('incorr').style.display="none";
+				sessionStorage.setItem('avePeop', ave);
+			}		
+			
+			else{
+				document.getElementById('correct').style.display="none";
+				document.getElementById('incorr').style.display="block";
+			}
+		}
+		
+		function checkAveHour(){
+			aveH = Number(document.getElementById("aveHour").value);
+			
+			if(aveH == 15){
+				document.getElementById('corrAveHour').style.display="block";
+				document.getElementById('incorrAveHour').style.display="none";
+				sessionStorage.setItem('peopPerHour', aveH);
+			}
+
+			else{
+				document.getElementById('corrAveHour').style.display="none";
+				document.getElementById('incorrAveHour').style.display="block";
+			}	
+		}	
+		
+		function checkBoth(){
+			if((aveH == 15)&&(ave == 120)){
+				document.getElementById('next').style.display = "block";
+			}
+		}
+		
+		function giveHint(){
+			document.getElementById('hint').style.display="block";
+		}
+		
+		function closeHint(){
+			document.getElementById('hint').style.display="none";
+		}
+		
+		/*Checking the hints*/
+		function showh2(){
+			var h1 = Number(document.getElementById('hIn1').value);
+			
+			if(h1 == 195){
+				document.getElementById('h2').style.display="block";
+				document.getElementById('correctH1').style.display="block";
+				document.getElementById('incorrectH1').style.display="none";
+			}
+			
+			else{
+				document.getElementById('correctH1').style.display="none";
+				document.getElementById('incorrectH1').style.display="block";
+			}
+		}
+		
+		function showh3(){
+			var h2 = Number(document.getElementById('hIn2').value);
+			
+			if(h2 == 325){
+				document.getElementById('h3').style.display="block";
+				document.getElementById('correctH2').style.display="block";
+				document.getElementById('incorrectH2').style.display="none";
+			}
+			
+			else{
+				document.getElementById('incorrectH2').style.display="block";
+				document.getElementById('correctH2').style.display="none";
+			}
+		}
+		
+		function showh4(){
+			var h3 = Number(document.getElementById('hIn3').value);
+			
+			if(h3 == 450){
+				document.getElementById('h4').style.display="block";
+				document.getElementById('correctH3').style.display="block";
+				document.getElementById('incorrectH3').style.display="none";
+			}
+			
+			else{
+				document.getElementById('incorrectH3').style.display="block";
+				document.getElementById('correctH3').style.display="none";
+			}
+		}
+		
+		function showh5(){
+			var h4 = Number(document.getElementById('hIn4').value);
+			
+			if(h4 == 570){
+				document.getElementById('h5').style.display="block";
+				document.getElementById('correctH4').style.display="block";
+				document.getElementById('incorrectH4').style.display="none";
+			}
+			
+			else{
+				document.getElementById('incorrectH4').style.display="block";
+				document.getElementById('correctH4').style.display="none";
+			}
+		}
+		
+		function showh6(){
+			var h5 = Number(document.getElementById('hIn5').value);
+			
+			if(h5 == 710){
+				document.getElementById('h6').style.display="block";
+				document.getElementById('correctH5').style.display="block";
+				document.getElementById('incorrectH5').style.display="none";
+			}
+			
+			else{
+				document.getElementById('incorrectH5').style.display="block";
+				document.getElementById('correctH5').style.display="none";
+			}
+		}
+		
+		function showh7(){
+			var h6 = Number(document.getElementById('hIn6').value);
+			
+			if(h6 == 840){
+				document.getElementById('h7').style.display="block";
+				document.getElementById('correctH6').style.display="block";
+				document.getElementById('incorrectH6').style.display="none";
+			}
+			
+			else{
+				document.getElementById('incorrectH6').style.display="block";
+				document.getElementById('correctH6').style.display="none";
+			}
+		}
+		
+		function checkh7(){
+			var h7 = Number(document.getElementById('hIn7').value);
+			
+			if(h7 == 120){
+				document.getElementById('correctH7').style.display="block";
+				document.getElementById('finAns').style.display="block";
+				document.getElementById('incorrectH7').style.display="none";
+			}
+			
+			else{
+				document.getElementById('incorrectH7').style.display="block";
+				document.getElementById('correctH7').style.display="none";
+			}
+		}
+	</script>
+
+	<nav>
+		<a href="que2.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="que4.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

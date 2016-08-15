@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Volume</title>
+  <link rel='stylesheet' href='vol1.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Volume</h1>
+		
+		
+		<div id="parDiv">
+			<ul>
+				<p><b><span class="keyWord">Volume</span> is the amount of three-dimensional space that something takes up.</b></p>
+				<br>
+				<li><u>The Base Unit for Volume</u> using the Metric System (SI) is the <b><em>Liter</em></b>.</li>
+				<br>
+				<li>Solids, liquids, and gases all have volume.</li>
+				<br>
+				<li>Volume is measured differently for solids, liquids, and gases.</li>
+				<br><br>
+			
+				
+				&nbsp&nbsp&nbsp&nbsp&nbsp <!--Used these to move buttons over instead of putting it on style sheet -->
+				<a href="volLiquids.html" class="myButton">Liquids</a>
+				<a href="volDisplacement.html"  class="myButton">Solids</a>
+				<a href="volContainers.html"   class="myButton">Gases</a> 
+
+			</ul>
+			
+
+		</div>
+		
+		<div id="metDiv">
+			<h3 style="font-family: sans-serif;">Metric System (SI) Units for Volume:</h3>
+				
+			<p style="position: relative; top: -10px;"><b>1 Liter (L) = 1000 <em>Milli</em>liters (mL)
+			<br>
+			1 <em>Milli</em>liter (mL) = 1 Cubic <em>Centi</em>meter (cm<sup>3</sup>)</b></p>
+			
+		</div>
+		
+		<div id="usUnitsDiv">
+			<h3 style="font-family: sans-serif;">Convert U.S. Customary Units to Metric System Units:</h3>
+				
+			<p style="position: relative; top: -10px;"><b>1 Gallon (G) = 3.78541 Liters (L)
+			<br>
+			1 Tablespoon (tbsp.) = 14.7868 Milliliters (mL)</b></p>
+		</div>
+		
+		<img id="gradCyl" src="images/volTutorial.png">
+	
+	
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+			<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.lineWidth = 3;
+				/*Dashed Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 0);
+				ctx.lineTo(450, 500);		
+				ctx.stroke();
+				
+				/*Top Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 92);
+				ctx.lineTo(901, 92);		
+				ctx.stroke();
+				
+				/*Second Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 185);
+				ctx.lineTo(901, 185);		
+				ctx.stroke();
+						
+				
+			</script>
+	</div>
+
+	
+	
+	
+	<nav>
+		<a href="../mainToolsPage.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+  
+</body>
+</html>

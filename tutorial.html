@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cell Dynamics</title>
+  <meta http-equiv="Content-Type" content="text/html"; charset=utf-8 />
+  <title>jquery.tickertype - Demo</title>
+  <link href="tutorialStyle.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tickertype.js"></script>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+  <div id="mainFrame">
+	
+	<div id="guideBox">
+		<img id="guide" src="PICS/guide.png" />
+		<div id="ticker-area" alt="1">
+		  <ul><b>
+			<li><b>Hover your mouse over the word <a href="#" id="click" title="This one won't take you anywhere, but the rest will.">orange</a>.</b></li>
+			<li><b>You can click orange words when they turn green to learn more.</b></li>
+			<li><b>Some images are also clickable! Hover over the one below to see how it responds.</b></li>
+			<li><b>The glossary button at the bottom right will open a glossary in a new tab.</b></li>
+			<li><b>Be sure to check each page for these clickable objects!</b></li>
+			<li><b>You should follow each link to be prepared for Cell Jeopardy at the end!</b></li>
+		  </b></ul>
+		</div>
+	</div>
+	
+	<img src="PICS/mainCell.png" id="tutImg"/>
+
+  </div>
+	
+	
+  <nav>
+	<a href="cellone.html"   title="Previous"  id="previous"><b>Go Back</b></a>
+	<a href="cell1.html"     title="Next Page" id="next">    <b>Continue Learning</b></a>
+	<a href="#" onclick="window.open('glossary.html', 'Nerve Cells', 'width=900, height=650'); return false;" title="Glossary"  id="glossary" target="_blank"><b>Open Glossary</b></a>
+  </nav>
+  
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature</title>
+  <link rel='stylesheet' href='temp2.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1 id="meas">Measuring Temperature</h2>
+		
+		
+		<div id="measParDiv">
+			<p><b>We use <span class="keyWord">Thermometers</span> to measure temperature.</b></p>
+			
+			<img id="thermTut" src="images/thermTut.png">
+			<a href="tempMeas.html" class="myButton" id="measButton">Practice Measuring Temperature</a>
+		</div>
+		
+	
+		<h1 id="conv">Converting Temperature</h1>
+
+		
+		<div id="parDiv">
+			<ul>
+				<p><b>We use both Fahrenheit and Celsius for measuring temperature. However, sometimes you need to convert from one scale 
+				to the other.</b></p>
+				<br>
+				<li>It is important to be familiar with both because most countries use <b>Celsius</b> while a few use <b>Fahrenheit</b>.</li>
+				<br>
+				<li>We perform science experiments using <b>Celsius</b> as the main temperature scale.</li>
+				<br>
+				<li>We use <b>Fahrenheit</b> in the U.S. when we talk about the temperature outside or in the room. We also use it when we are cooking.</li>
+				<br><br>
+			</ul>
+			
+			<a href="tempConv.html" class="myButton" id="convButton">Practice Temperature Conversion</a>
+		</div>
+
+	
+	
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+			<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.lineWidth = 3;
+				/*Dashed Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 0);
+				ctx.lineTo(450, 500);		
+				ctx.stroke();					
+			</script>
+	</div>
+
+	
+	
+	
+	<nav>
+		<a href="temp1.html"    title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+  
+</body>
+</html>

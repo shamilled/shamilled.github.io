@@ -1,0 +1,10 @@
+<?xml version ='1.0' ?>
+	<chapter1>
+		<hint id = 'intro1'> Welcome junior scientist! If you entered this cave I'm assuming you want to become a full-fledged scientist!</hint>
+		<hint id = 'intro2'> Your journey will not be an easy one as many obstacles stand in your way. </hint>
+		<hint id = 'intro3'> But I believe you can do it! To become a scientist, you will need to collect mRNA molecules to put in the ribosome.</hint>
+		<hint id = 'intro4'> Each mRNA molecule contains a code. </hint>
+		<hint id = 'intro5'> The ribosome uses the code to make amino acids! </hint>
+		<hint id = 'intro6'> Now go forth and learn! (Oh! by the way, if you didn't already know W is to jump, A is to go left, and D is to go right!) </hint>
+		<hint id = 'intro7'> Good luck junior scientist! </hint>
+	</chapter1>

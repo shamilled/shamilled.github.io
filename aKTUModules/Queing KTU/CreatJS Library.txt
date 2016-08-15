@@ -1,0 +1,2 @@
+CreateJS Library
+<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>

@@ -1,0 +1,8 @@
+<?xml version ='1.0' ?>
+	<chapter1>
+		<hint id = 'intro1'> The team of scientists decided we need more mRNA molecules to make more amino acids.</hint>
+		<hint id = 'intro2'>The amino acids are put together to form protiens.</hint>
+		<hint id = 'intro3'>This process is called protien synthesis.</hint>
+		<hint id = 'intro4'> Another junior scientist is waiting to help you collect more mRNA molecules. </hint>
+		<hint id = 'intro5'> Now go forth and help them out!!</hint>
+	</chapter1>

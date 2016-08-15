@@ -1,0 +1,25 @@
+body{
+	background-image: url('images/ktuBackGround.png');
+	}
+
+#mainFrame{
+	width: 880px;
+	height: 900px;
+
+	background-color: #EBEBEB;
+	}
+	
+h1{
+	text-align: center;
+	}
+	
+	
+#parDiv{
+	position: absolute;
+	top: 110px;
+	left: 50px;
+	width: 800px;
+	font-size: 18px;
+	font-family: sans-serif;
+	}
+		

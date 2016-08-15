@@ -1,0 +1,245 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='graphing.css'>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawInitialChart);
+	
+	var y0 = 0;
+	var y1 = 1;
+	
+	function drawInitialChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Sales', 'Expenses'],
+          [ 0,         0],
+		  [ 1,         1],
+          [ 2,         2],
+          [ 3,         3],
+          [ 4,         4],
+		  [ 5,         5]
+        ]);
+        var options = {
+          title: 'X vs. Y',
+          hAxis: {ticks: [0,1,2,3,4,5], title: 'X Axis', baselineColor: '#8600AF', titleTextStyle: {color: "#EE7F00", bold: true}, textStyle: {color: "#EE7F00", bold: true}},
+		  vAxis: {ticks: [0,1,2,3,4,5,6,7,8,9,10], title: 'Y Axis', baselineColor: '#EE7F00', titleTextStyle: {color: "#8600AF", bold: true}, textStyle: {color: "#8600AF", bold: true}},
+          legend: 'none'
+        };
+        
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+	
+	
+	
+		
+	/*Line Chart*/
+	/*------------------------------------------------*/
+	function drawLineChart() {
+		if(Number(document.getElementById('y0Val').value) == ''){
+			var y0 = 0;}
+		if(Number(document.getElementById('y0Val').value) != ''){
+			var y0 = Number(document.getElementById('y0Val').value);
+			}
+			
+		if(Number(document.getElementById('y1Val').value) == ''){
+			var y1 = 1;}
+		if(Number(document.getElementById('y1Val').value) != ''){
+			var y1 = Number(document.getElementById('y1Val').value);
+			}
+			
+		if(Number(document.getElementById('y2Val').value) == ''){
+			var y2 = 2;}
+		if(Number(document.getElementById('y2Val').value) != ''){
+			var y2 = Number(document.getElementById('y2Val').value);
+			}
+			
+		if(Number(document.getElementById('y3Val').value) == ''){
+			var y3 = 3;}
+		if(Number(document.getElementById('y3Val').value) != ''){
+			var y3 = Number(document.getElementById('y3Val').value);
+			}
+			
+		if(Number(document.getElementById('y4Val').value) == ''){
+			var y4 = 4;}
+		if(Number(document.getElementById('y4Val').value) != ''){
+			var y4 = Number(document.getElementById('y4Val').value);
+			}
+			
+		if(Number(document.getElementById('y5Val').value) == ''){
+			var y5 = 5;}
+		if(Number(document.getElementById('y5Val').value) != ''){
+			var y5 = Number(document.getElementById('y5Val').value);
+			}
+				
+        var data = google.visualization.arrayToDataTable([
+          ['Sales', 'Expenses'],
+          [ 0,         y0],
+		  [ 1,         y1],
+          [ 2,         y2],
+          [ 3,         y3],
+          [ 4,         y4],
+		  [ 5,         y5]
+        ]);
+        var options = {
+          title: 'X vs. Y',
+		  hAxis: {ticks: [0,1,2,3,4,5], title: 'X Axis', baselineColor: '#8600AF', titleTextStyle: {color: "#EE7F00", bold: true}, textStyle: {color: "#EE7F00", bold: true}},
+		  vAxis: {ticks: [0,1,2,3,4,5,6,7,8,9,10], title: 'Y Axis', baselineColor: '#EE7F00', titleTextStyle: {color: "#8600AF", bold: true}, textStyle: {color: "#8600AF", bold: true}},
+          legend: 'none'
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+	  
+	/*Scatter Chart*/
+	/*---------------------------------------------------------------------*/
+	function drawScatterChart() {	
+		if(Number(document.getElementById('y0Val').value) == ''){
+			var y0 = 0;}
+		if(Number(document.getElementById('y0Val').value) != ''){
+			var y0 = Number(document.getElementById('y0Val').value);
+			}
+			
+		if(Number(document.getElementById('y1Val').value) == ''){
+			var y1 = 1;}
+		if(Number(document.getElementById('y1Val').value) != ''){
+			var y1 = Number(document.getElementById('y1Val').value);
+			}
+			
+		if(Number(document.getElementById('y2Val').value) == ''){
+			var y2 = 2;}
+		if(Number(document.getElementById('y2Val').value) != ''){
+			var y2 = Number(document.getElementById('y2Val').value);
+			}
+			
+		if(Number(document.getElementById('y3Val').value) == ''){
+			var y3 = 3;}
+		if(Number(document.getElementById('y3Val').value) != ''){
+			var y3 = Number(document.getElementById('y3Val').value);
+			}
+			
+		if(Number(document.getElementById('y4Val').value) == ''){
+			var y4 = 4;}
+		if(Number(document.getElementById('y4Val').value) != ''){
+			var y4 = Number(document.getElementById('y4Val').value);
+			}
+			
+		if(Number(document.getElementById('y5Val').value) == ''){
+			var y5 = 5;}
+		if(Number(document.getElementById('y5Val').value) != ''){
+			var y5 = Number(document.getElementById('y5Val').value);
+			}
+		
+				
+		
+		
+        var data = google.visualization.arrayToDataTable([
+          ['Sales', 'Expenses'],
+          [ 0,         y0],
+		  [ 1,         y1],
+          [ 2,         y2],
+          [ 3,         y3],
+          [ 4,         y4],
+		  [ 5,         y5]
+		  
+        ]);
+        var options = {
+          title: 'X vs. Y',
+          hAxis: {ticks: [0,1,2,3,4,5], title: 'X Axis', baselineColor: '#8600AF', titleTextStyle: {color: "#EE7F00", bold: true}, textStyle: {color: "#EE7F00", bold: true}},
+		  vAxis: {ticks: [0,1,2,3,4,5,6,7,8,9,10], title: 'Y Axis', baselineColor: '#EE7F00', titleTextStyle: {color: "#8600AF", bold: true}, textStyle: {color: "#8600AF", bold: true}},
+          legend: 'none'
+        };
+        
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+	<div id="mainFrame">
+		<div id="chart_div" style="width: 450px; height: 250px;">
+		</div>
+		<div id="points">
+		  <h3>Put different values in for X and Y to see how the points on the graph change.</h3>
+			<table id="table">
+			  <tr>
+				<td><span style="color: #EE7F00;"><b>X Value</b></span></td>
+				<td><span style="color: #8600AF;"><b>Y Value</b></span></td>
+			  </tr>
+			  <tr>
+			    <td>
+					0
+				</td>
+				<td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="y0Val" type="text" placeholder="0" maxlength="1"/>
+					</form>
+				</td>
+			  <tr>
+			  <tr>
+			    <td>
+					1
+				</td>
+				<td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="y1Val" type="text" placeholder="1" maxlength="1"/>
+					</form>
+				</td>
+			  <tr>
+				<td>
+					2
+				</td>
+				<td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="y2Val" type="text" placeholder="2" maxlength="1"/>
+					</form>
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					3
+				</td>
+				<td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="y3Val" type="text" placeholder="3" maxlength="1"/>
+					</form>
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					4
+				</td>
+				<td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="y4Val" type="text" placeholder="4" maxlength="1"/>
+					</form>
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					5
+				</td>
+				<td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="y5Val" type="text" placeholder="5" maxlength="1"/>
+					</form>
+				</td>
+			  </tr>
+			  
+			  
+			
+			<input id="scattButton" type="submit" value="Plot the Points" onclick="drawScatterChart();" align="center"/>
+			<input id="lineButton" type="submit" value="Connect the Points to Make a Line Graph"    onclick="drawLineChart();"    align="center"/>
+		</div>
+	</div>
+	
+	<nav>
+			<a href="moreGraphing.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+	<!--<button type="button" id="graph" onclick="drawChart()"> <b>Draw Graph</b></button>-->
+  </body>
+</html>

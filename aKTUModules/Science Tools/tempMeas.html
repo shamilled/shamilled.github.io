@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature</title>
+  <link rel='stylesheet' href='tempMeas.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Measuring Temperature</h1>
+		<h2><br><br><br>Give the temperature in the indicated units for each question. <br> There will be both &degF and &degC for every temperature.</h2>
+		<div id="q1Div" class="qDiv">
+			<img class="therm" src="images/therm1.png">
+			<form id="q1Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q1ans" type="text" placeholder="Fahrenheit" maxlength="3"/> Degrees Fahrenheit<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ1();" align="center"/>
+			</form>
+			<p id="incorrPar1a" class="incorrPar"><b>Read the line to the left of the top of the red mercury.</b></p>
+			<p id="incorrPar1b" class="incorrPar"><b>Read the line to the right of the top of the red mercury.</b></p>
+			
+			<div id="corr1Div" style="display: none;">
+				<p class="corrPar"><b>Correct!</b> <br>About how many degrees<br> Celsius is 100&deg Fahrenheit?</p>
+				<form id="q1bForm" onsubmit="return false" method="post" class="qbForm">
+					<input class="input" id="q1bans" type="text" placeholder="Celsius" maxlength="3"/> Degrees Celsius<br>
+					<input id="button" type="submit" value="Submit" onclick="checkQ1b();" align="center"/>
+				</form>
+			</div>
+			
+			<div id="next1Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next1();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q2Div" class="qDiv" style="display: none;">
+			<img class="therm" src="images/therm2.png">
+			<form id="q2Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q2ans" type="text" placeholder="Celsius" maxlength="3"/> Degrees Celsius<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ2();" align="center"/>
+			</form>
+			<p id="incorrPar2a" class="incorrPar"><b>Read the line to the left of the top of the red mercury.</b></p>
+			<p id="incorrPar2b" class="incorrPar"><b>Read the line to the right of the top of the red mercury.</b></p>
+			
+			<div id="corr2Div" style="display: none;">
+				<p class="corrPar"><b>Correct!</b> <br>About how many degrees<br> Fahrenheit is 30&deg Celsius?</p>
+				<form id="q2bForm" onsubmit="return false" method="post" class="qbForm">
+					<input class="input" id="q2bans" type="text" placeholder="Fahrenheit" maxlength="3"/> Degrees Fahrenheit<br>
+					<input id="button" type="submit" value="Submit" onclick="checkQ2b();" align="center"/>
+				</form>
+			</div>
+			
+			<div id="next2Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next2();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q3Div" class="qDiv" style="display: none;">
+			<img class="therm" src="images/therm3.png">
+			<form id="q3Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q3ans" type="text" placeholder="Fahrenheit" maxlength="3"/> Degrees Fahrenheit<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ3();" align="center"/>
+			</form>
+			<p id="incorrPar3a" class="incorrPar"><b>Read the line to the left of the top of the red mercury.</b></p>
+			<p id="incorrPar3b" class="incorrPar"><b>Read the line to the right of the top of the red mercury.</b></p>
+			
+			<div id="corr3Div" style="display: none;">
+				<p class="corrPar"><b>Correct!</b> </br>About how many degrees<br> Celsius is 90&deg Fahrenheit?</p>
+				<form id="q3bForm" onsubmit="return false" method="post" class="qbForm">
+					<input class="input" id="q3bans" type="text" placeholder="Celsius" maxlength="3"/> Degrees Celsius<br>
+					<input id="button" type="submit" value="Submit" onclick="checkQ3b();" align="center"/>
+				</form>
+			</div>
+			
+			<div id="next3Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next3();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q4Div" class="qDiv" style="display: none;">
+			<img class="therm" src="images/therm4.png">
+			<form id="q4Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q4ans" type="text" placeholder="Fahrenheit" maxlength="3"/> Degrees Fahrenheit<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ4();" align="center"/>
+			</form>
+			<p id="incorrPar4a" class="incorrPar"><b>Read the line to the left of the top of the red mercury.</b></p>
+			<p id="incorrPar4b" class="incorrPar"><b>Read the line to the right of the top of the red mercury.</b></p>
+			
+			<div id="corr4Div" style="display: none;">
+				<p class="corrPar"><b>Correct!</b> <br>About how many degrees<br> Celsius is 60&deg Fahrenheit?</p>
+				<form id="q4bForm" onsubmit="return false" method="post" class="qbForm">
+					<input class="input" id="q4bans" type="text" placeholder="Celsius" maxlength="3"/> Degrees Celsius<br>
+					<input id="button" type="submit" value="Submit" onclick="checkQ4b();" align="center"/>
+				</form>
+			</div>
+			
+			<div id="next4Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next4();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q5Div" class="qDiv" style="display: none;">
+			<img class="therm" src="images/therm5.png">
+			<form id="q5Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q5ans" type="text" placeholder="Fahrenheit" maxlength="3"/> Degrees Fahrenheit<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ5();" align="center"/>
+			</form>
+			<p id="incorrPar5a" class="incorrPar"><b>Read the line to the left of the top of the red mercury.</b></p>
+			<p id="incorrPar5b" class="incorrPar"><b>Read the line to the right of the top of the red mercury.</b></p>
+			
+			<div id="corr5Div" style="display: none;">
+				<p class="corrPar"><b>Correct!</b> <br>About how many degrees<br> Celsius is 0&deg Fahrenheit?</p>
+				<form id="q5bForm" onsubmit="return false" method="post" class="qbForm">
+					<input class="input" id="q5bans" type="text" placeholder="Celsius" maxlength="3"/> Degrees Celsius<br>
+					<input id="button" type="submit" value="Submit" onclick="checkQ5b();" align="center"/>
+				</form>
+			</div>
+			
+			<div id="next5Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next5();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q6Div" class="qDiv" style="display: none;">
+			<img class="therm" src="images/therm6.png">
+			<form id="q6Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q6ans" type="text" placeholder="Celsius" maxlength="3"/> Degrees Celsius<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ6();" align="center"/>
+			</form>
+			<p id="incorrPar6a" class="incorrPar"><b>Read the line to the left of the top of the red mercury.</b></p>
+			<p id="incorrPar6b" class="incorrPar"><b>Read the line to the right of the top of the red mercury.</b></p>
+			
+			<div id="corr6Div" style="display: none;">
+				<p class="corrPar"><b>Correct!</b> <br>About how many degrees<br> Fahrenheit is 0&deg Celsius?</p>
+				<form id="q6bForm" onsubmit="return false" method="post" class="qbForm">
+					<input class="input" id="q6bans" type="text" placeholder="Fahrenheit" maxlength="3"/> Degrees Fahrenheit<br>
+					<input id="button" type="submit" value="Submit" onclick="checkQ6b();" align="center"/>
+				</form>
+			</div>
+			
+			<div id="next6Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next6();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q7Div" class="qDiv" style="display: none;">
+			<img class="therm" src="images/therm7.png">
+			<form id="q7Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q7ans" type="text" placeholder="Fahrenheit" maxlength="3"/> Degrees Fahrenheit<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ7();" align="center"/>
+			</form>
+			<p id="incorrPar7a" class="incorrPar"><b>Read the line to the left of the top of the red mercury.</b></p>
+			<p id="incorrPar7b" class="incorrPar"><b>Read the line to the right of the top of the red mercury.</b></p>
+			
+			<div id="corr7Div" style="display: none;">
+				<p class="corrPar"><b>Correct!</b> <br>About how many degrees<br> Celsius is 70&deg Fahrenheit?</p>
+				<form id="q7bForm" onsubmit="return false" method="post" class="qbForm">
+					<input class="input" id="q7bans" type="text" placeholder="Celsius" maxlength="3"/> Degrees Celsius<br>
+					<input id="button" type="submit" value="Submit" onclick="checkQ7b();" align="center"/>
+				</form>
+			</div>
+			
+			<div id="next7Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next7();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->	
+		
+		<div id="q8Div" class="qDiv" style="display: none;">
+			<img class="therm" src="images/therm8.png">
+			<form id="q8Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q8ans" type="text" placeholder="Celsius" maxlength="3"/> Degrees Celsius<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ8();" align="center"/>
+			</form>
+			<p id="incorrPar8a" class="incorrPar"><b>Read the line to the left of the top of the red mercury.</b></p>
+			<p id="incorrPar8b" class="incorrPar"><b>Read the line to the right of the top of the red mercury.</b></p>
+			
+			<div id="corr8Div" style="display: none;">
+				<p class="corrPar"><b>Correct!</b> <br>About how many degrees<br> Fahrenheit is 50&deg Celsius?</p>
+				<form id="q8bForm" onsubmit="return false" method="post" class="qbForm">
+					<input class="input" id="q8bans" type="text" placeholder="Fahrenheit" maxlength="3"/> Degrees Fahrenheit<br>
+					<input id="button" type="submit" value="Submit" onclick="checkQ8b();" align="center"/>
+				</form>
+			</div>
+			
+			<div id="next8Div" class="nextDiv">
+				<p><b>Correct!</b></p>
+				<input type="submit"value="Next" onclick="next8();" class="next"></a>
+			</div>
+		
+		</div>
+		
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<div id="fin">
+			<h2 id="divHead">You have completed practicing measuring temperature in both Celsius and Fahrenheit.</h2>
+			<a href="../mainPage.html" id="finButton">Finished!</a>
+		</div>
+		
+		
+	</div>
+
+	<script type="text/javascript">		
+		function checkQ1(){
+			var temp = Number(document.getElementById('q1ans').value);			
+			
+			if(temp == 100){
+				document.getElementById('corr1Div').style.display = "block";
+				document.getElementById('q1Form').style.display = "none";	
+				document.getElementById('incorrPar1a').style.display = "none";	
+				document.getElementById('incorrPar1b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('corr1Div').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ1b(){
+			var temp = Number(document.getElementById('q1bans').value);			
+			
+			if(36 <= temp && temp <= 41){
+				document.getElementById('next1Div').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";	
+				document.getElementById('incorrPar1b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('incorrPar1b').style.display = "block";
+			}
+						
+		}
+		
+		function next1(){
+			document.getElementById('q1Div').style.display = "none";
+			document.getElementById('q2Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ2(){
+			var temp = Number(document.getElementById('q2ans').value);			
+
+			if(temp == 30){
+				document.getElementById('corr2Div').style.display = "block";
+				document.getElementById('q2Form').style.display = "none";	
+				document.getElementById('incorrPar2a').style.display = "none";	
+				document.getElementById('incorrPar2b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('corr2Div').style.display = "none";
+				document.getElementById('incorrPar2b').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ2b(){
+			var temp = Number(document.getElementById('q2bans').value);			
+			
+			if(80 <= temp && temp <= 85){
+				document.getElementById('next2Div').style.display = "block";
+				document.getElementById('incorrPar2a').style.display = "none";	
+				document.getElementById('incorrPar2b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('incorrPar2a').style.display = "block";
+			}
+						
+		}
+		
+		function next2(){
+			document.getElementById('q2Div').style.display = "none";
+			document.getElementById('q3Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ3(){
+			var temp = Number(document.getElementById('q3ans').value);			
+
+			if(temp == 90){
+				document.getElementById('corr3Div').style.display = "block";
+				document.getElementById('q3Form').style.display = "none";	
+				document.getElementById('incorrPar3a').style.display = "none";	
+				document.getElementById('incorrPar3b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('corr3Div').style.display = "none";
+				document.getElementById('incorrPar3a').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ3b(){
+			var temp = Number(document.getElementById('q3bans').value);			
+			
+			if(33 <= temp && temp <= 37){
+				document.getElementById('next3Div').style.display = "block";
+				document.getElementById('incorrPar3a').style.display = "none";	
+				document.getElementById('incorrPar3b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('incorrPar3b').style.display = "block";
+			}
+						
+		}
+		
+		function next3(){
+			document.getElementById('q3Div').style.display = "none";
+			document.getElementById('q4Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ4(){
+			var temp = Number(document.getElementById('q4ans').value);			
+
+			if(temp == 60){
+				document.getElementById('corr4Div').style.display = "block";
+				document.getElementById('q4Form').style.display = "none";	
+				document.getElementById('incorrPar4a').style.display = "none";	
+				document.getElementById('incorrPar4b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('corr4Div').style.display = "none";
+				document.getElementById('incorrPar4a').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ4b(){
+			var temp = Number(document.getElementById('q4bans').value);			
+			
+			if(14 <= temp && temp <= 17){
+				document.getElementById('next4Div').style.display = "block";
+				document.getElementById('incorrPar4a').style.display = "none";	
+				document.getElementById('incorrPar4b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('incorrPar4b').style.display = "block";
+			}
+						
+		}
+		
+		function next4(){
+			document.getElementById('q4Div').style.display = "none";
+			document.getElementById('q5Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ5(){
+			var temp = Number(document.getElementById('q5ans').value);			
+
+			if(temp == 0){
+				document.getElementById('corr5Div').style.display = "block";
+				document.getElementById('q5Form').style.display = "none";	
+				document.getElementById('incorrPar5a').style.display = "none";	
+				document.getElementById('incorrPar5b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('corr5Div').style.display = "none";
+				document.getElementById('incorrPar5a').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ5b(){
+			var temp = Number(document.getElementById('q5bans').value);			
+			
+			if(-20 <= temp && temp <= -15){
+				document.getElementById('next5Div').style.display = "block";
+				document.getElementById('incorrPar5a').style.display = "none";	
+				document.getElementById('incorrPar5b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('incorrPar5b').style.display = "block";
+			}
+						
+		}
+		
+		function next5(){
+			document.getElementById('q5Div').style.display = "none";
+			document.getElementById('q6Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ6(){
+			var temp = Number(document.getElementById('q6ans').value);			
+
+			if(temp == 0){
+				document.getElementById('corr6Div').style.display = "block";
+				document.getElementById('q6Form').style.display = "none";	
+				document.getElementById('incorrPar6a').style.display = "none";	
+				document.getElementById('incorrPar6b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('corr6Div').style.display = "none";
+				document.getElementById('incorrPar6b').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ6b(){
+			var temp = Number(document.getElementById('q6bans').value);			
+			
+			if(30 <= temp && temp <= 35){
+				document.getElementById('next6Div').style.display = "block";
+				document.getElementById('incorrPar6a').style.display = "none";	
+				document.getElementById('incorrPar6b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('incorrPar6a').style.display = "block";
+			}
+						
+		}
+		
+		function next6(){
+			document.getElementById('q6Div').style.display = "none";
+			document.getElementById('q7Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ7(){
+			var temp = Number(document.getElementById('q7ans').value);			
+
+			if(temp == 70){
+				document.getElementById('corr7Div').style.display = "block";
+				document.getElementById('q7Form').style.display = "none";	
+				document.getElementById('incorrPar7a').style.display = "none";	
+				document.getElementById('incorrPar7b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('corr7Div').style.display = "none";
+				document.getElementById('incorrPar7a').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ7b(){
+			var temp = Number(document.getElementById('q7bans').value);			
+			
+			if(20 <= temp && temp <= 25){
+				document.getElementById('next7Div').style.display = "block";
+				document.getElementById('incorrPar7a').style.display = "none";	
+				document.getElementById('incorrPar7b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('incorrPar7b').style.display = "block";
+			}
+						
+		}
+		
+		function next7(){
+			document.getElementById('q7Div').style.display = "none";
+			document.getElementById('q8Div').style.display = "block";
+		}
+		
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		function checkQ8(){
+			var temp = Number(document.getElementById('q8ans').value);			
+
+			if(temp == 50){
+				document.getElementById('corr8Div').style.display = "block";
+				document.getElementById('q8Form').style.display = "none";	
+				document.getElementById('incorrPar8a').style.display = "none";	
+				document.getElementById('incorrPar8b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('corr8Div').style.display = "none";
+				document.getElementById('incorrPar8b').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ8b(){
+			var temp = Number(document.getElementById('q8bans').value);			
+			
+			if(120 <= temp && temp <= 125){
+				document.getElementById('next8Div').style.display = "block";
+				document.getElementById('incorrPar8a').style.display = "none";	
+				document.getElementById('incorrPar8b').style.display = "none";
+			}
+			
+			else{
+				document.getElementById('incorrPar8a').style.display = "block";
+			}
+						
+		}
+		
+		function next8(){
+			document.getElementById('q8Div').style.display = "none";
+			document.getElementById('fin').style.display = "block";
+		}
+		
+	</script>
+	
+	
+	
+	<nav>
+		<a href="temp2.html"           title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+  
+</body>
+</html>

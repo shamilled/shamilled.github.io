@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applying the Scientific Method</title>
+  <link rel='stylesheet' href='que9.css'>
+  <meta charset=utf-8 />
+    <script type="text/javascript">
+	function checkForQQ(){
+			var QQcheck = sessionStorage.getItem("compQQ");
+			
+			if(QQcheck == 31){
+				document.getElementById('next').style.display = "block";
+			}
+		}
+		
+  </script>
+</head>
+<body onload="checkForQQ();">
+  
+	<div id="mainFrame">
+	
+		<h1>Data</h1>
+		
+		<p style="width: 800px;"><b>In this instance, your data is <span class="keyWord">Qualitative</span>. That means you don't have numbers to work with. 
+		Instead, you have observed your store and noticed that you are getting backed up lines. </b></p>
+
+		<p><b>Qualitative Data</b>: Deals with descriptions and does not use measurements. (Colors, smells, properties)</p>
+
+		<p><b>Quantitative Data</b>: This data is measured <em>quantities</em> and involves numbers and units. (3 miles, 12 seconds, 8 kilograms)</p>
+		
+		<p>Practice Identifying <a id="QQlink" href="typesOfData.html">Qualitative vs. Quantitative</a> Data before you continue.</p>
+	</div>
+
+	<nav>
+		<a href="que8.html"  title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="que10.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

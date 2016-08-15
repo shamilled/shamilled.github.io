@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='plotPoints.css'>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawInitialChart);
+	
+	var y0 = 0;
+	var y1 = 1;
+	
+	function drawInitialChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['X', 'X, Y'],
+          [ 0,         0]
+        ]);
+        var options = {
+          title: 'X vs. Y',
+          hAxis: {title: 'X'},
+		  hAxis: {ticks: [-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6]},
+          vAxis: {title: 'Y'},
+		  vAxis: {ticks: [-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6]},
+          legend: 'none'
+        };
+        
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+
+	  
+	/*Scatter Chart*/
+	/*---------------------------------------------------------------------*/
+	function drawScatterChart() {	
+		if((Number(document.getElementById('xVal').value) < -6)||(Number(document.getElementById('xVal').value) > 6)){
+			/*alert('Number is outside of graphing range');*/
+			var x = 0;}
+		if((Number(document.getElementById('xVal').value)> -6) && (Number(document.getElementById('xVal').value) < 6)){
+			/*alert('Number is within range');*/
+			var x = Number(document.getElementById('xVal').value);}
+		
+		if((Number(document.getElementById('yVal').value) < -6)||(Number(document.getElementById('yVal').value) > 6)){
+			/*alert('Number is outside of graphing range');*/
+			var y = 0;}
+		if((Number(document.getElementById('yVal').value)> -6) && (Number(document.getElementById('yVal').value) < 6)){
+			/*alert('Number is within range');*/
+			var y = Number(document.getElementById('yVal').value);}
+					
+		
+        var data = google.visualization.arrayToDataTable([
+          ['X', 'X, Y'],
+          [ x,         y]		  
+        ]);
+        var options = {
+          title: 'X vs. Y',
+          hAxis: {title: 'Age', minValue: 0, maxValue: 10},
+		  hAxis: {ticks: [-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6]},
+          vAxis: {title: 'Weight', minValue: 0, maxValue: 10},
+		  vAxis: {ticks: [-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6]},
+          legend: 'none'
+        };
+        
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+	<div id="mainFrame">
+		<div id="chart_div" style="width: 810px; height: 400px;">
+		</div>
+		<div id="points">
+		  <h3>Put different values in for X and Y to see how the points on the graph change.</h3>
+			<table id="table">
+			  <tr>
+				<td>X Value</td>
+				<td>Y Value</td>
+			  </tr>
+			  <tr>
+			    <td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="xVal" type="text"/>
+					</form>
+				</td>
+				<td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="yVal" type="text"/>
+					</form>
+				</td>
+			  </tr>
+			  
+			  
+			  
+			  
+			
+			<input id="scattButton" type="submit" value="Plot" onclick="drawScatterChart();" align="center"/>
+		</div>
+	</div>
+	<!--<button type="button" id="graph" onclick="drawChart()"> <b>Draw Graph</b></button>-->
+  </body>
+</html>

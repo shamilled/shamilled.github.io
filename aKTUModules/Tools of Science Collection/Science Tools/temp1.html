@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature</title>
+  <link rel='stylesheet' href='temp1.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Temperature</h1>
+		
+		
+		<div id="parDiv">
+			<ul>
+				<p><b><span class="keyWord">Temperature</span> is used to measure how hot or cold something is, which is related to how much thermal 
+				energy it has.</b></p>
+				<br>
+				<li>In the Metric System (SI), we measure temperature in degrees <b><em>Celsius</em></b>.</li>
+				<br>
+				<li>There are special temperatures on the temperature scales called <b>Freezing Points</b> and <b>Boiling Points</b>.
+					<ul><br>
+						<li><span class="keyWord"><b>Freezing Point</b></span>: the temperature where water freezes and becomes a solid.</li>
+						<li><span class="keyWord"><b>Boiling Point</b></span>: the temperature where water boils and evaporates (becomes a gas).</li>
+					</ul>
+				</li>
+				<br><br>
+				
+
+			</ul>
+			
+
+		</div>
+		
+		<div id="metDiv">
+			<h3 style="font-family: sans-serif;">Metric System (SI): Celsius</h3>
+				
+			<p><b>Freezing Point = 0&deg Celsius
+			<br><br>
+			Boiling Point = 100&deg Celsius
+			<br></b></p>
+			
+		</div>
+		
+		<div id="usUnitsDiv">
+			<h3 style="font-family: sans-serif;">U.S. Customary: Fahrenheit</h3>
+				
+			<p><b>Freezing Point = 32&deg Fahrenheit
+			<br><br>
+			Boiling Point = 212&deg Fahrenheit
+			<br>
+			</b></p>
+		</div>
+		
+		<img id="therm" src="images/thermometer.png">
+	
+	
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+			<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.lineWidth = 3;
+				/*Dashed Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 0);
+				ctx.lineTo(450, 500);		
+				ctx.stroke();
+				
+				/*Top Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 125);
+				ctx.lineTo(901, 125);		
+				ctx.stroke();
+				
+				/*Second Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 250);
+				ctx.lineTo(901, 250);		
+				ctx.stroke();
+						
+				
+			</script>
+	</div>
+
+	
+	
+	
+	<nav>
+		<a href="../mainToolsPage.html"           title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="temp2.html"           title="Previous Page" id="next" class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

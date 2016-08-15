@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth17.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Conclusion</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<p><b>From our data, we conclude that our hypothesis was correct and Fertilizer 2 helped Plant B grow taller than Plant A.</b></p>
+				<br>
+				<li>We concluded that Fertilizer 2 helps plants grow taller, but can we say it works every time?</li>
+				<li>What should we do to increase our confidence that Fertilizer 2 makes plants grow taller?</li>
+				<br>
+				<li>There are two things that you should do:
+				<br><br>
+					<ol>
+						<li>Look over all of your data and make different types of charts and graphs to spot any patterns and trends that
+						will help you understand what is happening better.</li>
+						<br>
+						<li>Perform the experiment several more times. The <em>more trials</em> you use, the stronger your data is and the more accurate your conclusion
+						can be.</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+		
+		<div id="finished">
+			<h2 class="closeHead">Are you sure you want to finish?</h2>
+			<a href="http://ktu.vbi.vt.edu/" class="finish" id="yes"> <b>Yes</b></a>
+			<button class="finish" type="button" id="no" onclick="resume()"> <b>No</b></button>
+		</div>
+		
+		
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,    50);
+			ctx.lineTo(850,  50);
+			ctx.lineTo(850,  440);
+			ctx.lineTo(80,   440);
+			ctx.lineTo(80,   500);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(185,  50);
+			ctx.lineTo(171,  57);
+			ctx.lineTo(171,  43);
+			ctx.lineTo(185,  50);						
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(80, 500);
+			ctx.lineTo(87, 486);
+			ctx.lineTo(73, 486);
+			ctx.lineTo(80, 500);
+			ctx.fill();
+			ctx.stroke();
+					
+			function finish(){
+				document.getElementById("finished").style.display="block";
+			}
+			
+			function resume(){
+				document.getElementById("finished").style.display="none";
+			}
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod16.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<button class="pagechange" type="button" id="finish" onclick="finish()"> <b>Finish</b></button>
+		<a href="scientificMethod18.html" title="Next Page"     id="next"     class="pagechange"><b>Learn More About Graphing and Data</b></a>
+	</nav>
+  
+</body>
+</html>

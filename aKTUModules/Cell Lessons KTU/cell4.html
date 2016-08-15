@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cells</title>
+  <link rel='stylesheet' href='cell4style.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+	<!--Display coordinates of mouse on click-->
+<!--   <script>
+  function show_coords(event)
+    {
+    var x=event.clientX
+    var y=event.clientY
+    alert("X coords: " + x + ", Y coords: " + y)
+    }
+</script> -->
+</head>
+
+<body>
+  
+  <div id="mainFrame" onmousedown="show_coords(event)">
+    
+	<h1>Inside the Cell</h1>
+	<!--#FFEB64 to #FFDE00-->
+	
+    <div id="squares">
+      <div id="1"></div>
+      <div id="2"></div>
+      <div id="3"></div>
+	  <div id="4"></div>
+    </div>​
+	
+	<img id="cellFrame"      src="images/cellFrame.png"        />
+	<img id="cellRib"        src="images/cellRibosomes.png"    />
+	<img id="cellSMER"       src="images/cellSMER.png"         />
+	<img id="cellMit"        src="images/cellMitochondrion.png"/>
+	<img id="cellGolgiApp"   src="images/cellGolgiApp.png"     />
+	<img id="cellNuc"        src="images/cellNucleus.png"      />
+	<img id="cellLys"        src="images/cellLysosomes.png"    />
+	<img id="cellNuco"       src="images/cellNucleolus.png"    />
+	<img id="cellRER"        src="images/cellRER.png"          />
+	
+	<!--Labels-->
+	
+	<p id="rib"    class="label"><a href="rib.html"  title="Ribosomes"                    id="riblink"   class="orglink" onmouseover="animRib();"  onmouseout="unanimRib();" ><b>Ribosome</b></a></p>
+	<p id="smER"   class="label"><a href="smer.html" title="Smooth Endoplasmic Reticulum" id="smerlink"  class="orglink" onmouseover="animSMER();" onmouseout="unanimSMER();"><b>Smooth Endoplasmic Reticulum</b></a></p>
+	<p id="mit"    class="label"><a href="mit.html"  title="Mitochondrion"                id="mitlink"   class="orglink" onmouseover="animMit();"  onmouseout="unanimMit();" ><b>Mitochondrion</b></a></p>
+	<p id="gAp"    class="label"><a href="gap.html"  title="Golgi Apparatus"              id="gaplink"   class="orglink" onmouseover="animGAP();"  onmouseout="unanimGAP();" ><b>Golgi Apparatus</b></a></p>
+	<p id="nuc"    class="label"><a href="nuc.html"  title="Nucleus"                      id="nuclink"   class="orglink" onmouseover="animNuc();"  onmouseout="unanimNuc();" ><b>Nucleus</b></a></p>
+	<p id="lys"    class="label"><a href="lys.html"  title="Lysosomes"                    id="lyslink"   class="orglink" onmouseover="animLys();"  onmouseout="unanimLys();" ><b>Lysosome</b></a></p>
+	<p id="nuco"   class="label"><a href="nuco.html" title="Nucleolus"                    id="nucolink"  class="orglink" onmouseover="animNuco();" onmouseout="unanimNuco();"><b>Nucleolus</b></a></p>
+	<p id="cyt"    class="label"><a href="cyt.html"  title="Cytoplasm"                    id="cytlink"   class="orglink" onmouseover="animCyt();"  onmouseout="unanimCyt();" ><b>Cytoplasm</b></a></p>
+	<p id="cm"     class="label"><a href="cm.html"   title="Cell Membrane"                id="cmlink"    class="orglink" onmouseover="animCM();"   onmouseout="unanimCM();"  ><b>Cell Membrane</b></a></p>
+	<p id="rER"    class="label"><a href="rer.html"  title="Rough Endoplasmic Reticulum"  id="rerlink"   class="orglink" onmouseover="animRER();"  onmouseout="unanimRER();" ><b>Rough Endoplasmic Reticulum</b></a></p>
+	
+	<p id="inf">Click on the names of the organelles.</p>
+	<p id="linkPar">Also, check out this link for a great 
+	<a href="#" onclick="window.open('https://www.youtube.com/watch?v=fKEaTt9heNM&src_vid=LP7xAr2FDFU&feature=iv&annotation_id=annotation_219283', 'Organelles', 'width=1000, height=700'); return false;" id="vid">video</a> on the organelles.</p>
+	
+  </div>
+  
+  <script type="text/javascript">
+	function animRib(){
+		document.getElementById('cellRib').style.width = '228px';
+	}
+	function unanimRib(){
+		document.getElementById('cellRib').style.width = '225px';
+	}
+	
+	
+	function animSMER(){
+		document.getElementById('cellSMER').style.width = '110px';
+	}
+	function unanimSMER(){
+		document.getElementById('cellSMER').style.width = '107px';
+	}
+	
+	
+	function animMit(){
+		document.getElementById('cellMit').style.width = '305px';
+	}
+	function unanimMit(){
+		document.getElementById('cellMit').style.width = '302px';
+	}
+	
+	
+	function animGAP(){
+		document.getElementById('cellGolgiApp').style.width = '212px';
+	}
+	function unanimGAP(){
+		document.getElementById('cellGolgiApp').style.width = '209px';
+	}
+	
+	
+	function animNuc(){
+		document.getElementById('cellNuc').style.width = '171px';
+	}
+	function unanimNuc(){
+		document.getElementById('cellNuc').style.width = '168px';
+	}
+	
+	
+	function animLys(){
+		document.getElementById('cellLys').style.width = '312px';
+	}
+	function unanimLys(){
+		document.getElementById('cellLys').style.width = '309px';
+	}
+	
+	
+	function animNuco(){
+		document.getElementById('cellNuco').style.width = '153px';
+	}
+	function unanimNuco(){
+		document.getElementById('cellNuco').style.width = '150px';
+	}
+	
+	
+	function animRER(){
+		document.getElementById('cellRER').style.width = '210px';
+	}
+	function unanimRER(){
+		document.getElementById('cellRER').style.width = '207px';
+	}
+  </script>
+  
+  
+  <nav>
+    <a href="cell3.html" title="previous page" id="previous" class="pagechange"><b>Go Back</b></a>
+	<a href="cell5.html"  title="Next Page"     id="next"><b>Continue Learning</b></a>
+	<a href="#" onclick="window.open('glossary.html', 'Nerve Cells', 'width=900, height=650'); return false;" title="Glossary"  id="glossary" target="_blank"><b>Open Glossary</b></a>
+	<a href="#" onclick="window.open('sources.html', 'Nerve Cells', 'width=900, height=650'); return false;" title="Citations"  id="sources" target="_blank">Citations</a>
+  </nav>
+  
+</body>
+</html>

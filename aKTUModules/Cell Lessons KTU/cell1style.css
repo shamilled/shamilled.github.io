@@ -1,0 +1,89 @@
+body{
+  width: 100%;
+  max-width: 785px;
+  height: 600px;
+  background-image: url('images/ktuBackGround.png');
+  color: black;
+  }
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  color: black;
+  background-image: url('images/Background 2.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: center;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  }
+  
+h5{
+  color: black;
+  margin-left: 30px;
+  }
+  
+p{
+  font-size: 15px;
+  margin-top: -10px;
+  }
+  
+#salt{
+  margin-left: 30px;
+  }
+
+  
+#previous{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 15px;
+  }
+  
+#next{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  }
+  
+#glossary{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(155,255,230);
+  border: 15px;
+  padding: 10px;
+  margin-left: 4px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 492px;
+  }
+  
+#sources{
+  color: white;
+  position: absolute;
+  left: 700px;
+  top: 500px;
+  }
+  
+a:hover {
+  font-size: 105%;
+  color: green;
+  }

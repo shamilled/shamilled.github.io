@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+		
+	  function drawLineChart() {
+		var x1 = Number(document.getElementById('x1Val').value);
+		var y1 = Number(document.getElementById('y1Val').value);
+		var x2 = Number(document.getElementById('x2Val').value);
+		var y2 = Number(document.getElementById('y2Val').value);
+        var data = google.visualization.arrayToDataTable([
+          ['Sales', 'Expenses'],
+          [x1,         y1],
+          [x2,         y2],
+          [660,       1120],
+          [1030,      540]
+        ]);
+        var options = {
+          title: 'Company Performance'
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+	  
+	  function drawScatterChart() {
+		var x1 = Number(document.getElementById('x1Val').value);
+		var y1 = Number(document.getElementById('y1Val').value);
+		var x2 = Number(document.getElementById('x2Val').value);
+		var y2 = Number(document.getElementById('y2Val').value);
+		var xmin = Math.min(x1, x2, 660, 1030).value;
+		var ymin = Math.min(y1, y2, 1120, 540).value;
+		var xmax = Math.max(x1, x2, 660, 1030).value;
+		var ymax = Math.max(y1, y2, 1120, 540).value;
+        var data = google.visualization.arrayToDataTable([
+          ['Sales', 'Expenses'],
+          [ x1,         y1],
+          [ x2,         y2],
+          [ 660,       1120],
+          [ 1030,      540]
+        ]);
+        var options = {
+          title: 'Age vs. Weight comparison',
+          hAxis: {title: 'Age', minValue: xmin, maxValue: xmax},
+          vAxis: {title: 'Weight', minValue: ymin, maxValue: ymax},
+          legend: 'none'
+        };
+        
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;">
+	</div>
+	<div id="points">
+		<form id="vals" onsubmit="return false" method="post" class="qform">
+				Input an X value<input id="x1Val" type="text" /><br>
+				Input a Y value<input id="y1Val" type="text" /><br>
+		</form>
+		<form id="vals" onsubmit="return false" method="post" class="qform">
+				Input an X value<input id="x2Val" type="text" /><br>
+				Input a Y value<input id="y2Val" type="text" /><br>
+		</form>
+		<input type="submit" value="Line" onclick="drawLineChart();" align="center"/>
+		<input type="submit" value="Scatter" onclick="drawScatterChart();" align="center"/>
+	</div>
+	<!--<button type="button" id="graph" onclick="drawChart()"> <b>Draw Graph</b></button>-->
+  </body>
+</html>

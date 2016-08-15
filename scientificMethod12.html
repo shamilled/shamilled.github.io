@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth12.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Tables: Columns</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li><b>Each column of a table is for one variable. If you have three variables, then you will need three columns.</b></li>
+				<br>
+				<li>In our experiment we have three variables:
+					<ul>
+						<li>The Day (independent variable)</li>
+						<li>Height of Plant A (dependent variable)</li>
+						<li>Height of Plant B (dependent variable)</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<img id="column" src="PICS/tableColumn.png">
+		
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(901,  405);
+			ctx.lineTo(870,  405);
+			ctx.lineTo(870,  480);
+			ctx.lineTo(370,  480);
+			ctx.lineTo(370,  390);
+			ctx.lineTo(20,   390);
+			ctx.lineTo(20,   65);
+			ctx.lineTo(901,  65);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(55,  65);
+			ctx.lineTo(41,  58);
+			ctx.lineTo(41,  72);
+			ctx.lineTo(55,  65);						
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901,  65);
+			ctx.lineTo(887,  58);
+			ctx.lineTo(887,  72);
+			ctx.lineTo(901,  65);
+			ctx.fill();
+			ctx.stroke();
+					
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod11.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod13.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

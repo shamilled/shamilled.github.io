@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='readingCoordinates.css'>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawScatterChart);
+	  
+	/*Scatter Chart*/
+	/*---------------------------------------------------------------------*/
+		var y = Math.floor((Math.random() * 10) + 1);
+		var x = Math.floor((Math.random() * 10) + 1);
+	
+	
+	function drawScatterChart() {			
+        var data = google.visualization.arrayToDataTable([
+          ['X', 'X, Y'],
+          [ x,       y]		  
+        ]);
+        
+        
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        chart.draw(data, {title: 'Practice Plotting Points',
+		  hAxis: {ticks: [0,1,2,3,4,5,6,7,8,9,10], title: 'X Axis', baselineColor: '#8600AF', titleTextStyle: {color: "#EE7F00", bold: true}, textStyle: {color: "#EE7F00", bold: true}},
+		  vAxis: {ticks: [0,1,2,3,4,5,6,7,8,9,10], title: 'Y Axis', baselineColor: '#EE7F00', titleTextStyle: {color: "#8600AF", bold: true}, textStyle: {color: "#8600AF", bold: true}},
+          legend: 'none',
+		  lineWidth: '5',
+		  enableInteractivity: false}		
+		);
+	  }
+	  
+	function checkAnswer() {
+		if ((Number(document.getElementById('xVal').value) == x) && (Number(document.getElementById('yVal').value) == y)){
+			alert('Correct!');
+			location.reload();
+		}
+		else{
+			document.getElementById("warning").style.display="block";
+		}
+	
+	}
+	
+	
+    </script>
+  </head>
+  <body>
+	<div id="mainFrame">
+		<div id="chart_div" style="width: 500px; height: 330px;">
+		</div>
+		
+		
+		<div id="points">
+		  <h3>Read the values for X and Y and put them in the table below.</h3>
+		  <p id="warning"><b>Remember to read the <span style="color: #EE7F00;"><b>X value</span> from below the point and the <span style="color: #8600AF;"><b>Y value</span> to the left of the point.</b></p>
+			<table id="table">
+			  <tr>
+				<td><span style="color: #EE7F00;"><b>X Value</b></span></td>
+				<td><span style="color: #8600AF;"><b>Y Value</b></span></td>
+			  </tr>
+			  <tr>
+			    <td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="xVal" type="text"/>
+					</form>
+				</td>
+				<td>
+					<form class="vals" onsubmit="return false" method="post">
+							<input class="input" id="yVal" type="text"/>
+					</form>
+				</td>
+			  </tr>
+			
+			  
+			  
+			
+			<input id="button" type="submit" value="Check Answer" onclick="checkAnswer();" align="center"/>
+			
+			
+		</div>
+		
+		<nav>
+			<a href="moreGraphing.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		</nav>
+		
+	</div>
+	<!--<button type="button" id="graph" onclick="drawChart()"> <b>Draw Graph</b></button>-->
+  </body>
+</html>

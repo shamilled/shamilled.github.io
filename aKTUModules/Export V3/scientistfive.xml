@@ -1,0 +1,6 @@
+<?xml version ='1.0' ?>
+	<chapter1>
+		<hint id = 'intro1'>Great job completing three of the four minigames! </hint>
+		<hint id = 'intro2'>In this minigame you will try and solve the problem of bottlenecking. </hint>
+		<hint id = 'intro3'> After that you will face the boss! Good luck!</hint>
+	</chapter1>

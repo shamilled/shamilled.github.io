@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Displacement</title>
+  <link rel='stylesheet' href='volDisplacement.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Displacement</h1>
+		
+		
+		<div id="parDiv">
+			<ul>
+				<p><b><span class="keyWord">Displacement</span> helps us find the <u>volume</u> of a solid object.</b></p>
+				<br>
+				<li>To find this volume, we fill a graduated cylinder with enough water to cover the object.<br>
+				<span style="color: #0000FF; text-shadow: -2px 1px 1px white;">(we'll use <b>50 mL</b>)</span></li>
+				<br>
+				<li>Then, we place an object in the graduated cylinder and the water level rises. In our case the water level rises to 
+				<span style="color: #FF0000; text-shadow: -2px 1px 1px white;"><b>150 mL</b></span>.</li>
+				<br>
+				<li>This means that our object has a volume of <span style="color: #8000FF; text-shadow: 1px 1px 1px white;"><b>100 mL</b></span>. We calculate this by subtracting the initial volume from the final volume.</li>
+				<br><br>
+			</ul>
+			
+
+		</div>
+
+		
+		<img id="dispTut" src="PICS/volDispTutorial.png">
+	
+	
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+			<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.lineWidth = 3;
+				/*Dashed Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 0);
+				ctx.lineTo(450, 500);		
+				ctx.stroke();					
+			</script>
+	</div>
+
+	
+	
+	
+	<nav>
+		<a href="vol1.html"    title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="volSolids.html"      title="Next Page"     id="next"     class="pagechange"><b>Measuring Volume Activity</b></a>
+	</nav>
+  
+</body>
+</html>

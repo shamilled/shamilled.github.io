@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Length</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+  <script src="len2.js" type="text/javascript" charset="utf-8"></script>
+  <link rel='stylesheet' href='len2.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Measuring Length</h1>
+		<p style="position: relative; top: 100px; left: 20px;">Drag the ruler to measure the length of the object <b>(at the widest part)</b>. Give answer in decimal form.
+		<br>For metric (SI) measurements, go to the nearest 0.5 cm. 
+		<br>For U.S. Customary measurements, go to the nearest 0.25 (1/4) of an inch.</p>
+		
+		<div id="tutorial">
+			<p>Drag the ruler at the bottom of the page up to the rectangle to measure the width.</p>
+			
+			<input id="begin" type="submit" value="Begin" onclick="begin();" align="center"/>
+			<img id="tutRuler" src="images/ruler.png" >
+			<img id="object"   src="images/object.png">
+		</div>
+		
+			<!--Was going to update score in here, but would prefer students to keep trying until each is correct before moving on.-->
+		<div id="scoreBox">
+			<!-- <b><span id="score">0/0</span></b> -->
+			<p id="corrPar">Correct!</p>
+			<p id="incorrPar1a">Remember to align the <br>0 cm mark up with the left side of the object.</p>
+			<p id="incorrPar1b">Remember to align the <br>0 inch mark up with the left side of the object.</p>
+			<p id="incorrPar2">Remember to measure the widest part of the object.</p>
+		</div>
+		
+		
+	<!-- Begin Answer Forms Here -->	
+		<div id="q1" class="qDiv" style="display: none;">
+			<form id="q1Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q1ans" type="text" placeholder="Length in SI Units" maxlength="5"/> centimeters<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ1();" align="center"/>
+			</form>
+			<img id="img1" src="images/apple.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q2" class="qDiv" style="display: none;">
+			<form id="q2Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q2ans" type="text" placeholder="Length in U.S. Units" maxlength="5"/> inches<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ2();" align="center"/>
+			</form>
+			<img id="img2" src="images/cookie.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q3" class="qDiv" style="display: none;">
+			<form id="q3Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q3ans" type="text" placeholder="Length in SI Units" maxlength="5"/> centimeters (remember to use decimal notation)<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ3();" align="center"/>
+			</form>
+			<img id="img3" src="images/marker.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q4" class="qDiv" style="display: none;">
+			<form id="q4Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q4ans" type="text" placeholder="Length in SI Units" maxlength="5"/> centimeters <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ4();" align="center"/>
+			</form>
+			<img id="img4" src="images/marble.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q5" class="qDiv" style="display: none;">
+			<form id="q5Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q5ans" type="text" placeholder="Length in U.S. Units" maxlength="5"/> inches (remember to use decimal notation)<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ5();" align="center"/>
+			</form>
+			<img id="img5" src="images/tennisBall.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q6" class="qDiv" style="display: none;">
+			<form id="q6Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q6ans" type="text" placeholder="Length in U.S. Units" maxlength="5"/> inches (remember to use decimal notation)<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ6();" align="center"/>
+			</form>
+			<img id="img6" src="images/paperclip.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q7" class="qDiv" style="display: none;">
+			<form id="q7Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q7ans" type="text" placeholder="Length in SI Units" maxlength="5"/> centimeters <br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ7();" align="center"/>
+			</form>
+			<img id="img7" src="images/orange.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q8" class="qDiv" style="display: none;">
+			<form id="q8Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q8ans" type="text" placeholder="Length in SI Units" maxlength="5"/> centimeters (remember to use decimal notation)<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ8();" align="center"/>
+			</form>
+			<img id="img8" src="images/eraser.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q9" class="qDiv" style="display: none;">
+			<form id="q9Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q9ans" type="text" placeholder="Length in SI Units" maxlength="5"/> centimeters (remember to use decimal notation)<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ9();" align="center"/>
+			</form>
+			<img id="img9" src="images/penny.png">
+		</div>
+	<!-------------------------------------------------------------------------------------->	
+		<div id="q10" class="qDiv" style="display: none;">
+			<form id="q10Form" onsubmit="return false" method="post" class="qForm">
+				<input class="input" id="q10ans" type="text" placeholder="Length in U.S. Units" maxlength="5"/> inches<br>
+				<input id="button" type="submit" value="Submit" onclick="checkQ10();" align="center"/>
+			</form>
+			<img id="img10" src="images/pencil.png">
+		</div>
+		
+	<!-------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------->
+	
+		<div id="fin">
+			<h2 id="divHead">You have completed practicing measuring with both metric and customary rulers.</h2>
+			<a href="../mainToolsPage.html" id="finButton">Finished!</a>
+		</div>
+		
+		
+		
+		
+		
+	<!--------------------------------------------------------------------------------------->	
+		<img id="ruler" draggable="true" value="ruler" src="images/ruler.png"    >
+		<img id="inch"  draggable="true" value="inch"  src="images/inchRuler.png">
+	
+	</div>
+	
+	<script type="text/javascript">		
+		function begin(){
+			document.getElementById('q1').style.display = "block";
+			document.getElementById('tutorial').style.display = "none";
+		}
+		
+		function checkQ1(){
+			var len = Number(document.getElementById('q1ans').value);			
+			
+			if(len == 7){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";	
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q1').style.display = "none";
+				document.getElementById('q2').style.display = "block";
+				document.getElementById('ruler').style.display = "none";
+				document.getElementById('inch').style.display = "block";
+			}
+			
+			if(len > 7){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "block";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 7){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+			}
+						
+		}
+		
+		function checkQ2(){
+			var len = Number(document.getElementById('q2ans').value);			
+			
+			if(len == 3){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";					
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q2').style.display = "none";
+				document.getElementById('q3').style.display = "block";
+				document.getElementById('ruler').style.display = "block";
+				document.getElementById('inch').style.display = "none";				
+			}
+			if(len > 3){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";	
+				document.getElementById('incorrPar1b').style.display = "block";
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 3){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+				
+			}
+				
+		}
+		
+		function checkQ3(){
+			var len = Number(document.getElementById('q3ans').value);			
+			
+			if(len == 14.5){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";					
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q3').style.display = "none";
+				document.getElementById('q4').style.display = "block";
+				document.getElementById('ruler').style.display = "block";
+				document.getElementById('inch').style.display = "none";				
+			}
+			if(len > 14.5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "block";	
+				document.getElementById('incorrPar1b').style.display = "none";
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 14.5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+				
+			}
+				
+		}
+		
+		function checkQ4(){
+			var len = Number(document.getElementById('q4ans').value);			
+			
+			if(len == 2){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";					
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q4').style.display = "none";
+				document.getElementById('q5').style.display = "block";
+				document.getElementById('ruler').style.display = "none";
+				document.getElementById('inch').style.display = "block";				
+			}
+			if(len > 2){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "block";	
+				document.getElementById('incorrPar1b').style.display = "none";
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 2){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+				
+			}
+				
+		}
+		
+		function checkQ5(){
+			var len = Number(document.getElementById('q5ans').value);			
+			
+			if(len == 2.5){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";					
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q5').style.display = "none";
+				document.getElementById('q6').style.display = "block";
+				document.getElementById('ruler').style.display = "none";
+				document.getElementById('inch').style.display = "block";				
+			}
+			if(len > 2.5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";	
+				document.getElementById('incorrPar1b').style.display = "block";
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 2.5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+				
+			}
+				
+		}
+		
+		function checkQ6(){
+			var len = Number(document.getElementById('q6ans').value);			
+			
+			if(len == 1.25){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";					
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q6').style.display = "none";
+				document.getElementById('q7').style.display = "block";
+				document.getElementById('ruler').style.display = "block";
+				document.getElementById('inch').style.display = "none";				
+			}
+			if(len > 1.25){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";	
+				document.getElementById('incorrPar1b').style.display = "block";
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 1.25){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+				
+			}
+				
+		}
+		
+		function checkQ7(){
+			var len = Number(document.getElementById('q7ans').value);			
+			
+			if(len == 9){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";					
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q7').style.display = "none";
+				document.getElementById('q8').style.display = "block";
+				document.getElementById('ruler').style.display = "block";
+				document.getElementById('inch').style.display = "none";				
+			}
+			if(len > 9){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "block";	
+				document.getElementById('incorrPar1b').style.display = "none";
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 9){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+				
+			}
+				
+		}
+		
+		function checkQ8(){
+			var len = Number(document.getElementById('q8ans').value);			
+			
+			if(len == 6.5){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";					
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q8').style.display = "none";
+				document.getElementById('q9').style.display = "block";
+				document.getElementById('ruler').style.display = "block";
+				document.getElementById('inch').style.display = "none";				
+			}
+			if(len > 6.5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "block";	
+				document.getElementById('incorrPar1b').style.display = "none";
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 6.5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+				
+			}
+				
+		}
+		
+		function checkQ9(){
+			var len = Number(document.getElementById('q9ans').value);			
+			
+			if(len == 3.5){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";					
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q9').style.display = "none";
+				document.getElementById('q10').style.display = "block";
+				document.getElementById('ruler').style.display = "none";
+				document.getElementById('inch').style.display = "block";				
+			}
+			if(len > 3.5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "block";	
+				document.getElementById('incorrPar1b').style.display = "none";
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 3.5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+				
+			}
+				
+		}
+		
+		function checkQ10(){
+			var len = Number(document.getElementById('q10ans').value);			
+			
+			if(len == 5){
+				document.getElementById('corrPar').style.display = "block";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";					
+				document.getElementById('incorrPar2').style.display = "none";
+				document.getElementById('q10').style.display = "none";
+				document.getElementById('fin').style.display = "block";
+				document.getElementById('ruler').style.display = "none";
+				document.getElementById('inch').style.display = "none";				
+			}
+			if(len > 5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";	
+				document.getElementById('incorrPar1b').style.display = "block";
+				document.getElementById('incorrPar2').style.display = "none";
+			}
+			
+			if(len < 5){
+				document.getElementById('corrPar').style.display = "none";
+				document.getElementById('incorrPar1a').style.display = "none";
+				document.getElementById('incorrPar1b').style.display = "none";	
+				document.getElementById('incorrPar2').style.display = "block";
+				
+			}
+				
+		}
+		
+	</script>
+
+	
+	
+	<nav>
+		<a href="len1.html"    title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+	</nav>
+  
+</body>
+</html>

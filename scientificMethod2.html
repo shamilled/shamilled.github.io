@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth2.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Scientific Method</h1>
+		<ul>
+			<li><b>Every time you <u>solve a problem</u>, you use the <span class="keyWord"><em>Scientific Method</em></span>.</b></li>
+			<br>
+			<li>You use some form of the Scientific Method everyday without even thinking about it!</li>
+		</ul>
+		
+		<p>For instance, when you walk into a dark room you are faced with a problem: you can't see! You know that you can turn the lights on with a switch,
+		so you flip the switch. 
+		<br>
+		<br>
+		If the lights come on, you can conclude that the lights were turned off. If not, then maybe the bulbs are burnt out. To solve that
+		simple problem, you naturally followed the steps of the Scientific Method!
+		</p>
+		
+		<img id="switch" src="PICS/lightSwitch.png">
+		
+		<!--  The canvas has dimensions equal to the main division. I use it to draw the arrows -->
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(650, 65);
+			ctx.lineTo(830, 65);
+			ctx.lineTo(830, 220);
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.moveTo(830, 220);
+			ctx.lineTo(775, 220);
+			ctx.lineTo(775, 460);
+			ctx.lineTo(830, 460);
+			ctx.lineTo(830, 500);
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.moveTo(830, 500);
+			ctx.lineTo(823, 486);
+			ctx.lineTo(837, 486);
+			ctx.lineTo(830, 500);
+			ctx.fill();
+			ctx.stroke();
+		</script>
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod1.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod3.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

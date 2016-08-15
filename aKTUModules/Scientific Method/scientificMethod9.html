@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth9.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Dependent Variable</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li><b><u>Height of the Plants</u></b>: The height of the plants (according to your hypothesis) will change
+				<span class="important"><b><u><i>depending</i></u></b></span> on which fertilizer you use. Because this variable
+				<span class="important"><b><u><i>depends</i></u></b></span> on another variable it is a <i>Dependent Variable</i>.
+				</li>
+			</ul>
+		</div>
+		
+		
+		<img id="guy" src="images/depVarGuy.png">
+		
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,   460);
+			ctx.lineTo(30,  460);
+			ctx.lineTo(30,  340);
+			ctx.lineTo(660, 340);
+			ctx.lineTo(660, 480);
+			ctx.lineTo(860, 480);
+			ctx.lineTo(860,  20);
+			ctx.lineTo(0,    20);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(85, 340);
+			ctx.lineTo(71, 347);
+			ctx.lineTo(71, 333);
+			ctx.lineTo(85, 340);			
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(0,  20);
+			ctx.lineTo(14, 13);
+			ctx.lineTo(14, 27);
+			ctx.lineTo(0,  20);
+			ctx.fill();
+			ctx.stroke();		
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod8.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod10.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

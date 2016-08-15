@@ -1,0 +1,276 @@
+body{
+  width: 100%;
+  max-width: 785px;
+  height: 600px;
+  background-image: url('PICS/ktuBackGround.png');
+  color: black;
+    margin: auto;
+  }
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  color: white;
+  background-image: url('PICS/Background 2.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: center;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  }
+  
+#cellDiv{
+  width: 250px;
+  position: absolute;
+  top: 10px;
+  left: 33%;
+  }
+
+.tissImg{
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+  position: absolute;
+  padding: 1px;
+  background-color: #00008B;
+  border: 2px solid black;
+  }
+  
+#epithTissue{
+  margin-left: 35px;
+  }
+  
+#nerveTissue{
+  margin-left: 35px;
+  }
+  
+  
+#tissDiv{
+  width: 350px;
+  height: 450px;
+  position: absolute;
+  top: 0px;
+  left: 110%;
+  }
+  
+#epithTissue{
+  top: 100px;
+  left: 5px;
+  }
+  
+#connectiveTissue{
+  top: 100px;
+  left: 175px;
+  }
+  
+#nerveTissue{
+  top: 235px;
+  left: 5px;
+  }
+  
+#cardiacTissue{
+  top: 235px;
+  left: 175px;
+  }
+
+#orgsDiv{
+  width: 300px;
+  height: 450px;
+  position: absolute;
+  top: 0px;
+  left: 110%;
+  }
+  
+#digSys{
+  height: 220px;
+  }
+  
+#organs{
+  width: 240px;
+  height: 220px;
+  }
+  
+#orgSysDiv{
+  width: 300px;
+  height: 450px;
+  position: absolute;
+  top: 0px;
+  left: 110%;
+  }
+
+#persDiv{
+  width: 300px;
+  height: 450px;
+  position: absolute;
+  top: 6%;
+  left: 110%;
+  }
+  
+#person{
+  width: 240px;
+  height: 220px;
+  }
+  
+#rArrow{
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  top: 40%;
+  left: 80%;
+  }
+  
+#rArrow2{
+  position:absolute;
+  width: 15%;
+  height: 20%;
+  top: 40%;
+  left: 105%;
+  }
+  
+#rArrow3{
+  position:absolute;
+  width: 15%;
+  height: 20%;
+  top: 40%;
+  left: 105%;
+  }
+  
+#rArrow4{
+  position:absolute;
+  width: 15%;
+  height: 20%;
+  top: 40%;
+  left: 105%;
+  }
+   
+#lArrow{
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  top: 40%;
+  left: 105%;
+  }
+  
+#lArrow2{
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  top: 40%;
+  left: 105%;
+  }
+  
+#lArrow3{
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  top: 40%;
+  left: 105%;
+  }
+  
+#lArrow4{
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  top: 40%;
+  left: 105%;
+  }
+  
+.infP{
+  text-align: center;
+  color: green;
+  }
+  
+#tissP{
+  position: absolute;
+  top: 360px;
+  } 
+
+.header{
+  font-family: impact;
+  color: #009048;
+  font-size: 40px;
+  }
+		
+#previous{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 15px;
+  }
+  
+#glossary{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(155,255,230);
+  border: 15px;
+  padding: 10px;
+  margin-left: 4px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 492px;
+  }
+  
+#sources{
+  color: white;
+  position: absolute;
+  left: 700px;
+  top: 500px;
+  }
+  
+  
+.tissImg:hover{
+  border: 1px solid black;
+  }
+  
+  a.tooltips {
+  position: relative;
+  display: inline;
+  text-decoration: none;
+  color: green;
+}
+a.tooltips span {
+  position: absolute;
+  width:140px;
+  color: #FFFFFF;
+  background: #00C438;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px #666666;
+  text-decoration: none;
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid #28D65A;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 1.0;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 999;
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="338.28571"
+   height="219.71428"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="open.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="188.42857"
+     inkscape:cy="137.71428"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3014-1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="1352"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-186.57143,-450.36218)">
+    <g
+       transform="translate(-4.2857074,135.71429)"
+       id="g3014-1">
+      <g
+         id="g3064">
+        <g
+           transform="translate(4.2857074,-135.71429)"
+           id="g3014">
+          <rect
+             style="fill:#e6e6e6;stroke:#696764;stroke-width:4;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+             id="rect2985"
+             width="334.28571"
+             height="117.14286"
+             x="188.57143"
+             y="452.36218" />
+          <flowRoot
+             xml:space="preserve"
+             id="flowRoot2987"
+             style="font-size:64px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             transform="matrix(1.757063,0,0,1.9645478,-157.71218,-469.77985)"><flowRegion
+               id="flowRegion2989"><rect
+                 id="rect2991"
+                 width="297.14285"
+                 height="91.428574"
+                 x="202.85715"
+                 y="469.50504"
+                 style="font-size:64px" /></flowRegion><flowPara
+               id="flowPara2993"
+               style="font-size:64px;font-weight:bold;fill:#ff0000">OPEN</flowPara></flowRoot>        </g>
+        <g
+           transform="translate(57.142857,-17.142857)"
+           id="g3051">
+          <rect
+             y="451.91534"
+             x="188.1246"
+             height="98.036514"
+             width="240.89365"
+             id="rect2985-7"
+             style="fill:#e6e6e6;stroke:#696764;stroke-width:3.10634565;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+          <flowRoot
+             transform="matrix(1.173107,0,0,1.3015852,-35.052813,-151.09862)"
+             style="font-size:64px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             id="flowRoot2987-4"
+             xml:space="preserve"><flowRegion
+               id="flowRegion2989-0"><rect
+                 style="font-size:64px"
+                 y="469.50504"
+                 x="202.85715"
+                 height="91.428574"
+                 width="297.14285"
+                 id="rect2991-9" /></flowRegion><flowPara
+               style="font-size:64px;font-weight:bold;fill:#ff0000"
+               id="flowPara2993-4">SOON</flowPara></flowRoot>        </g>
+      </g>
+    </g>
+  </g>
+</svg>

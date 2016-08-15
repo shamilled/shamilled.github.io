@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Displacement</title>
+  <link rel='stylesheet' href='volContainers.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Volume of Containers</h1>
+		
+		
+		<div id="parDiv">
+			<ul>
+				<p><b><span class="keyWord">Gases</span> expand to fill up the whole volume of the container that they are in.</b></p>
+				<br>
+				<li>To find the volume of the gas, we need to find the volume of the container that it is in.</li>
+				<br>
+				<li>Containers come in many shapes and sizes. We are going to focus on two main shapes:<br><br>
+					<ol>
+						
+						<li><span class="keyWord">Rectangular Prisms</span><br> (note: cubes are a special type of rectangular prism where all sides are the same length)</li>
+						<br>
+						<li><span class="keyWord">Cylinders</span></li>
+						
+					</ol>
+				</li>
+			</ul>
+			
+
+		</div>
+
+		
+		<img id="dispTut" src="PICS/volContainersTut.png">
+	
+	
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+			<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.lineWidth = 3;
+				/*Dashed Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 0);
+				ctx.lineTo(450, 500);		
+				ctx.stroke();					
+			</script>
+	</div>
+
+	
+	
+	
+	<nav>
+		<a href="vol1.html"    title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="volGases.html"      title="Next Page"     id="next"     class="pagechange"><b>Measuring Container Volume Activity</b></a>
+	</nav>
+  
+</body>
+</html>

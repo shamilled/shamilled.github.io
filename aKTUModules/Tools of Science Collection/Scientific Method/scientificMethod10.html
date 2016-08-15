@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth10.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Perform the Experiment</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li>You plant the seeds for Plant A and Plant B with the same amount of soil, water, sunlight, and fertilizer.</li>
+				<br>
+				<li>You give Plant A Fertilizer 1 and Plant B Fertilizer 2.</li>
+				<br>
+				<li>You record the heights of Plant A and Plant B for 4 days in a row once they start sprouting.</li>
+			</ul>
+		</div>
+		
+		<img id="pots" src="images/pots.png">	
+		<img id="pail"   src="images/pail.png"    >
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(850,  0);
+			ctx.lineTo(850,  70);
+			ctx.lineTo(40,   70);
+			ctx.lineTo(40,   480);
+			ctx.lineTo(450,  480);
+			ctx.lineTo(450,  500);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(726,  70);
+			ctx.lineTo(740,  77);
+			ctx.lineTo(740,  63);
+			ctx.lineTo(726,  70);			
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(450, 500);
+			ctx.lineTo(443, 486);
+			ctx.lineTo(457, 486);
+			ctx.lineTo(450, 500);
+			ctx.fill();
+			ctx.stroke();
+					
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod8.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod11.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

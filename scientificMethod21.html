@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth21.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Pie Charts</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li><span class="keyWord">Pie Charts</span> help us see <u>fractions of a whole</u>. Percentages and fractions help us predict the chance of 
+				something happening.</li>
+				<br>
+				<li>For example, we decide to do the plant experiment three more times and record the final heights of each plant in the table on the right.
+				Now we want to see what fraction of the plants grew over 20 cm for each fertilizer.</li>
+				<br>
+				<li>Fertilizer 1 only had <u>1 in 4</u> plants grow over 20 cm. <br>1/4 is %25</li>
+				<br>
+				<li>Fertilizer 2 had <u>2 in 4</u> plants grow over 20 cm. <br>2/4 is %50.</li>
+				<br>
+			</ul>
+		</div>
+		
+		<img id="graph" src="PICS/pieChart.png">
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,  50);
+			ctx.lineTo(901, 50);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(270,  50);
+			ctx.lineTo(256,  43);
+			ctx.lineTo(256,  57);
+			ctx.lineTo(270,  50);						
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901,  50);
+			ctx.lineTo(887,  43);
+			ctx.lineTo(887,  57);
+			ctx.lineTo(901,  50);
+			ctx.fill();
+			ctx.stroke();
+			
+			
+			
+			/*Dashed Line*/
+			ctx.beginPath();
+			ctx.setLineDash([5,3]);
+			ctx.moveTo(450, 0);
+			ctx.lineTo(450, 500);		
+			ctx.stroke();
+					
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod20.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod22.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

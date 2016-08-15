@@ -1,0 +1,84 @@
+ <div id="container">
+          <div id="slideshow" class="cycle-slideshow" data-cycle-fx = "fade">
+              <img src="PICS/0006.jpg" alt="">
+              <img src="PICS/090131-ktu-206%20(1).jpg" alt="">
+              <img src="PICS/1.jpg" alt="">
+              <img src="PICS/_0009.jpg" alt="">
+          </div>
+          <div id="pager"></div>
+          <img id="prev" src="PICS/prev1.svg">
+          <img id="next" src="PICS/next1.svg">
+      </div>
+
+
+
+
+#container {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    background: #ff00ff;    
+}
+
+#slideshow {
+    height: inherit;
+    width: 100%;
+    z-index: 2000;
+}
+
+#pager {
+    height: 60px;
+    width: 643px;
+    position: absolute;
+    bottom: 20%;
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#pager:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#prev {
+    height: 110px;
+    width: 110px;
+    position: sticky;
+    top: 0;
+    bottom: 100px;
+    left: 20%;
+    margin: auto 10px;
+    z-index: 3000;
+}
+
+#next {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    right: 280px;
+    margin: auto 10px;
+    z-index: 3000;
+}
+
+#next:hover {
+    background-color: rgba(160, 153, 153, 0.93);
+}
+
+#prev:hover {
+    background-color: rgba(160, 153, 153, 0.93);
+}
+
+
+
+
+ <div id="list">
+                    <ol>
+                        <li>What was your story that you animated using Storytelling Alice about?</li>
+                        <li>Did you have any problems using the Storyletting Alice software to animate your story?</li>
+                        <li>What are they?</li>
+                        <li>How would you have changed the Storytelling Alice software to make it easier to animate your story?</li>
+                    </ol></div>
+
+

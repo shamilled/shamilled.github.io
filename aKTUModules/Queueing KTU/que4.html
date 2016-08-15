@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applying the Scientific Method</title>
+  <link rel='stylesheet' href='que4.css'>
+  <meta charset=utf-8 />
+  <script type="text/javascript">
+	function checkStorage(){
+		document.getElementById('name').innerHTML = sessionStorage.getItem('name').toUpperCase();
+		document.getElementById('storeName').innerHTML = sessionStorage.getItem('store').toUpperCase();
+		document.getElementById('storeName2').innerHTML = sessionStorage.getItem('store').toUpperCase();
+	}
+  </script>
+</head>
+<body onload="checkStorage();">
+  
+	<div id="mainFrame">
+	
+		<h1>Background Research</h1>
+		
+		<p style="width: 810px;"><b>You were able to determine that there is an average of 120 customers per day, and from this 
+		you calculated that an average of 15 people come by the store every hour.</b></p>
+
+		<p>Now how will we determine the number of cashiers that we will need to hire?</p>
+
+		<p>We need to do more background research and determine how many people a cashier can check out per hour. Then we can 
+		figure out how many cashiers we need to hire to serve 15 people per hour.</p>
+	
+	<img id="store" src="images/grocery_store.png"/>
+	<img id="sign"  src="images/hiringSign.png"   />
+	<div id="nameDiv">
+		<p id="namePar">CONTACT <span id="name">Name</span></p>
+	</div>
+	<div id="storeNameDiv">
+		<p id="storeNamePar"><b><span id="storeName">Store Name</span></b></p>
+	</div>
+	<div id="storeNameDiv2">
+		<p id="storeNamePar2"><b><span id="storeName2">Store Name</span></b></p>
+	</div>
+	
+	
+	</div>
+
+	
+	
+	<nav>
+		<a href="que3.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="que5.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version ='1.0' ?>
+	<chapter1>
+		<hint id = 'intro1'> Quick! We can fix bottlenecking!</hint>
+		<hint id = 'intro2'> The mRNA molecules can go in different lines so that more ribosomes can read the codes.</hint>
+		<hint id = 'intro3'> Now go and fix this problem!!</hint>
+	</chapter1>

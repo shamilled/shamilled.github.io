@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth4.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Question</h1>
+		<h2>?</h2>
+		
+		<ul>
+			<p style="position: relative; left: -50px; width: 630px;"><b>Everyday you are faced with problems or come up with questions. Having a <span class="keyWord">Question</span> is the <u>first step</u> to finding the solution.</b></p><br>
+			<li>For example, you bought seeds for your favorite flower but are not sure what the best fertilizer to use is.</li><br>
+			<li>You have two types of fertilizer in your garage so you come up with the <em>Question</em>:</li><br>
+			<p id="ques"><b><em>Which fertilizer will make my flower grow taller: Fertilizer 1 or Fertilizer 2?</em></b></p>
+		</ul>
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(830, 0);
+			ctx.lineTo(830, 65);
+			ctx.lineTo(50, 65);
+			ctx.lineTo(50, 500);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.moveTo(50, 500);
+			ctx.lineTo(43, 486);
+			ctx.lineTo(57, 486);
+			ctx.lineTo(50, 500);
+			ctx.fill();
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.moveTo(50, 95);
+			ctx.lineTo(43, 81);
+			ctx.lineTo(57, 81);
+			ctx.lineTo(50, 95);	
+			ctx.fill();			
+			ctx.stroke();
+			
+		</script>
+		
+		<img id='fertilizers' src="PICS/fertilizers.png">
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod3.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod5.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

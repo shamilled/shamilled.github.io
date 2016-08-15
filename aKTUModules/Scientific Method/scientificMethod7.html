@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth7.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Design the Experiment: Variables</h1>
+		
+		<div id="textDiv">
+			
+			<p><b>To make your <span class="keyWord">Experiment</span> you need to figure out what all can affect your outcome.</b></p>
+			<p><b>In other words, you need to figure out what the <span class="keyWord">Variables</span> are. A variable is something that changes (varies) or can change. Our variables are:</b></p>
+			<ul id="variables" style="background-color: #E6E6E6; width: 470px; border-radius: 20px; border: 2px solid #BCBCBC; text-align: center;"><b>
+				<li>Type of Fertilizer</li>
+				<li>The day you measure height</li>
+				<li>Sunlight</li>
+				<li>Planting Pot</li>
+				<li>Water</li>
+				<li>Height of the plants</li>
+				<li>Soil</li>
+				<li>Type of Seeds</li>
+				<li>Ruler</li>
+			</b></ul>
+			<p><b>There are two types of variables:</b></p>
+			<ul>
+				<li><b>Independent Variable:</b> Does not depend on the other variables. This is the variable that you control.</li>
+				<li><b>Dependent Variable:</b> Depends on the other variables. <i>It is the variable that you are trying to measure.</i></li>
+			</ul>
+			
+			<p>You can see that some of the variables we listed we are not trying to test. We only want to see how different 
+			fertilizers affect plant height. This is why we <b><em>control</em></b> the variables that we are not testing.</p>
+			<p>Click <a href="controls.html">here</a> to learn more about <b><span class="keyWord">controls</span></b></p>
+			
+		</div>
+		
+		<img id="materials" src="images/materials.png">
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(850, 500);
+			ctx.lineTo(850, 460);
+			ctx.lineTo(40,  460);
+			ctx.lineTo(40,  55);
+			ctx.lineTo(901, 55);
+			ctx.stroke();
+			
+			/*Branch*/
+			ctx.beginPath();
+			ctx.moveTo(125, 460);
+			ctx.lineTo(125, 500);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.moveTo(125, 500);
+			ctx.lineTo(118, 486);
+			ctx.lineTo(132, 486);
+			ctx.lineTo(125, 500);
+			ctx.fill();
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(205, 55);
+			ctx.lineTo(191, 48);
+			ctx.lineTo(191, 62);
+			ctx.lineTo(205, 55);
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901, 55);
+			ctx.lineTo(887, 48);
+			ctx.lineTo(887, 62);
+			ctx.lineTo(901, 55);
+			ctx.fill();
+			ctx.stroke();		
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod6.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod8.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

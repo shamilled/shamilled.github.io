@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth22.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Final Conclusion</h1>
+		
+		<div id="parDiv">
+			<ul>
+				<li>With the help of our Scatter Plot and Line Graph, we can see that both plants start growing similarly, but Plant A starts to slow 
+				down around 15 cm while Plant B keeps growing at the same rate.</li>
+				<br>
+				<li>After performing multiple trials, we see that Fertilizer 2 almost always grows taller plants with half of them growing over 20 cm in 4 days.</li>
+				<br><br>
+				<li>We notice on one occasion that Fertilizer 1 grew a taller plant. How does this affect our conclusion?</li>
+				<br>
+				<li>Would you feel confident telling your friend that if they used Fertilizer 2 as opposed to Fertilizer 1 that they would have taller plants?</li>
+			</ul>
+		</div>
+		
+		
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,    50);
+			ctx.lineTo(385,  50);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(385,  50);
+			ctx.lineTo(371,  57);
+			ctx.lineTo(371,  43);
+			ctx.lineTo(385,  50);						
+			ctx.fill();
+			ctx.stroke();
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod21.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="../mainToolsPage.html"        title="Next Page"     id="next"     class="pagechange"><b>Finished</b></a>
+	</nav>
+  
+</body>
+</html>

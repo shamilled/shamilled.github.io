@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth5.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Research</h1>
+		
+		
+		<ul id="mainList">
+			<li>To begin answering your question, you have to do a little <span class="keyWord"><b>Research</b></span> on the topic.</li><br>
+			<li>For example, if you researched plant fertilizers you would find that they have different nutrients in them. Some are better
+			for making plants bigger and some are better for making them flower more.			
+				<ul>
+					<li>Different fertilizers have different nutrients for the plants.</li>
+					<li>You found out that Fertilizer 1 has a lot of flowering nutrients in it while Fertilizer 2 has a lot of growth nutrients.</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<img id="mag"    src="images/magGlass.png">
+		<img id="tall"   src="images/tallPlant.svg">
+		<img id="flower" src="images/flowerPlant.svg">
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(50, 0);
+			ctx.lineTo(50, 65);
+			ctx.lineTo(800, 65);
+			ctx.lineTo(800, 300);
+			ctx.lineTo(901, 300);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(115, 65);
+			ctx.lineTo(101, 72);
+			ctx.lineTo(101, 58);
+			ctx.lineTo(115, 65);
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(901, 300);
+			ctx.lineTo(887, 307);
+			ctx.lineTo(887, 293);
+			ctx.lineTo(901, 300);
+			ctx.fill();
+			ctx.stroke();
+			
+			/*In Magnifying Glass*/
+			ctx.beginPath();
+			ctx.lineWidth = 12;
+			ctx.moveTo(704, 65);
+			ctx.lineTo(800, 65);
+			ctx.lineTo(800, 180);
+			ctx.stroke();
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod4.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod6.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

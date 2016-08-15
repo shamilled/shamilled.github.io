@@ -1,0 +1,134 @@
+body{
+  width: 100%;
+  max-width: 785px;
+  height: 600px;
+  background-image: url('images/ktuBackGround.png');
+  color: black;
+  }
+
+h1{
+  font-size: 35px;
+  padding: 15px;
+  border-radius: 20px 0px 20px 0px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #FFEB64), color-stop(1, #FFDE00));
+  background: -moz-linear-gradient(left bottom, #FFEB64, #FFDE00);
+  background-image: -ms-linear-gradient(bottom left, #FFEB64 0%, #FFDE00 100%);
+  border: 2px;
+  width: 350px;
+  position: absolute;
+  left: 83px;
+  top: 20px;
+  }
+  
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  background-image: url('images/Background 2.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: center;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  }
+
+li{
+  color: black;
+  font-weight: thick;
+  position: relative;
+  top: 80px;
+  text-align: left;
+  }
+  
+#guide{
+  width: 700px;
+  height: 450px;
+  margin-left: 10px;
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  }
+  
+#ticker-area{
+  position: absolute;
+  top: -60px;
+  left: 100px;
+  font-weight: thick;
+  width: 410px;
+  }
+  
+#tutImg{
+  position: absolute;
+  top: 295px;
+  left: 170px;
+  width: 185px;
+  }
+  
+#tutImg:hover{
+  border: 2px solid black;
+  border-radius: 3px;
+  }
+  
+#click{
+  color: #FF832F;
+  text-decoration: none;
+  }
+  
+#click:hover{
+  font-size: 105%;
+  color: green;
+  }
+
+  
+  
+#previous{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 15px;
+  width: 120px;
+  height: 30px;
+  }
+  
+#next{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  }
+  
+#glossary{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(155,255,230);
+  border: 15px;
+  padding: 10px;
+  margin-left: 4px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 492px;
+  }
+  
+#sources{
+  color: white;
+  position: absolute;
+  left: 700px;
+  top: 500px;
+  }

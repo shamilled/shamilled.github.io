@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Length</title>
+  <link rel='stylesheet' href='len1.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Length</h1>
+		
+		
+		<div id="parDiv">
+			<ul>
+				<p><b><span class="keyWord">Length</span> is used to measure distances.</b></p>
+				<br>
+				<li><u>The Base Unit for Volume</u> using the Metric System (SI) is the <b><em>Meter</em></b>.</li>
+				<br>
+				<li>Length can describe the dimensions of an object (length, width, height) or can describe the distance between two objects.</li>
+				<br><br>
+				
+				<!--
+				&nbsp&nbsp&nbsp&nbsp&nbsp <!--Used these to move buttons over instead of putting it on style sheet 
+				<a href="volSolids.html" class="myButton">Solids</a>
+				<a href="volLiquids.html" class="myButton">Liquids</a>
+				<a href="volGases.html" class="myButton">Gases</a> -->
+
+			</ul>
+			
+
+		</div>
+		
+		<div id="metDiv">
+			<h3 style="font-family: sans-serif;">Metric System (SI) Units for Length:</h3>
+				
+			<p><b>1 <em>Kilo</em>meter (km) = 1000 Meters (m)
+			<br>
+			1 Meter (m) = 100 <em>Centi</em>meters (cm)
+			<br>
+			1 <em>Centi</em>meter (cm) = 10 <em>Milli</em>meters (mm)</b></p>
+			
+		</div>
+		
+		<div id="usUnitsDiv">
+			<h3 style="font-family: sans-serif;">Convert U.S. Customary Units to Metric System Units:</h3>
+				
+			<p><b>1 Inch (in) = 2.54 <em>Centi</em>meters (cm)
+			<br>
+			1 Foot (ft) = 0.3048 Meters (m)
+			<br>
+			1 Mile (mi) = 1.60934 <em>Kilo</em>meters (km)
+			</b></p>
+		</div>
+		
+		<img id="dimensions" src="PICS/dimensions.png">
+		<img id="ruler"      src="PICS/metricRuler.png"     >
+	
+	
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+			<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.lineWidth = 3;
+				/*Dashed Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 0);
+				ctx.lineTo(450, 500);		
+				ctx.stroke();
+				
+				/*Top Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 125);
+				ctx.lineTo(901, 125);		
+				ctx.stroke();
+				
+				/*Second Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 250);
+				ctx.lineTo(901, 250);		
+				ctx.stroke();
+						
+				
+			</script>
+	</div>
+
+	
+	
+	
+	<nav>
+		<a href="mainToolsPage.html"    title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="len2.html"           title="Previous Page" id="next" class="pagechange"><b>Measuring Length Activity</b></a>
+	</nav>
+  
+</body>
+</html>

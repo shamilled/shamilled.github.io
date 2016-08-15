@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth6.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Hypothesis</h1>
+		
+		
+		<ul id="mainList">
+			<li>After researching your topic you have enough information to predict how your experiment will go.
+			This prediction is called a <span class="keyWord"><b>Hypothesis</b></span>.</li>
+			<p style="width: 600px; position: absolute; left: 0px;"><em><b><u>If</u> you use Fertilizer 1 on Plant A and Fertilizer 2 on Plant B, <u>then</u> you can expect Plant B to grow taller
+			<u>because</u> its fertilizer has more growth nutrients.</b></em></p>
+		</ul>
+		
+		<img id="think"   src="images/thinker.png">
+		
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0, 300);
+			ctx.lineTo(170, 300);
+			ctx.lineTo(170, 445);
+			ctx.lineTo(850, 445);
+			ctx.lineTo(850, 0);
+			ctx.stroke();
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(345, 445);
+			ctx.lineTo(331, 452);
+			ctx.lineTo(331, 438);
+			ctx.lineTo(345, 445);
+			ctx.fill();	
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(850, 0);
+			ctx.lineTo(843, 14);
+			ctx.lineTo(857, 14);
+			ctx.lineTo(850, 0);
+			ctx.fill();
+			ctx.stroke();			
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod5.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod7.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

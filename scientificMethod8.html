@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Scientific Method</title>
+  <link rel='stylesheet' href='sciMeth8.css'>
+  <meta charset=utf-8 />
+</head>
+<body>
+  
+	<div id="mainFrame">
+		<h1>Procedures</h1>
+		
+		<div id="textDiv">
+			
+			<p><b><span class="keyWord">Procedures</span> are the directions for an experiment.</b></p>
+			<p><b>You should write down your procedure in a way that anyone can follow along and do your experiment, too.</b></p>
+			<p><b>Procedures should include:</b></p>
+			<ul><b>
+				<li>Measurements for all of the materials you used</li>
+				<li>The unit (gram, liter, centimeter, etc.) at the end of a number</li>
+				<li>When to make measurements and record the data</li>
+				<li>How much time to wait for certain parts of the experiment</li>
+				<li>List all the controls</li>
+				<li>Describe how to change the independent variable</li>
+				<li>Describe how to measure the dependent variable</li>
+				<li>List any tools that will be used</li>
+			</b></ul>
+		</div>
+		
+		<a href="#" onclick="window.open('procedure.html', 'Nerve Cells', 'width=900, height=900'); return false;"><img id="proc" src="PICS/procede.png"></a>
+		
+		
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,   55);
+			ctx.lineTo(850, 55);
+			ctx.lineTo(850, 500);
+			ctx.stroke();
+			
+			/*Branch*/
+			ctx.beginPath();
+			ctx.moveTo(850,  330);
+			ctx.lineTo(901,  330);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.moveTo(901, 330);
+			ctx.lineTo(887, 337);
+			ctx.lineTo(887, 323);
+			ctx.lineTo(901, 330);
+			ctx.fill();
+			ctx.stroke();			
+			
+			/*First Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(405, 55);
+			ctx.lineTo(391, 48);
+			ctx.lineTo(391, 62);
+			ctx.lineTo(405, 55);
+			ctx.fill();
+			ctx.stroke();
+			
+			/*Last Arrow*/
+			ctx.beginPath();
+			ctx.moveTo(850, 500);
+			ctx.lineTo(857, 486);
+			ctx.lineTo(843, 486);
+			ctx.lineTo(850, 500);
+			ctx.fill();
+			ctx.stroke();		
+			
+		</script>
+		
+	</div>
+	
+	
+
+	<nav>
+		<a href="scientificMethod7.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="scientificMethod10.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

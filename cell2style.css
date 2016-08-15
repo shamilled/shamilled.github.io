@@ -1,0 +1,170 @@
+body{
+  width: 100%;
+  max-width: 785px;
+  height: 600px;
+  background-image: url('PICS/ktuBackGround.png');
+  color: black;
+    margin: auto;
+  }
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  color: white;
+  background-image: url('PICS/Background 2.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: center;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  }
+  
+h1{
+  font-size: 35px;
+  padding: 15px;
+  border-radius: 20px 0px 20px 0px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #FFEB64), color-stop(1, #FFDE00));
+  background: -moz-linear-gradient(left bottom, #FFEB64, #FFDE00);
+  background-image: -ms-linear-gradient(bottom left, #FFEB64 0%, #FFDE00 100%);
+  border: 2px;
+  width: 350px;
+  position: absolute;
+  left: 30px;
+  top: -1px;
+  }
+  
+#squares div{
+  display: inline-block;
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #FFEB64), color-stop(1, #FFDE00));
+  background: -moz-linear-gradient(left bottom, #FFEB64, #FFDE00);
+  background-image: -ms-linear-gradient(bottom left, #FFEB64 0%, #FFDE00 100%);
+  margin-left: 25px;
+  position: relative;
+  top: -8px;
+  }
+  
+#atoms{
+  width: 130px;
+  position: absolute;
+  top: 154px;
+  left: 70px;
+  }
+  
+#molecules{
+  width: 150px;
+  position: absolute;
+  top: 344px;
+  left: 295px;
+  }
+  
+#cell{
+  width: 170px;
+  position: absolute;
+  top: 114px;
+  left: 540px;
+  }
+
+#arrdown{
+  width: 80px;
+  position: absolute;
+  top: 284px;
+  left: 210px;
+  }
+
+#arrup{
+  width: 70px;
+  position: absolute;
+  top: 264px;
+  left: 450px;
+  }  
+  
+.par{
+  width: 160px;
+  text-align: center;
+  color: rgb(66,142,79);
+  }
+  
+#atomp{
+  position: absolute;
+  top: 284px;
+  left: 50px;
+  }
+  
+.inflink{
+  color: #FF832F;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #474747;
+  }
+  
+#molp{
+  position: absolute;
+  top: 144px;
+  left: 290px;
+  }
+  
+#cellp{
+  position: absolute;
+  top: 259px;
+  left: 530px;
+  }
+  
+#previous{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 15px;
+  }
+  
+#next{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  }
+  
+#glossary{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(155,255,230);
+  border: 15px;
+  padding: 10px;
+  margin-left: 4px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 492px;
+  }
+  
+  
+#sources{
+  color: white;
+  position: relative;
+  left: 430px;
+  top: 0px;
+  }
+  
+a:hover {
+  font-size: 105%;
+  color: green;
+  }

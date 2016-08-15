@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applying the Scientific Method</title>
+  <link rel='stylesheet' href='que13.css'>
+  <meta charset=utf-8 />
+  <script type="text/javascript">	
+		function insertValues(){
+			var cashNum = sessionStorage.getItem('cashNumResult');
+			var guessNum = sessionStorage.getItem('guess');
+			var diff = Math.abs(cashNum - guessNum);
+			
+			if(cashNum == null){
+				alert('You need to complete the previous page to have results for this page.')
+			}
+			else{
+			document.getElementById('cashNum').innerHTML = sessionStorage.getItem('cashNumResult');
+			document.getElementById('guessNum').innerHTML = sessionStorage.getItem('guess');
+			document.getElementById("mainFrame").style.display = "block";
+			document.getElementById("next").style.display = "block";
+			}
+			
+			if(cashNum == guessNum){
+				document.getElementById('guessResp1').style.display = "inline";
+			}
+			
+			if(0 < diff && diff <= 2){
+				document.getElementById('guessResp2').style.display = "inline";
+			}
+		}
+	</script>
+	
+</head>
+
+<body onload="insertValues()">
+  
+	<div id="mainFrame" style="display: none;">
+	
+		<h1>Analyze the Data</h1>
+		
+		<p style="width: 880px;"><b>You found in your experiment that having <span id="cashNum"></span> cashiers had the highest profit. Your guess was <span id="guessNum"></span> cashiers.
+		<span id="guessResp1" style="display: none;">Your guess was right on! </span><span id="guessResp2" style="display: none;">Your guess was really close!</span></b></p>
+		
+		<p>Do these results surprise you?</p>
+		<p>How did hiring more cashiers help you to make more money?</p>
+		<p>Look at the number of customers that left for each number of cashier that you had. How does this change as you hire more cashiers?</p>
+		<br>
+		<p>This is an example of Queueing Theory, which is the study of how lines move. According to Queueing Theory you need a few more cashiers than what you expect from the 
+		averages to make sure that lines don't build up and you can serve customers quickly and efficiently.</p>
+		
+		
+	</div>
+
+
+	
+	
+	<nav>
+		<a href="que12.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="que14.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

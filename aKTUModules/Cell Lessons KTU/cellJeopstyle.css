@@ -1,0 +1,331 @@
+body{
+  width: 100%;
+  max-width: 985px;
+  height: 600px;
+  background-image: url('images/ktuBackGround.png');
+  color: black;
+}  
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  color: black;
+  background-image: url('images/Background 2.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: left;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: none;
+  }
+  
+#headline{
+  width: 700px;
+  height: 42px;
+  font-size: 40px;
+  font-weight: thick;
+  color: #321C22;
+  position: absolute;
+  top: -35px;
+  left: 80px;
+  }
+  
+#rulz{
+  width: 700px;
+  height: 450px;
+  background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #7FEF6E 100%);
+  background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #7FEF6E 100%);
+  background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #7FEF6E 100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FFFFFF), color-stop(1, #7FEF6E));
+  background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #7FEF6E 100%);
+  position: absolute;
+  left: 200px;
+  z-index: 1000;
+  border: 5px solid blue;
+  }
+  
+.welcPar{
+  margin-top: 80px;
+  font-size: 25px;
+  }
+  
+#important{
+  color: red;
+  }
+    
+table{
+  background-color: black;
+  position: absolute;
+  left: 100px;
+  top: 110px;
+  }
+  
+
+  
+.qdiv{
+   display: none;
+   background-color: #16006E;
+   color: #FDFCEF;
+   font-family: impact;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: auto;
+   margin-bottom: auto;
+   width: 600px;
+   height: 400px;
+   position: absolute;
+   top: 70px;
+   left: 70px;
+   z-index: 10;
+   border: 2px solid #A19DBF;
+   } 
+   
+.qform{
+  font-size: 25px;
+  margin: auto;
+  padding: 30px;
+  width: 400px;
+  height: 200px;
+  margin-top: 80px;
+  }
+  
+.box{
+  display: inline;
+  }
+
+.amt{
+  height: 50px;
+  width: 110px;
+  display: block;
+  }
+  
+.blank{
+  height: 50px;
+  width: 110px;
+  background-color: #16006E;
+  display: none;
+  font-size: 12px;
+  color: white;
+  position: relative;
+  }
+  
+.incorrPar{
+  padding: 10px;
+  margin: 0px;
+  }
+  
+a{
+  color: orange;
+  }
+  
+.title{
+  height: 50px;
+  width: 110px;
+  }
+
+p{
+  text-align: center;
+}
+
+#scoreOutLine{
+  position: absolute;
+  left: 640px;
+  top: 190px;
+  background-color: #16006E;
+  width: 130px;
+  height: 70px;
+  border-radius: 5px;
+  
+  
+  color: #FFFAF0;
+  font-size: 30px;
+  font-family: Tahoma, Geneva, sans-serif;
+  padding-top: 18px;
+  padding-bottom: 0px;
+  margin: 0px;
+  text-align: center;
+  display: none;
+  }
+	
+#scoreBox{
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  background-color: #16006E;
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  
+  color: #FFFAF0;
+  font-size: 30px;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  margin: 0px;
+  text-align: center;
+  }
+  
+#correct{
+  position: absolute;
+  left: 655px;
+  top: 330px;
+  background-color: none;
+  width: 100px;
+  height: 30px;
+  color: green;
+  display: block;
+  display: none;
+  }
+  
+#wordBank{
+  width: 500px;
+  height: 600px;
+  color: black;
+  font-weight: bold;
+  border: 5px solid blue;
+  border-radius: 5px;
+  background-image: url('images/crossword.png');
+  position: absolute;
+  top: 16px;
+  left: 820px;
+  display: none;
+  }
+  
+#wbHead{
+  font-size: 25px;
+  text-align: center;
+  }
+  
+#instr{
+  position: absolute;
+  left: 215px;
+  top: 515px;
+  border: 5px solid blue;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 575px;
+  height: 100px;
+  color: black;
+  background-image: url('images/crossword.png');
+  display: none;
+  }
+  
+.instPar{
+  width: 570px;
+  }
+  
+.wPar{
+  width: 100px;
+  height: 40px;
+  float: left;
+  font-family: sans-serif;
+  }
+  
+#close1{
+  width: 700px;
+  height: 450px;
+  background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #7FEF6E 100%);
+  background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #7FEF6E 100%);
+  background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #7FEF6E 100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FFFFFF), color-stop(1, #7FEF6E));
+  background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #7FEF6E 100%);
+  position: absolute;
+  top: 30px;
+  left: 200px;
+  z-index: 1000;
+  border: 5px solid blue;
+  display: none;
+  }
+  
+#close2{
+  width: 700px;
+  height: 450px;
+  background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #4A7CEF  100%);
+  background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #4A7CEF  100%);
+  background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #4A7CEF  100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FFFFFF), color-stop(1, #4A7CEF ));
+  background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #4A7CEF  100%);
+  position: absolute;
+  top: 30px;
+  left: 200px;
+  z-index: 1000;
+  border: 5px solid blue;
+  display: none;
+  }
+  
+#playAgain{
+  font-size: 20px;
+  color: black;
+  }
+  
+.closeHead{
+  text-align: center;
+  }
+  
+.cellsRule{
+  width: 46%;
+  position: absolute;
+  left: 24%;
+  top: 170px;
+  }
+
+#exit1{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 5px;
+  display: none;
+  position: absolute;
+  top: 490px;
+  left: 20px;
+  }
+  
+#finish1{
+  display: none;
+  background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #4A7CEF  100%);
+  background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #4A7CEF  100%);
+  background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #4A7CEF  100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FFFFFF), color-stop(1, #4A7CEF ));
+  background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #4A7CEF  100%);
+  border: 2px solid blue;
+  height: 250px;
+  }
+  
+  
+#previous{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 15px;
+  position: absolute;
+  top: 520px;
+  left: -20px;
+  }
+  
+  
+#yes{
+  display: none;
+  margin: auto;
+  margin-bottom: 20px;
+  }
+  
+#no{
+  display: none;
+  margin: auto;
+  }
+  

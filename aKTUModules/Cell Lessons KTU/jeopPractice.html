@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cell Dynamics</title>
+  <link rel='stylesheet' href='jeopPractice.css'>
+  <meta charset=utf-8 />
+  <script type="text/javascript" src="jeopPractice.js"></script>
+</head>
+<body onload="rand()">
+  
+  <div id="rulz">
+		<p class="welcPar"><b>Let's Play Jeopardy! There will be four categories. Answer the questions in any order that you want.</b></p>
+		<p class="welcPar"><b>There is a word bank that you may refer to on the right. Not all of the words in it will be used.
+		Enjoy your round of Cell Jeopardy!</b></p>
+		<p><span id="important"><b>CLICK THE <u>FINISHED BUTTON</u> AT THE BOTTOM LEFT AFTER YOU HAVE ANSWERED ALL OF THE QUESTIONS</b></span></p>
+		<p><button id="begin" type="button" onclick="hide()">Begin</button></p>
+  </div>
+  
+  <div id="mainFrame">
+  
+	<div id="headline">
+		<h1>CELL JEOPARDY</h1>
+	</div>
+	
+	
+	
+	
+	<table>
+	    <!-- Title row -->
+		<tr>
+			<td>
+			<img src="images/titleJeopCells.png" class="title">
+			</td>
+			
+			<td>
+			<img src="images/titleJeoporg.png" class="title">
+			</td>
+			
+			<td>
+			<img src="images/titleJeopAtom.png" class="title">
+			</td>
+			
+			<td>
+			<img src="images/titleJeopTiss.png" class="title">
+			</td>
+		</tr>
+		
+		<!-- First row -->
+		
+		<tr>
+		
+		<td>
+		<div id="11" class="box">
+			<input type="image" src="images/2hun.png" alt="Submit" id="show11" onClick="show11()" class="amt">
+			<div id="used11" class="blank">
+				<p id="par11"  class="incorrPar">Click <a href="bloodCells.html" target="_blank">here</a> to find answer.</p>
+				<p id="par11b" class="incorrPar">Click <a href="nerveCells.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		
+		</td>
+		
+		<td>
+		<div id="12" class="box">
+			<input type="image" src="images/2hun.png" alt="Submit" id="show12" onClick="show12()" class="amt">
+			<div id="used12" class="blank">
+				<p id="par12" class="incorrPar">Click <a href="cm.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="13" class="box">
+			<input type="image" src="images/2hun.png" alt="Submit" id="show13" onClick="show13()" class="amt">
+			<div id="used13" class="blank">
+				<p id="par13" class="incorrPar">Click <a href="cellthree.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="14" class="box">
+			<input type="image" src="images/2hun.png" alt="Submit" id="show14" onClick="show14()" class="amt">
+			<div id="used14" class="blank">
+				<p id="par14" class="incorrPar">Click <a href="cellinf.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		</tr>
+		
+		<!-- Second row -->
+		<tr>
+		
+		<td>
+		<div id="21" class="box">
+			<input type="image" src="images/4hun.png" alt="Submit" id="show21" onClick="show21()" class="amt">
+			<div id="used21" class="blank">
+				<p id="par21" class="incorrPar">Click <a href="fatCells.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="22" class="box">
+			<input type="image" src="images/4hun.png" alt="Submit" id="show22" onClick="show22()" class="amt">
+			<div id="used22" class="blank">
+				<p id="par22" class="incorrPar">Click <a href="mit.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="23" class="box">
+			<input type="image" src="images/4hun.png" alt="Submit" id="show23" onClick="show23()" class="amt">
+			<div id="used23" class="blank">
+				<p id="par23" class="incorrPar">Click <a href="atominf.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="24" class="box">
+			<input type="image" src="images/4hun.png" alt="Submit" id="show24" onClick="show24()" class="amt">
+			<div id="used24" class="blank">
+				<p id="par24" class="incorrPar">Click <a href="tissConn.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		</tr>
+		
+		<!--Third Row------->
+		
+		<tr>
+		
+		<td>
+		<div id="31" class="box">
+			<input type="image" src="images/6hun.png" alt="Submit" id="show31" onClick="show31()" class="amt">
+			<div id="used31" class="blank">
+				<p id="par31" class="incorrPar">Click <a href="boneCells.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="32" class="box">
+			<input type="image" src="images/6hun.png" alt="Submit" id="show32" onClick="show32()" class="amt">
+			<div id="used32" class="blank">
+				<p id="par32" class="incorrPar">Click <a href="rib.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="33" class="box">
+			<input type="image" src="images/6hun.png" alt="Submit" id="show33" onClick="show33()" class="amt">
+			<div id="used33" class="blank">
+				<p id="par33" class="incorrPar">Click <a href="atominf.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="34" class="box">
+			<input type="image" src="images/6hun.png" alt="Submit" id="show34" onClick="show34()" class="amt">
+			<div id="used34" class="blank">
+				<p id="par34" class="incorrPar">Click <a href="tissNerve.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		</tr>
+		
+		<!--Fourth Row-->
+		
+		<tr>
+		
+		<td>
+		<div id="41" class="box">
+			<input type="image" src="images/8hun.png" alt="Submit" id="show41" onClick="show41()" class="amt">
+			<div id="used41" class="blank">
+				<p id="par41" class="incorrPar">Click <a href="bloodCells.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="42" class="box">
+			<input type="image" src="images/8hun.png" alt="Submit" id="show42" onClick="show42()" class="amt">
+			<div id="used42" class="blank">
+				<p id="par42" class="incorrPar">Click <a href="smer.html" target="_blank">here</a> to find answer.</p>
+				<p id="par42b" class="incorrPar">Click <a href="lys.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="43" class="box">
+			<input type="image" src="images/8hun.png" alt="Submit" id="show43" onClick="show43()" class="amt">
+			<div id="used43" class="blank">
+				<p id="par43" class="incorrPar">Click <a href="molinf.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="44" class="box">
+			<input type="image" src="images/8hun.png" alt="Submit" id="show44" onClick="show44()" class="amt">
+			<div id="used44" class="blank">
+				<p id="par44" class="incorrPar">Click <a href="tissMuscle.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		</tr>		
+	<!--Fifth row----------->
+		
+		<tr>
+		
+		<td>
+		<div id="51" class="box">
+			<input type="image" src="images/10hun.png" alt="Submit" id="show51" onClick="show51()" class="amt">
+			<div id="used51" class="blank">
+				<p id="par51" class="incorrPar">Click <a href="nerveCells.html" target="_blank">here</a> to find answer</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="52" class="box">
+			<input type="image" src="images/10hun.png" alt="Submit" id="show52" onClick="show52()" class="amt">
+			<div id="used52" class="blank">
+				<p id="par52" class="incorrPar">Click <a href="nuco.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="53" class="box">
+			<input type="image" src="images/10hun.png" alt="Submit" id="show53" onClick="show53()" class="amt">
+			<div id="used53" class="blank">
+				<p id="par53" class="incorrPar">Click <a href="atominf.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="54" class="box">
+			<input type="image" src="images/10hun.png" alt="Submit" id="show54" onClick="show54()" class="amt">
+			<div id="used54" class="blank">
+				<p id="par54" class="incorrPar">Click <a href="tissEpith.html" target="_blank">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		</tr>	
+
+
+	
+	</table>	
+	<!--End Table-->
+	<!------------->
+	
+	<!---------------------------------------------------------------------------------------------------------------------------------------->
+
+		<!--First Row of Questions-->
+		<div id="q11div" class="qdiv">
+			<form id="q11" name="ques11" alt="ques11" onsubmit="return false" method="post" class="qform">
+			"<u>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</u>" 
+			cells are found in your blood stream and
+			carry oxygen to other cells in your body.<br><input id="ques11" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues11();" align="right"/>
+			</form>
+		</div>
+		
+		<div id="q11bdiv" class="qdiv">		
+			<form id="q11b" name="ques11b" alt="ques11b" onsubmit="return false" method="post" class="qform">
+			This type of cell helps send signals throughout your body that tell muscles and body parts what to do.<br><input id="ques11b" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues11b();" align="right"/>
+			</form>
+		</div>
+
+		
+			
+		</div>
+		
+		<div id="q12div" class="qdiv">
+			<form id="q12" name="ques12" alt="ques12" onsubmit="return false" method="post" class="qform">
+			What surrounds the cell and controls what goes in 
+			and out of the cell?<br><input id="ques12" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues12();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q13div" class="qdiv">
+			<form id="q13" name="ques13" alt="ques13" onsubmit="return false" method="post" class="qform">
+			Which is larger: atoms or molecules?<br><input id="ques13" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues13();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q14div" class="qdiv">
+			<form id="q14" name="ques14" alt="ques14" onsubmit="return false" method="post" class="qform">
+			True or False: Organ systems combine to make up cells.<br><input id="ques14" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues14();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<!--Second Row of Questions-->
+		
+		<div id="q21div" class="qdiv">
+			<form id="q21" name="ques21" alt="ques21" onsubmit="return false" method="post" class="qform">
+			What type of cells are used primarily for energy storage and also play a role in temperature regulation?<br><input id="ques21" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues21();" align="right"/>
+			
+			</form>
+		</div>
+		
+		<div id="q22div" class="qdiv">
+			<form id="q22" name="ques22" alt="ques22" onsubmit="return false" method="post" class="qform">
+			Also known as the "powerhouse" of the cell, this organelle generates energy for the cell.<br><input id="ques22" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues22();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q23div" class="qdiv">
+			<form id="q23" name="ques23" alt="ques23" onsubmit="return false" method="post" class="qform">
+			Which subatomic particle has no charge, or is neutral?<br><input id="ques23" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues23();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q24div" class="qdiv">
+			<form id="q24" name="ques24" alt="ques24" onsubmit="return false" method="post" class="qform">
+			This type of tissue is important for maintaining form of the body and its organs. It contains various cells in an extracellular matrix.<br><input id="ques24" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues24();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<!--Third Row of Questions-->
+		
+		<div id="q31div" class="qdiv">
+			<form id="q31" name="ques31" alt="ques31" onsubmit="return false" method="post" class="qform">
+			This type of tissue is the hard, outer-layer of the bone.<br><input id="ques31" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues31();" align="right"/>
+			
+			</form>
+		</div>
+		
+		<div id="q32div" class="qdiv">
+			<form id="q32" name="ques32" alt="ques32" onsubmit="return false" method="post" class="qform">
+			These organelles attach themselves to the Rough Endoplasmic Reticulum and are where protein synthesis (protein building) occurs.<br><input id="ques32" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues32();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q33div" class="qdiv">
+			<form id="q33" name="ques33" alt="ques33" onsubmit="return false" method="post" class="qform">
+			The atomic number tells us what element the atom is and is determined by the number of this subatomic particle only.<br><input id="ques33" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues33();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q34div" class="qdiv">
+			<form id="q34" name="ques34" alt="ques34" onsubmit="return false" method="post" class="qform">
+			This type of tissue reacts to stimuli and conducts impulses important for communication within the body.<br><input id="ques34" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues34();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<!--Fourth Row of Questions-->
+		
+		<div id="q41div" class="qdiv">
+			<form id="q41" name="ques41" alt="ques41" onsubmit="return false" method="post" class="qform">
+			This type of cell takes waste to the kidneys and liver to be filtered out of the body.<br><input id="ques41" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues41();" align="right"/>
+			
+			</form>
+		</div>
+		
+		<!---->
+		<div id="q42div" class="qdiv">
+			<form id="q42" name="ques42" alt="ques42" onsubmit="return false" method="post" class="qform">
+			This is a network of membranes that produce lipids (fats) and break down toxins.<br><input id="ques42" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues42();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q42bdiv" class="qdiv">
+			<form id="q42b" name="ques42b" alt="ques42b" onsubmit="return false" method="post" class="qform">
+			This organelle digests worn out organelles and other cell debris/waste.<br><input id="ques42b" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues42b();" align="center"/>
+		
+			</form>  
+		</div>
+		<!---->
+		
+		<div id="q43div" class="qdiv">
+			<form id="q43" name="ques43" alt="ques43" onsubmit="return false" method="post" class="qform">
+			A "<u>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</u>" holds atoms together in a molecule.<br><input id="ques43" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues43();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q44div" class="qdiv">
+			<form id="q44" name="ques44" alt="ques44" onsubmit="return false" method="post" class="qform">
+			This type of tissue is responsible for movement and comes in three varieties: skeletal, cardiac, and smooth.<br><input id="ques44" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues44();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		
+		
+	<!----Fifth Row of Questions---------->
+		<div id="q51div" class="qdiv">
+			<form id="q51" name="ques51" alt="ques51" onsubmit="return false" method="post" class="qform">
+			This part of the Nerve Cell is stimulated (through touch, heat, light, etc.) and conducts a signal to the axon that can be sent to muscles, glands, and other nerves.<br><input id="ques51" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues51();" align="right"/>
+			
+			</form>
+		</div>
+		
+		<div id="q52div" class="qdiv">
+			<form id="q52" name="ques52" alt="ques52" onsubmit="return false" method="post" class="qform">
+			This organelle synthesizes rRNA and assembles ribosomes.<br><input id="ques52" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues52();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q53div" class="qdiv">
+			<form id="q53" name="ques53" alt="ques53" onsubmit="return false" method="post" class="qform">
+			This subatomic particle does not exist in the nucleus of an atom. Instead it orbits the atom in somewhat of a cloud.<br><input id="ques53" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues53();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q54div" class="qdiv">
+			<form id="q54" name="ques54" alt="ques54" onsubmit="return false" method="post" class="qform">
+			Epithelial Tissue can be found lining structures within the body, but are also important in forming these types of organs:<br><input id="ques54" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues54();" align="center"/>
+		
+			</form>  
+		</div>
+	
+	
+	
+	
+	<!--End Questions---------------------------------------------------------------------------------------------------------------->	
+		
+		
+		
+	
+	
+
+  </div>
+	<!--Scoreboard-->
+		<div id="scoreOutLine">
+		  <span id="scoreTitle">TOTAL</span>	
+			<div id="scoreBox">
+				$0
+			</div>
+		</div>
+	<!-------------->
+	
+	
+	<!-- response block  -->
+		<div id="correct">
+			<p id="corrPar">CORRECT!</p>
+		</div>
+		
+
+	<!--------------------->
+	
+  <div id="wordBank">
+	<h1 id="wbHead">Word Bank</h1>
+	<p class="wPar">Fat Cells</p>
+	<p class="wPar">Nerve Cells</p>
+	<p class="wPar">Axon</p>
+	<p class="wPar">Fat Storage</p>
+	<p class="wPar">Dendrites</p>
+	<p class="wPar">Bone Cells</p>
+	<p class="wPar">Compact Tissue</p>
+	<p class="wPar">Subchondral Tissue</p>
+	<p class="wPar">Cancellous Tissue</p>
+	<p class="wPar">Blood Cells</p>
+	<p class="wPar">Living Organism</p>
+	<p class="wPar">Cells</p>
+	<p class="wPar">Cell Membrane</p>
+	<p class="wPar">Electron</p>
+	<p class="wPar">Smooth Endoplasmic Reticulum</p>
+	<p class="wPar">Cytoplasm</p>
+	<p class="wPar">Nucleus</p>
+	<p class="wPar">Nucleolus</p>
+	<p class="wPar">Mitochondrion</p>
+	<p class="wPar">Golgi Apparatus</p>
+	<p class="wPar">Ribosomes</p>
+	<p class="wPar">Rough Endoplasmic Reticulum</p>
+	<p class="wPar">Lysosomes</p>
+	<p class="wPar">Atoms</p>
+	<p class="wPar">Neutron</p>
+	<p class="wPar">Atomic Number</p>
+	<p class="wPar">Proton</p>
+	<p class="wPar">Molecules</p>
+	<p class="wPar">Epithelial Tissue</p>
+	<p class="wPar">Muscle Tissue</p>
+	<p class="wPar">Nervous Tissue</p>
+	<p class="wPar">Glands</p>
+	<p class="wPar">Chemical Bond</p>
+	<p class="wPar">Neutron</p>
+	<p class="wPar">Connective Tissue</p>
+	
+  </div>
+  
+  <div id="instr">
+	<p class="instPar">INSTRUCTIONS: Use the word bank in order to check your spelling.
+	The game is not case sensitive but relies on correct spelling in order
+	to check your answers. Some words in the bank will not be used. Test 
+	your knowledge of this unit and HAVE FUN!!</p>
+  </div>
+	
+  <button type="button" id="exit" onclick="finished()"> <b>Finished</b></button>
+  
+  <div id="close1">
+	<h1 class="closeHead">Congratulations!</h1>
+	<p><b>You completed Cell Jeopardy and have learned a lot today. You 
+	can refresh this page to play again and try to improve your score and knowledge of atoms, molecules, cells, and tissues
+	or you can exit back to the <a href="http://ktu.vbi.vt.edu/" title="KTU Home Page">Home Page.</a></b></p>
+	
+	<img class="cellsRule" src="images/cellsRule.png" />
+  </div>
+  
+  <div id="close2">
+	<h1 class="closeHead">Congratulations!</h1>
+	<p><b>You completed Cell Jeopardy with a perfect score! You have mastered this module. 
+	Thank you for learning about cells with us today! You can now go check out the other cool features
+	of the <a href="http://ktu.vbi.vt.edu/" title="KTU Home Page">KTU Website.</a></b></p>
+	
+	<img class="cellsRule" src="images/cellsRule2.png" />
+  </div>
+  
+  <nav>
+    <a href="playJeop.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+  </nav>
+  
+  
+</body>
+</html>

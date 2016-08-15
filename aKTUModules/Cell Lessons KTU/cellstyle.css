@@ -1,0 +1,116 @@
+body{
+  width: 100%;
+  max-width: 785px;
+  height: 600px;
+  background-image: url('images/ktuBackGround.png');
+  color: black;
+  }
+
+h1{
+  font-family: impact;
+  color: rgb(155,155,155);
+  text-align: center-left;
+  }
+  
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  color: white;
+  background-image: url('images/Background 1.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: center;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  }
+
+#cells{
+  position: absolute;
+  top: 70px;
+  left: 380px;
+  width: 380px;
+  z-index: 100;
+  }
+  
+  
+  
+#blueCell{
+  position: absolute;
+  top: 21px;
+  left: 65px;
+  width: 250px;
+  z-index: 3;
+  }
+  
+#pinkCell{
+  position: absolute;
+  top: 185px;
+  left: 70px;
+  width: 280px;
+  z-index: 4;
+  }
+  
+#redThing{
+  position: absolute;
+  top: 0px;
+  left: 320px;
+  width: 500px;
+  }
+  
+#home{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 15px;
+  z-index: 1000;
+  }  
+  
+#next{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  z-index: 1000;
+  }
+  
+#glossary{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  margin-left: 350px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  }
+  
+#sources{
+  color: white;
+  position: absolute;
+  left: 700px;
+  top: 500px;
+  }
+  
+p{
+  position: absolute;
+  top: 350px;
+  left: 380px;
+  font-size: 30px;
+  width: 400px;
+  }

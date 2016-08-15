@@ -1,0 +1,10 @@
+<?xml version ='1.0' ?>
+	<chapter1>
+		<hint id = 'intro1'> Welcome newcomer! If you entered this cave I'm assuming you want to become a scientist!</hint>
+		<hint id = 'intro2'> Your journey will not be an easy one as many obstacles stand in your way. </hint>
+		<hint id = 'intro3'> But I believe you cn do it! Go through the portals to enter a minigame that teaches you about an aspect of the queing theory!</hint>
+		<hint id = 'intro4'> Make sure you get through all of them as they all contain vital information! </hint>
+		<hint id = 'intro5'> At the end you will use your newfound skills to battle a big boss! </hint>
+		<hint id = 'intro6'> Now go forth and learn! (Oh! by the way, if you didn't already know W is to jump, A is to go left, and D is to go right!) </hint>
+		<hint id = 'intro7'> Good luck young scientist! </hint>
+	</chapter1>

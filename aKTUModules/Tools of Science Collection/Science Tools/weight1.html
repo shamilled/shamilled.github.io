@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weight and Mass</title>
+  <link rel='stylesheet' href='weight1.css'>
+  <meta charset=utf-8 />
+</head>
+
+<body>
+  
+	<div id="mainFrame">
+		<h1>Weight and Mass</h1>
+		
+		
+		<div id="parDiv">
+			<ul>
+				<p><b><span class="keyWord">Weight</span> is the measure of the downward force of an object due to gravity and is used to find object's <span class="keyWord">Mass</span>.</b></p>
+				<br>
+				<li>The <u>Base Unit for Mass</u> using the Metric System (SI) is the <b><em>Kilogram</em></b>.</li>
+				<br>
+				<li>We use <b>scales</b> to weigh objects. However, scales are set to give you the object's mass and not the object's weight.</li>
+				<br><br>
+
+
+			</ul>
+			
+
+		</div>
+		
+		<div id="metDiv">
+			<h3 style="font-family: sans-serif;">Metric System (SI) Units for Mass:</h3>
+				
+			<p><b>1 Kilogram (kg) = 1000 Grams (g)
+			<br><br>
+			1 Gram (g) = 1000 Milligrams (mg)
+			<br></b></p>
+			
+		</div>
+		
+		<div id="usUnitsDiv">
+			<h3 style="font-family: sans-serif;">U.S. Customary Units to Metric System Units (SI):</h3>
+				
+			<p><b>1 Pound (lb) = 0.453592 Kilograms (kg)
+			<br><br>
+			1 Ounce (oz) = 28.3495 Grams (g)
+			<br>
+			</b></p>
+		</div>
+		
+		<img id="scales" src="images/scales.png">
+	
+	
+		<canvas id="myCanvas" width="901" height="500" style="border:1px solid #000000;"></canvas>
+			<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.lineWidth = 3;
+				/*Dashed Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 0);
+				ctx.lineTo(450, 500);		
+				ctx.stroke();
+				
+				/*Top Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 125);
+				ctx.lineTo(901, 125);		
+				ctx.stroke();
+				
+				/*Second Horizontal Line*/
+				ctx.beginPath();
+				ctx.setLineDash([5,3]);
+				ctx.moveTo(450, 250);
+				ctx.lineTo(901, 250);		
+				ctx.stroke();
+						
+				
+			</script>
+	</div>
+
+	
+	
+	
+	<nav>
+		<a href="../mainToolsPage.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="weight2.html"     title="Next Page"     id="next"     class="pagechange"><b>Weight vs. Mass</b></a>
+	</nav>
+  
+</body>
+</html>

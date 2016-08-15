@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cell Dynamics</title>
+  <link rel='stylesheet' href='cellJeop2style.css'>
+  <meta charset=utf-8 />
+  <script type="text/javascript" src="js/cellJeop2.js"></script>
+</head>
+<body>
+  
+  <div id="rulz">
+		<p class="welcPar"><b>Let's Play Jeopardy! There will be three categories. Answer the questions in any order that you want.</b></p>
+		<p class="welcPar"><b>There is a word bank that you may refer to on the right. Not all of the words in it will be used.
+		Enjoy your round of Cell Jeopardy!</b></p>
+		<p><span id="important"><b>CLICK THE <u>FINISHED BUTTON</u> AT THE BOTTOM LEFT AFTER YOU HAVE ANSWERED ALL OF THE QUESTIONS</b></span></p>
+		<p><button id="begin" type="button" onclick="hide()">Begin</button></p>
+  </div>
+  
+  <div id="mainFrame">
+  
+	<div id="headline">
+		<h1>CELL JEOPARDY</h1>
+	</div>
+	
+	
+	
+	
+	<table>
+	    <!-- Title row -->
+		<tr>
+			<td>
+			<img src="PICS/titleJeopCells.png" class="title">
+			</td>
+			
+			<td>
+			<img src="PICS/titleJeoporg.png" class="title">
+			</td>
+			
+			<td>
+			<img src="PICS/titleJeopTiss.png" class="title">
+			</td>
+			
+		</tr>
+		
+		<!-- First row -->
+		
+		<tr>
+		
+		<td>
+		<div id="11" class="box">
+			<input type="image" src="PICS/2hun.png" alt="Submit" id="show11" onClick="show11()" class="amt">
+			<div id="used11" class="blank">
+				<p id="par11" class="incorrPar">Click <a href="#" onclick="window.open('cell2.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="12" class="box">
+			<input type="image" src="PICS/2hun.png" alt="Submit" id="show12" onClick="show12()" class="amt">
+			<div id="used12" class="blank">
+				<p id="par12" class="incorrPar">Click <a href="#" onclick="window.open('mit.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="13" class="box">
+			<input type="image" src="PICS/2hun.png" alt="Submit" id="show13" onClick="show13()" class="amt">
+			<div id="used13" class="blank">
+				<p id="par13" class="incorrPar">Click <a href="#" onclick="window.open('cellinf.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		
+		</tr>
+		
+		<!-- Second row -->
+		<tr>
+		
+		<td>
+		<div id="21" class="box">
+			<input type="image" src="PICS/4hun.png" alt="Submit" id="show21" onClick="show21()" class="amt">
+			<div id="used21" class="blank">
+				<p id="par21" class="incorrPar">Click <a href="#" onclick="window.open('cell3.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="22" class="box">
+			<input type="image" src="PICS/4hun.png" alt="Submit" id="show22" onClick="show22()" class="amt">
+			<div id="used22" class="blank">
+				<p id="par22"  class="incorrPar">Click <a href="#" onclick="window.open('rer.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+				<p id="par22b" class="incorrPar">Click <a href="#" onclick="window.open('cyt.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="23" class="box">
+			<input type="image" src="PICS/4hun.png" alt="Submit" id="show23" onClick="show23()" class="amt">
+			<div id="used23" class="blank">
+				<p id="par23" class="incorrPar">Click <a href="#" onclick="window.open('cellinf.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		
+		</tr>
+		
+		<!--Third Row------->
+		
+		<tr>
+		
+		<td>
+		<div id="31" class="box">
+			<input type="image" src="PICS/6hun.png" alt="Submit" id="show31" onClick="show31()" class="amt">
+			<div id="used31" class="blank">
+				<p id="par31" class="incorrPar">Click <a href="#" onclick="window.open('boneCells.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="32" class="box">
+			<input type="image" src="PICS/6hun.png" alt="Submit" id="show32" onClick="show32()" class="amt">
+			<div id="used32" class="blank">
+				<p id="par32" class="incorrPar">Click <a href="#" onclick="window.open('nuc.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="33" class="box">
+			<input type="image" src="PICS/6hun.png" alt="Submit" id="show33" onClick="show33()" class="amt">
+			<div id="used33" class="blank">
+				<p id="par33" class="incorrPar">Click <a href="#" onclick="window.open('tissNerve.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		
+		</tr>
+		
+		<!--Fourth Row-->
+		
+		<tr>
+		
+		<td>
+		<div id="41" class="box">
+			<input type="image" src="PICS/8hun.png" alt="Submit" id="show41" onClick="show41()" class="amt">
+			<div id="used41" class="blank">
+				<p id="par41"  class="incorrPar">Click <a href="#" onclick="window.open('fatCells.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+				<p id="par41b" class="incorrPar">Click <a href="#" onclick="window.open('nerveCells.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="42" class="box">
+			<input type="image" src="PICS/8hun.png" alt="Submit" id="show42" onClick="show42()" class="amt">
+			<div id="used42" class="blank">
+				<p id="par42" class="incorrPar">Click <a href="#" onclick="window.open('gap.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		<td>
+		<div id="43" class="box">
+			<input type="image" src="PICS/8hun.png" alt="Submit" id="show43" onClick="show43()" class="amt">
+			<div id="used43" class="blank">
+				<p id="par43" class="incorrPar">Click <a href="#" onclick="window.open('cellinf.html', 'Cells', 'width=900, height=650'); return false;">here</a> to find answer.</p>
+			</div>
+		</div>
+		</td>
+		
+		
+		</tr>		
+	
+
+
+	
+	</table>	
+	<!--End Table-->
+	<!------------->
+	
+	<!---------------------------------------------------------------------------------------------------------------------------------------->
+
+		<!--First Row of Questions-->
+		<div id="q11div" class="qdiv">
+			<form id="q11" name="ques11" alt="ques11" onsubmit="return false" method="post" class="qform">
+			These are the smallest structural and functional units of living organisms.<br><input id="ques11" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues11();" align="right"/>
+			
+			</form>
+		</div>
+		
+		<div id="q12div" class="qdiv">
+			<form id="q12" name="ques12" alt="ques12" onsubmit="return false" method="post" class="qform">
+			This organelle is known as the "powerhouse" of the cell because it 
+			is where the cell makes energy.<br><input id="ques12" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues12();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q13div" class="qdiv">
+			<form id="q13" name="ques13" alt="ques13" onsubmit="return false" method="post" class="qform">
+			What are made of different tissues grouped together to do a certain function?<br><input id="ques13" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues13();" align="center"/>
+		
+			</form>  
+		</div>
+		
+
+		
+		<!--Second Row of Questions-->
+		
+		<div id="q21div" class="qdiv">
+			<form id="q21" name="ques21" alt="ques21" onsubmit="return false" method="post" class="qform">
+			Anything made up of cells that requires energy to survive.<br><input id="ques21" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues21();" align="right"/>
+			
+			</form>
+		</div>
+		
+		<!---->
+		<div id="q22div" class="qdiv">
+			<form id="q22" name="ques22" alt="ques22" onsubmit="return false" method="post" class="qform">
+			This organelle is covered with ribosomes and works with them to make and 
+			package proteins.<br><input id="ques22" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues22();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q22bdiv" class="qdiv">
+			<form id="q22b" name="ques22b" alt="ques22b" onsubmit="return false" method="post" class="qform">
+			This is a gel-like fluid that helps support the structure of the cell.<br><input id="ques22b" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues22b();" align="center"/>
+		
+			</form>  
+		</div>
+		<!---->
+		
+		
+		<div id="q23div" class="qdiv">
+			<form id="q23" name="ques23" alt="ques23" onsubmit="return false" method="post" class="qform">
+			When different organs work together to do a large function for the organism, they are called what?<br><input id="ques23" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues23();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		
+		<!--Third Row of Questions-->
+		
+		<div id="q31div" class="qdiv">
+			<form id="q31" name="ques31" alt="ques31" onsubmit="return false" method="post" class="qform">
+			These cells help your skeleton stay strong and supportive by growing your bones and
+			constantly replenishing them to keep them healthy.<br><input id="ques31" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues31();" align="right"/>
+			
+			</form>
+		</div>
+		
+		<div id="q32div" class="qdiv">
+			<form id="q32" name="ques32" alt="ques32" onsubmit="return false" method="post" class="qform">
+			This is known as the "brain" of the cell. It is where the genetic information is kept.<br><input id="ques32" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues32();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q33div" class="qdiv">
+			<form id="q33" name="ques33" alt="ques33" onsubmit="return false" method="post" class="qform">
+			This type of tissue helps send nerve signals to the brain.<br><input id="ques33" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues33();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		
+		<!--Fourth Row of Questions-->
+		
+		<!---->
+		<div id="q41div" class="qdiv">
+			<form id="q41" name="ques41" alt="ques41" onsubmit="return false" method="post" class="qform">
+			These cells help store energy in the body.<br><input id="ques41" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues41();" align="right"/>
+			
+			</form>
+		</div>
+		
+		<div id="q41bdiv" class="qdiv">
+			<form id="q41b" name="ques41b" alt="ques41b" onsubmit="return false" method="post" class="qform">
+			These cells help send messages to your brain.<br><input id="ques41b" type="text" />
+							<input type="submit" value="Submit" onclick="checkQues41b();" align="right"/>
+			
+			</form>
+		</div>
+		<!---->
+		
+		<div id="q42div" class="qdiv">
+			<form id="q42" name="ques42" alt="ques42" onsubmit="return false" method="post" class="qform">
+			This is where proteins and lipids are modified, sorted, and packaged.<br><input id="ques42" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues42();" align="center"/>
+		
+			</form>  
+		</div>
+		
+		<div id="q43div" class="qdiv">
+			<form id="q43" name="ques43" alt="ques43" onsubmit="return false" method="post" class="qform">
+			Complete the chain:<br>
+			<p id="chainPar">cells -> tissues -> "<u>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </u>"
+			-> organ systems -> organisms </p><br><input id="ques43" type="text" />
+						<input type="submit" value="Submit" onclick="checkQues43();" align="center"/>
+		
+			</form>  
+		</div>
+		
+	
+	
+	
+	
+	<!--End Questions---------------------------------------------------------------------------------------------------------------->	
+		
+		
+		
+	
+	
+
+  </div>
+	<!--Scoreboard-->
+		<div id="scoreOutLine">
+		  <span id="scoreTitle">TOTAL</span>	
+			<div id="scoreBox">
+				$0
+			</div>
+		</div>
+	<!-------------->
+	
+	
+	<!-- response block  -->
+		<div id="correct">
+			<p id="corrPar">CORRECT!</p>
+		</div>
+		
+
+	<!--------------------->
+	
+  <div id="wordBank">
+	<h1 id="wbHead">Word Bank</h1>
+	<p class="wPar">Fat Cells</p><!---->
+	<p class="wPar">Nerve Cells</p>
+	<p class="wPar">Fat Storage</p>
+	<p class="wPar">Bone Cells</p><!---->
+	<p class="wPar">Blood Cells</p>
+	<p class="wPar">Living Organism</p>
+	<p class="wPar">Cells</p> <!---->
+	<p class="wPar">Cell Membrane</p>
+	<p class="wPar">Electron</p>
+	<p class="wPar">Smooth Endoplasmic Reticulum</p>
+	<p class="wPar">Cytoplasm</p>
+	<p class="wPar">Nucleus</p><!---->
+	<p class="wPar">Nucleolus</p>
+	<p class="wPar">Mitochondria</p><!---->
+	<p class="wPar">Golgi Apparatus</p><!---->
+	<p class="wPar">Ribosomes</p>
+	<p class="wPar">Rough Endoplasmic Reticulum</p><!---->
+	<p class="wPar">Lysosomes</p>
+	<p class="wPar">Atoms</p><!---->
+	<p class="wPar">Neutron</p>
+	<p class="wPar">Living Organism</p><!---->
+	<p class="wPar">Proton</p>
+	<p class="wPar">Molecules</p><!---->
+	<p class="wPar">Glands</p>
+	<p class="wPar">Chemical Bond</p>
+	<p class="wPar">Neutron</p>
+	<p class="wPar">Kids' Tech University</p>
+	
+	
+  </div>
+  
+  <div id="instr">
+	<p class="instPar">INSTRUCTIONS: Use the word bank in order to check your spelling.
+	The game is not case sensitive but relies on correct spelling in order
+	to check your answers. Some words in the bank will not be used. Test 
+	your knowledge of this unit and HAVE FUN!!</p>
+  </div>
+	
+  <button type="button" id="exit1" onclick="finished1()"> <b>Finished</b></button>
+  
+  <div id="finish1">
+	<h1 class="closeHead">Are you sure you want to finish?</h1>
+	<button type="button" id="yes" onclick="finished()"> <b>Yes</b></button>
+	<button type="button" id="no"  onclick="return1()"> <b>No</b></button>
+  </div>
+  
+  <div id="close1">
+	<h1 class="closeHead">Congratulations!</h1>
+	<p><b>You completed Cell Jeopardy and have learned a lot today. You 
+	can play again or you can exit back to the <a href="../mainPage.html" title="KTU Home Page">Home Page.</a></b></p>
+	<p><a href="playJeop.html" id="playAgain">PLAY AGAIN</a></p>
+	
+	<img class="cellsRule" src="PICS/cellsRule.png" />
+  </div>
+  
+  <div id="close2">
+	<h1 class="closeHead">Congratulations!</h1>
+	<p><b>You completed Cell Jeopardy with a perfect score! You have mastered this module. 
+	Thank you for learning about cells with us today! You can now go check out the other cool features
+	of the <a href="http://ktu.vbi.vt.edu/" title="KTU Home Page">KTU Website.</a></b></p>
+	<p><a href="playJeop.html" id="playAgain">PLAY AGAIN</a></p>
+	
+	<img class="cellsRule" src="PICS/cellsRule2.png" />
+  </div>
+  
+   <nav>
+     <a href="playJeop.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+   </nav>
+  
+</body>
+</html>

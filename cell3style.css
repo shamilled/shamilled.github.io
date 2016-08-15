@@ -1,0 +1,176 @@
+body{
+  width: 100%;
+  max-width: 785px;
+  height: 600px;
+  background-image: url('PICS/ktuBackGround.png');
+  color: black;
+    margin: auto;
+}  
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  color: white;
+  background-image: url('PICS/Background 2.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: center;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  }
+
+
+
+#cellMosaic{
+  height: 300px;
+  width: 350px;
+  float: right;
+  padding: 15px;
+  background-color: transparent;
+  position: relative;
+  left: 340px;
+  top: -45px;
+  }
+
+  
+#fatCells{
+  width: 190px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: none;
+  }
+  
+#bloodCells{
+  width: 150px;
+  position: absolute;
+  top: 0px;
+  left: 195px;
+  padding: none;
+  }
+  
+#nerveCells{
+  width: 135px;
+  position: absolute;
+  top: 135px;
+  left: 0px;
+  padding: none;
+  }
+  
+#boneCells{
+  width: 200px;
+  position: absolute;
+  top: 145px;
+  left: 140px;
+  padding: none;
+  }
+  
+h1{
+  font-size: 35px;
+  padding: 15px;
+  border-radius: 20px 0px 20px 0px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #FFEB64), color-stop(1, #FFDE00));
+  background: -moz-linear-gradient(left bottom, #FFEB64, #FFDE00);
+  background-image: -ms-linear-gradient(bottom left, #FFEB64 0%, #FFDE00 100%);
+  border: 2px;
+  width: 350px;
+  position: relative;
+  left: 0px;
+  top: -40px;
+  }
+  
+#squares div{
+  display: inline-block;
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-image: -webkit-gradient(linear, left top, right bottom, 
+                    color-stop(0, #FFEB64), color-stop(1, #FFDE00));
+  background: -moz-linear-gradient(left bottom, #FFEB64, #FFDE00);
+  background-image: -ms-linear-gradient(bottom left, #FFEB64 0%, #FFDE00 100%);
+  margin-left: 25px;
+  position: relative;
+  top: -172px;
+  }
+  
+ #microscope{
+  height: 270px;
+  width: 170px;
+  background-color: transparent;
+  position:relative;
+  left:-205px;
+  top:-360px;
+  }
+  
+.cellImg:hover{
+  border: 5px solid black;
+  border-radius: 3px;
+  z-index: 100;
+  }
+
+#microscope:hover{
+  width: 180px;
+  height: 286px;
+  border: 2px solid black;
+  border-radius: 3px;
+  }
+  
+#information{
+  text-align: right;
+  width: 250px;
+  }
+  
+#previous{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: 40px;
+  margin-top: 15px;
+  }
+  
+#next{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  }
+  
+#glossary{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(155,255,230);
+  border: 15px;
+  padding: 10px;
+  margin-left: 4px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 492px;
+  }
+  
+  
+#sources{
+  color: white;
+  position: relative;
+  left: 430px;
+  top: 0px;
+  }
+  
+a:hover {
+  font-size: 105%;
+  }

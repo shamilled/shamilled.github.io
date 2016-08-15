@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Applying the Scientific Method</title>
+  <link rel='stylesheet' href='que2.css'>
+  <meta charset=utf-8 />
+  <script type="text/javascript">
+	function checkStorage(){
+		var checkName = sessionStorage.getItem('name');
+		var checkStore = sessionStorage.getItem('store');
+		
+		if(checkName != null && checkStore != null){
+			document.getElementById('next').style.display = "block";
+			document.getElementById('putStoreNameHere').innerHTML = checkStore.toUpperCase();
+			document.getElementById('closed').style.display = "none";
+			document.getElementById('open').style.display = "block";
+			document.getElementById('nameForm').innerHTML = "Hello, " + checkName + ". Welcome to your new store, " + checkStore.toUpperCase() + "!";
+			document.getElementById('next').style.display = "block";
+		}
+	}
+  </script>
+  
+</head>
+<body onload="checkStorage();">
+  
+	<div id="mainFrame">
+	
+		<h1>The Problem</h1>
+		
+		<p style="width: 800px;"><b>You are the manager of a grocery store and you want to make sure that you have enough cashiers to check everybody out.</b></p><br>
+			<form id="nameForm" onsubmit="return false" method="post" style="font-size: 20px;">
+				What is your name?
+				<input id="name"    type="text" placeholder="Name" maxlength="10" style="width: 125px;"/>
+				<br>
+				<!-- What is the name of your store?
+				<input id="store"    type="text" placeholder="Store Name" maxlength="10" style="width: 125px;"/>
+				<br> -->
+				<input id="button" type="submit" value="Submit" onclick="names();" align="center"/>
+			</form>
+			
+			
+			
+
+		<p>- If your lines get too long your customers will get angry and maybe even leave. So, it’s important that you keep the lines short.</p>
+
+		<p style="width: 450px;">- If you hire too many cashiers then you will spend too much money.</p>
+		
+		<img id="storeImg" src="PICS/grocery_store.png"/>
+		<img id="closed"   src="PICS/closed.png"       />
+		<img id="open"     src="PICS/open.png"         />
+		
+		<div id="storeNameDiv">
+			<b><span id="putStoreNameHere">GROCERIES</span></b>
+		</div>
+		
+		<div id="respDiv">
+			<p id="respName">Please Enter Your Name</p>
+			<p id="respStore">Please Name Your Store</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		function names(){
+			var name = document.getElementById('name').value;
+			var store = document.getElementById('name').value.toLowerCase() + "'s";
+
+			
+			/*Try to catch bad words*/
+			var m = name.indexOf('damn') + 1 + name.indexOf('poop') + 1 + name.indexOf('ass') + 1 + name.indexOf('retard') + 1 + name.indexOf('fuck') + 1 + name.indexOf('bitch') + 1
+			+ name.indexOf('shit') + 1 + name.indexOf('bastard') + 1 + name.indexOf('stupid') + 1 + name.indexOf('gay') + 1 + name.indexOf('fag') + 1 + name.indexOf('piss') + 1
+			+ name.indexOf('dumb') + 1 + name.indexOf('idiot') + 1 + name.indexOf('penis') + 1 + name.indexOf('butt') + 1;
+			
+			var n = store.indexOf('damn') + 1 + store.indexOf('poop') + 1 + store.indexOf('ass') + 1 + store.indexOf('retard') + 1 + store.indexOf('fuck') + 1 + store.indexOf('bitch') + 1
+			+ store.indexOf('shit') + 1 + store.indexOf('bastard') + 1 + store.indexOf('stupid') + 1 + store.indexOf('gay') + 1 + store.indexOf('fag') + 1 + store.indexOf('piss') + 1
+			+ store.indexOf('dumb') + 1 + store.indexOf('idiot') + 1 + store.indexOf('penis') + 1 + name.indexOf('butt') + 1;
+			/*alert(n);*/ 
+			
+			if((name.toLowerCase() == "cassandra")||(name.toLowerCase() == "cassie")){
+				m = 0;
+			}
+			
+			if((m > 0)||(n > 0)){
+					alert('Try a different name.');
+			}
+			else{
+			
+				if((name != "")&&(store != "")){
+					document.getElementById('next').style.display = "block";
+					document.getElementById('closed').style.display = "none";
+					document.getElementById('open').style.display = "block";
+					document.getElementById('putStoreNameHere').innerHTML = store.toUpperCase();
+					document.getElementById('nameForm').innerHTML = "Hello, " + name + ". Welcome to your new store, " + store.toUpperCase() + "!";
+					sessionStorage.setItem('name', name);
+					sessionStorage.setItem('store', store);
+					document.getElementById('respName').style.display = "none";
+					document.getElementById('respStore').style.display = "none";
+				}
+				
+				if(name == ''){
+					document.getElementById('respName').style.display = "block";
+				}
+				/*
+				if(store == ''){
+					document.getElementById('respStore').style.display = "block";
+				}*/
+			}
+		}
+	</script>
+
+	<nav>
+		<a href="que1.html" title="Previous Page" id="previous" class="pagechange"><b>Go Back</b></a>
+		<a href="que3.html" title="Next Page"     id="next"     class="pagechange"><b>Continue Learning</b></a>
+	</nav>
+  
+</body>
+</html>

@@ -1,0 +1,115 @@
+body{
+  width: 100%;
+  max-width: 785px;
+  height: 600px;
+  background-image: url('PICS/ktuBackGround.png');
+  color: black;
+    margin: auto;
+  }
+
+h1{
+  font-family: impact;
+  color: rgb(155,155,155);
+  text-align: center-left;
+  }
+  
+
+#mainFrame{
+  border: 5px solid blue;
+  padding: 30px;
+  padding-left: 5px;
+  width: 700px;
+  height: 400px;
+  color: white;
+  background-image: url('PICS/Background 1.png');
+  background-repeat:no-repeat;
+  background-size: 745px 470px;
+  text-align: center;
+  font-family: helvetica;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  }
+
+#cells{
+  position: relative;
+  top: 30px;
+  left: 280px;
+  width: 380px;
+  z-index: 100;
+  }
+  
+  
+  
+#blueCell{
+  position: relative;
+  top: -95px;
+  left: -420px;
+  width: 250px;
+  z-index: 3;
+  }
+  
+#pinkCell{
+  position: relative;
+  top: -160px;
+  left: -210px;
+  width: 280px;
+  z-index: 4;
+  }
+  
+#redThing{
+  position: relative;
+  top: -640px;
+  left: 155px;
+  width: 500px;
+  }
+  
+#home{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  margin-left: -560px;
+  z-index: 1000;
+  }  
+  
+#next{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  z-index: 1000;
+  }
+  
+#glossary{
+  text-decoration: none;
+  color: black;
+  background-color: rgb(85,255,0);
+  border: 15px;
+  padding: 10px;
+  margin-left: 350px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  }
+  
+#sources{
+  color: white;
+  position: relative;
+  left: 340px;
+  top: 0px;
+  }
+  
+p{
+  position: relative;
+  top: -725px;
+  left: 325px;
+  font-size: 30px;
+  width: 400px;
+  }
